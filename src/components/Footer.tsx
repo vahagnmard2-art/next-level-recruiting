@@ -92,11 +92,12 @@ export default function Footer() {
           </nav>
 
           {/* Contact */}
-          <address className="not-italic">
+          <div>
             <h2 className="font-heading font-bold text-white tracking-widest uppercase text-sm mb-6 flex items-center gap-2">
               <span className="w-4 h-0.5 bg-nlr-gold" aria-hidden="true" />
               Contact Us
             </h2>
+            <address className="not-italic">
             <ul className="space-y-4 list-none m-0 p-0" role="list">
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-nlr-gold mt-0.5 flex-shrink-0" aria-hidden="true" />
@@ -140,7 +141,8 @@ export default function Footer() {
                 Get Started Today
               </Link>
             </div>
-          </address>
+            </address>
+          </div>
         </div>
       </div>
 

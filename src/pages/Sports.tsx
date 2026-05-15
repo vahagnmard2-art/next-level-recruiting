@@ -91,7 +91,7 @@ export default function Sports() {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-nlr-green/8 blur-[150px]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection>
-            <span className="section-label">10 Sports. All Ages.</span>
+            <p className="section-label">10 Sports. All Ages.</p>
             <h1 className="display-heading text-6xl sm:text-8xl text-white mt-3 mb-6">
               YOUR SPORT.<br /><span className="text-nlr-gold">OUR EXPERTISE.</span>
             </h1>
@@ -176,7 +176,7 @@ export default function Sports() {
       <section className="py-24 bg-nlr-darker relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-nlr-green/5 to-nlr-gold/5" />
         <AnimatedSection className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-          <span className="section-label">Ready to Start?</span>
+          <p className="section-label">Ready to Start?</p>
           <h2 className="display-heading text-5xl sm:text-7xl text-white mt-4 mb-6">
             LET'S BUILD<br /><span className="text-nlr-gold">YOUR TAPE</span>
           </h2>

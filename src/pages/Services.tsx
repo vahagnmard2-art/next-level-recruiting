@@ -153,7 +153,7 @@ export default function Services() {
         <div className="absolute top-0 right-0 w-96 h-96 bg-nlr-green/10 blur-[150px]" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection>
-            <span className="section-label">Pricing & Services</span>
+            <p className="section-label">Pricing & Services</p>
             <h1 className="display-heading text-6xl sm:text-8xl text-white mt-3 mb-6">
               INVEST IN<br /><span className="text-nlr-gold">YOUR FUTURE</span>
             </h1>
@@ -221,7 +221,7 @@ export default function Services() {
       <section className="py-24 lg:py-32 bg-nlr-darker">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <span className="section-label">Individual Services</span>
+            <p className="section-label">Individual Services</p>
             <h2 className="display-heading text-5xl sm:text-7xl text-white mt-3">
               PICK WHAT<br /><span className="text-nlr-gold">YOU NEED</span>
             </h2>
