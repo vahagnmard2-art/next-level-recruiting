@@ -1,10 +1,10 @@
 import { useState, FormEvent, useId } from 'react'
-import { Mail, Instagram, MapPin, Phone, ChevronRight, CheckCircle, Send, AlertCircle } from 'lucide-react'
+import { Mail, Instagram, MapPin, Phone, ChevronRight, ChevronDown, CheckCircle, Send, AlertCircle } from 'lucide-react'
 import AnimatedSection from '../components/AnimatedSection'
 import PageSEO from '../components/PageSEO'
 
 // Sign up free at formspree.io, create a form, paste your form ID here
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORMSPREE_ID'
+const FORMSPREE_ENDPOINT = `https://formspree.io/f/${import.meta.env.VITE_FORMSPREE_ID ?? ''}`
 
 const PHONE = '(818) 521-7493'
 const PHONE_HREF = 'tel:+18185217493'
@@ -93,7 +93,7 @@ export default function Contact() {
     const e: Partial<FormData> = {}
     if (!form.athleteName.trim()) e.athleteName = 'Athlete name is required'
     if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = 'Valid email is required'
-    if (!form.phone.trim()) e.phone = 'Phone number is required'
+    if (!form.phone.trim() || !/^[\d\s\-()+]{7,}$/.test(form.phone)) e.phone = 'Valid phone number required (digits only)'
     if (!form.sport) e.sport = 'Please select a sport'
     if (!form.service) e.service = 'Please select a service'
     setErrors(e)
@@ -301,17 +301,20 @@ export default function Contact() {
                             Sport <span className="text-nlr-gold" aria-hidden="true">*</span>
                             <span className="sr-only">(required)</span>
                           </label>
-                          <select
-                            {...field('sport')}
-                            className={`w-full bg-nlr-navy border px-4 py-3 text-sm focus:outline-none focus:border-nlr-gold transition-colors appearance-none cursor-pointer ${
-                              errors.sport ? 'border-red-400/60' : 'border-white/10'
-                            } ${form.sport ? 'text-white' : 'text-white/40'}`}
-                          >
-                            <option value="" disabled>Select a sport</option>
-                            {sports.map((s) => (
-                              <option key={s} value={s} className="bg-nlr-navy text-white">{s}</option>
-                            ))}
-                          </select>
+                          <div className="relative">
+                            <select
+                              {...field('sport')}
+                              className={`w-full bg-nlr-navy border px-4 py-3 pr-10 text-sm focus:outline-none focus:border-nlr-gold transition-colors appearance-none cursor-pointer ${
+                                errors.sport ? 'border-red-400/60' : 'border-white/10'
+                              } ${form.sport ? 'text-white' : 'text-white/40'}`}
+                            >
+                              <option value="" disabled>Select a sport</option>
+                              {sports.map((s) => (
+                                <option key={s} value={s} className="bg-nlr-navy text-white">{s}</option>
+                              ))}
+                            </select>
+                            <ChevronDown size={16} className="absolute right-3 top-1/2 -translate-y-1/2 text-white/40 pointer-events-none" aria-hidden="true" />
+                          </div>
                           {errors.sport && (
                             <p id={`${formId}-sport-error`} className="text-red-400 text-xs mt-1" role="alert">
                               {errors.sport}
@@ -322,17 +325,20 @@ export default function Contact() {
                           <label htmlFor={field('grade').id} className="block font-heading font-bold text-white/70 text-xs tracking-widest uppercase mb-2">
                             Grade / Year
                           </label>
-                          <select
-                            {...field('grade')}
-                            className={`w-full bg-nlr-navy border border-white/10 px-4 py-3 text-sm focus:outline-none focus:border-nlr-gold transition-colors appearance-none cursor-pointer ${
-                              form.grade ? 'text-white' : 'text-white/40'
-                            }`}
-                          >
-                            <option value="" disabled>Select grade/year</option>
-                            {grades.map((g) => (
-                              <option key={g} value={g} className="bg-nlr-navy text-white">{g}</option>
-                            ))}
-                          </select>
+                          <div className="relative">
+                            <select
+                              {...field('grade')}
+                              className={`w-full bg-nlr-navy border border-white/10 px-4 py-3 pr-10 text-sm focus:outline-none focus:border-nlr-gold transition-colors appearance-none cursor-pointer ${
+                                form.grade ? 'text-white' : 'text-white/40'
+                              }`}
+                            >
+                              <option value="" disabled>Select grade/year</option>
+                              {grades.map((g) => (
+                                <option key={g} value={g} className="bg-nlr-navy text-white">{g}</option>
+                              ))}
+                            </select>
+                            <ChevronDown size={16} className="absolute right-3 top-1/2 -translate-y-1/2 text-white/40 pointer-events-none" aria-hidden="true" />
+                          </div>
                         </div>
                       </div>
 
@@ -342,17 +348,20 @@ export default function Contact() {
                           Service Interested In <span className="text-nlr-gold" aria-hidden="true">*</span>
                           <span className="sr-only">(required)</span>
                         </label>
-                        <select
-                          {...field('service')}
-                          className={`w-full bg-nlr-navy border px-4 py-3 text-sm focus:outline-none focus:border-nlr-gold transition-colors appearance-none cursor-pointer ${
-                            errors.service ? 'border-red-400/60' : 'border-white/10'
-                          } ${form.service ? 'text-white' : 'text-white/40'}`}
-                        >
-                          <option value="" disabled>Select a service</option>
-                          {serviceOptions.map((s) => (
-                            <option key={s} value={s} className="bg-nlr-navy text-white">{s}</option>
-                          ))}
-                        </select>
+                        <div className="relative">
+                          <select
+                            {...field('service')}
+                            className={`w-full bg-nlr-navy border px-4 py-3 pr-10 text-sm focus:outline-none focus:border-nlr-gold transition-colors appearance-none cursor-pointer ${
+                              errors.service ? 'border-red-400/60' : 'border-white/10'
+                            } ${form.service ? 'text-white' : 'text-white/40'}`}
+                          >
+                            <option value="" disabled>Select a service</option>
+                            {serviceOptions.map((s) => (
+                              <option key={s} value={s} className="bg-nlr-navy text-white">{s}</option>
+                            ))}
+                          </select>
+                          <ChevronDown size={16} className="absolute right-3 top-1/2 -translate-y-1/2 text-white/40 pointer-events-none" aria-hidden="true" />
+                        </div>
                         {errors.service && (
                           <p id={`${formId}-service-error`} className="text-red-400 text-xs mt-1" role="alert">
                             {errors.service}

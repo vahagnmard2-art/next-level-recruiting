@@ -6,12 +6,13 @@ interface Props {
   canonical: string
   ogImage?: string
   schema?: object
+  robots?: string
 }
 
 const SITE = 'https://next-level-recruiting-theta.vercel.app'
 const DEFAULT_OG = `${SITE}/nlr-og.svg`
 
-export default function PageSEO({ title, description, canonical, ogImage = DEFAULT_OG, schema }: Props) {
+export default function PageSEO({ title, description, canonical, ogImage = DEFAULT_OG, schema, robots = 'index, follow' }: Props) {
   const fullTitle = `${title} | Next Level Recruiting — Southern California`
   const canonicalUrl = `${SITE}${canonical}`
 
@@ -19,6 +20,7 @@ export default function PageSEO({ title, description, canonical, ogImage = DEFAU
     <Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
+      <meta name="robots" content={robots} />
       <link rel="canonical" href={canonicalUrl} />
 
       {/* Open Graph */}

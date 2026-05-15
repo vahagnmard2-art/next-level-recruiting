@@ -77,18 +77,19 @@ export default function Footer() {
               Our Sports
             </h2>
             <ul className="space-y-3 list-none m-0 p-0" role="list">
-              {sports.map((sport) => (
+              {sports.slice(0, 5).map((sport) => (
                 <li key={sport}>
-                  <Link
-                    to="/sports"
-                    className="flex items-center gap-2 text-white/50 hover:text-nlr-gold text-sm transition-colors duration-200 group"
-                  >
+                  <Link to="/sports" className="flex items-center gap-2 text-white/50 hover:text-nlr-gold text-sm transition-colors duration-200 group">
                     <ChevronRight size={12} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                     {sport}
                   </Link>
                 </li>
               ))}
             </ul>
+            <Link to="/sports" className="inline-flex items-center gap-1 text-nlr-gold hover:text-nlr-gold-light text-xs font-heading font-bold tracking-widest uppercase mt-4 transition-colors">
+              View All 10 Sports
+              <ChevronRight size={10} aria-hidden="true" />
+            </Link>
           </nav>
 
           {/* Contact */}
@@ -149,10 +150,10 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-white/30 text-xs font-body">
+          <p className="text-white/50 text-xs font-body">
             &copy; {new Date().getFullYear()} Next Level Recruiting. All rights reserved. Southern California.
           </p>
-          <p className="text-white/20 text-xs font-heading tracking-widest uppercase">
+          <p className="text-white/40 text-xs font-heading tracking-widest uppercase">
             Your Game. Your Future. Next Level.
           </p>
         </div>

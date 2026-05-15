@@ -265,10 +265,13 @@ export default function About() {
             <p className="text-white/40 text-sm mb-10 font-heading tracking-widest uppercase">
               Franchise opportunities coming soon
             </p>
-            <Link to="/contact" className="btn-gold text-sm py-4 px-12 inline-flex items-center gap-2">
-              Join the Movement
+            <a
+              href="mailto:info@nextlevelrecruiting.com?subject=Franchise%20Inquiry"
+              className="btn-gold text-sm py-4 px-12 inline-flex items-center gap-2"
+            >
+              Inquire About Franchise
               <ChevronRight size={16} aria-hidden="true" />
-            </Link>
+            </a>
           </AnimatedSection>
         </section>
       </div>

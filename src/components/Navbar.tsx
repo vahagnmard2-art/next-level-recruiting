@@ -16,6 +16,7 @@ export default function Navbar() {
   const location = useLocation()
   const menuButtonRef = useRef<HTMLButtonElement>(null)
   const firstMenuItemRef = useRef<HTMLAnchorElement>(null)
+  const menuPanelRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -24,6 +25,7 @@ export default function Navbar() {
   }, [])
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setOpen(false)
   }, [location.pathname])
 
@@ -41,7 +43,21 @@ export default function Navbar() {
 
   // Trap focus inside mobile menu
   const handleMenuKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') setOpen(false)
+    if (e.key === 'Escape') { setOpen(false); return }
+    if (e.key !== 'Tab') return
+    const panel = menuPanelRef.current
+    if (!panel) return
+    const focusables = Array.from(
+      panel.querySelectorAll<HTMLElement>('a[href], button:not([disabled]), [tabindex="0"]')
+    ).filter(el => !el.closest('[aria-hidden="true"]'))
+    if (focusables.length === 0) return
+    const first = focusables[0]
+    const last = focusables[focusables.length - 1]
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last.focus() }
+    } else {
+      if (document.activeElement === last) { e.preventDefault(); first.focus() }
+    }
   }
 
   return (
@@ -104,7 +120,7 @@ export default function Navbar() {
             <button
               ref={menuButtonRef}
               onClick={() => setOpen(!open)}
-              className="lg:hidden p-2 text-white hover:text-nlr-gold transition-colors duration-200"
+              className="lg:hidden min-w-[44px] min-h-[44px] flex items-center justify-center text-white hover:text-nlr-gold transition-colors duration-200"
               aria-label={open ? 'Close navigation menu' : 'Open navigation menu'}
               aria-expanded={open}
               aria-controls="mobile-menu"
@@ -121,7 +137,6 @@ export default function Navbar() {
           open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         aria-hidden={!open}
-        onKeyDown={handleMenuKeyDown}
       >
         {/* Backdrop */}
         <div
@@ -133,9 +148,11 @@ export default function Navbar() {
         {/* Panel */}
         <div
           id="mobile-menu"
+          ref={menuPanelRef}
           role="dialog"
           aria-modal="true"
           aria-label="Navigation menu"
+          onKeyDown={handleMenuKeyDown}
           className={`absolute top-0 right-0 h-full w-80 max-w-full bg-nlr-navy border-l border-white/5 flex flex-col transition-transform duration-300 ${
             open ? 'translate-x-0' : 'translate-x-full'
           }`}
@@ -146,7 +163,7 @@ export default function Navbar() {
             </span>
             <button
               onClick={() => setOpen(false)}
-              className="text-white/60 hover:text-white p-1"
+              className="text-white/60 hover:text-white min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label="Close menu"
             >
               <X size={20} aria-hidden="true" />

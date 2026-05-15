@@ -31,6 +31,7 @@ export default {
         'fade-up': 'fadeUp 0.7s ease-out forwards',
         'fade-in': 'fadeIn 0.7s ease-out forwards',
         'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+        'pulse-glow-once': 'pulseGlow 2s ease-in-out 3',
         'bounce-slow': 'bounce 2s ease-in-out infinite',
       },
       keyframes: {

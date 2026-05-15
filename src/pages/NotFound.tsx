@@ -8,7 +8,8 @@ export default function NotFound() {
       <PageSEO
         title="Page Not Found"
         description="The page you're looking for doesn't exist. Head back to Next Level Recruiting."
-        canonical="/404"
+        canonical="/"
+        robots="noindex, nofollow"
       />
       <div className="min-h-screen bg-nlr-darker flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-nlr-green/5 via-transparent to-nlr-gold/5" />

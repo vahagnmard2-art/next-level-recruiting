@@ -39,6 +39,12 @@
   font-display: swap;
 }
 
+/* Firefox scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1A7A3C #0D1F2D;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

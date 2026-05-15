@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   ChevronRight, Play, Award, Users, TrendingUp,
@@ -135,15 +136,12 @@ const homeSchema = {
       url: 'https://next-level-recruiting-theta.vercel.app',
       name: 'Next Level Recruiting',
       description: 'Southern California athlete recruiting agency',
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: 'https://next-level-recruiting-theta.vercel.app/sports',
-      },
     },
   ],
 }
 
 export default function Home() {
+  const [tickerPaused, setTickerPaused] = useState(false)
   return (
     <>
       <PageSEO
@@ -189,7 +187,7 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-              <Link to="/contact" className="btn-gold text-sm py-4 px-10 flex items-center gap-2 animate-pulse-glow">
+              <Link to="/contact" className="btn-gold text-sm py-4 px-10 flex items-center gap-2 animate-pulse-glow-once">
                 Get Your Tape Done
                 <ChevronRight size={16} aria-hidden="true" />
               </Link>
@@ -225,7 +223,11 @@ export default function Home() {
         <section className="bg-nlr-green py-5 overflow-hidden" aria-label="Sports we cover: Basketball, Baseball, Football, Soccer, Volleyball, Softball, Track and Field, Lacrosse, Wrestling, Tennis">
           <div className="flex" aria-hidden="true">
             {/* Two copies for seamless loop */}
-            <div className="flex gap-8 whitespace-nowrap animate-marquee flex-shrink-0">
+            <div
+              className={`flex gap-8 whitespace-nowrap flex-shrink-0 ${tickerPaused ? '[animation-play-state:paused]' : 'animate-marquee'}`}
+              onTouchStart={() => setTickerPaused(true)}
+              onTouchEnd={() => setTickerPaused(false)}
+            >
               {[...sportBadges, ...sportBadges].map((sport, i) => (
                 <span
                   key={i}
@@ -435,7 +437,7 @@ export default function Home() {
               Join athletes across Southern California who trusted NLR to take their recruiting to the next level. Your tape is waiting.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/contact" className="btn-gold text-sm py-4 px-12 flex items-center gap-2 animate-pulse-glow">
+              <Link to="/contact" className="btn-gold text-sm py-4 px-12 flex items-center gap-2 animate-pulse-glow-once">
                 Book Your Session
                 <ChevronRight size={16} aria-hidden="true" />
               </Link>

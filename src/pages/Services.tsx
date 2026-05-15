@@ -3,6 +3,15 @@ import { ChevronRight, Video, FileText, Globe, Headphones, Users, Star, Zap, Che
 import AnimatedSection from '../components/AnimatedSection'
 import PageSEO from '../components/PageSEO'
 
+const faqs = [
+  { q: 'What footage do I need to send?', a: 'Any raw game footage, practice clips, or combine video. Phone recordings are fine — we handle the editing. The more clips you send, the better we can select your strongest moments.' },
+  { q: 'How long does it take?', a: 'Standard turnaround is 5–7 business days from when we receive your footage. Rush delivery is available on request — ask us when you book.' },
+  { q: 'Do college coaches actually watch these?', a: 'Yes. A well-produced tape that leads with your best plays in the first 60 seconds dramatically increases your evaluation rate versus a raw, unedited file.' },
+  { q: 'Can NLR film at our games or events?', a: 'We operate at SoCal AAU gyms and travel sports facilities. Contact us to discuss on-site filming for your games, showcases, or combines.' },
+  { q: 'What is your revision policy?', a: 'Standard tape includes one revision round. Premium tape includes two revision rounds. All revisions must be requested within 30 days of delivery.' },
+  { q: 'Is this only for basketball?', a: 'No. We cover 10 sports: Basketball, Baseball, Football, Soccer, Volleyball, Softball, Track & Field, Lacrosse, Wrestling, and Tennis.' },
+]
+
 const servicesSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
@@ -165,6 +174,18 @@ export default function Services() {
         </div>
       </section>
 
+      {/* FREE CONSULTATION STRIP */}
+      <section className="py-4 bg-nlr-gold" aria-label="Free consultation offer">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+          <p className="font-heading font-bold text-nlr-darker text-sm tracking-wide uppercase">
+            Not sure where to start? Book a <span className="underline">free</span> 15-minute consultation — no commitment.
+          </p>
+          <Link to="/contact" className="bg-nlr-darker text-nlr-gold font-heading font-bold text-xs tracking-widest uppercase px-6 py-2.5 hover:bg-nlr-dark transition-colors whitespace-nowrap flex-shrink-0 border border-nlr-darker">
+            Book Free Call
+          </Link>
+        </div>
+      </section>
+
       {/* BEST VALUE PACKAGE */}
       <section className="py-16 bg-nlr-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -273,6 +294,29 @@ export default function Services() {
               </AnimatedSection>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-24 lg:py-32 bg-nlr-dark" aria-labelledby="faq-heading">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="text-center mb-16">
+            <p className="section-label">Common Questions</p>
+            <h2 id="faq-heading" className="display-heading text-5xl sm:text-7xl text-white mt-3">
+              GOT<br /><span className="text-nlr-gold">QUESTIONS?</span>
+            </h2>
+            <div className="gold-line mx-auto mt-6" aria-hidden="true" />
+          </AnimatedSection>
+          <dl className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {faqs.map((faq, i) => (
+              <AnimatedSection key={faq.q} delay={i * 80}>
+                <div className="bg-nlr-navy border border-white/5 p-8 h-full hover:border-nlr-gold/20 transition-all duration-300">
+                  <dt className="font-heading font-bold text-white text-lg tracking-wide uppercase mb-3">{faq.q}</dt>
+                  <dd className="text-white/60 text-sm leading-relaxed">{faq.a}</dd>
+                </div>
+              </AnimatedSection>
+            ))}
+          </dl>
         </div>
       </section>
 
