@@ -21,7 +21,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-white/50 text-sm leading-relaxed mb-6">
-              Southern California's premier athlete recruiting agency. Serving all sports, all ages, from youth to the transfer portal.
+              Southern California athlete recruiting — tapes, profiles, and consulting built by a coach who knows exactly what college coaches watch.
             </p>
             <div className="flex items-center gap-3" aria-label="Social media links">
               <a

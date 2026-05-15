@@ -27,10 +27,10 @@ const values = [
 ]
 
 const numbers = [
+  { val: '2018', label: 'Coaching Since', sub: 'Chamlian Armenian School' },
+  { val: '3', label: 'Coaching Roles', sub: 'Chamlian · Homenetmen · St. Francis' },
   { val: '10', label: 'Sports Covered', sub: 'Basketball to Tennis' },
-  { val: 'ALL', label: 'Ages Welcome', sub: 'Youth through Transfer Portal' },
   { val: 'SoCal', label: 'Where It Started', sub: 'AAU Gyms & Travel Sports' },
-  { val: '24hr', label: 'Response Time', sub: 'Every inquiry answered same day' },
 ]
 
 const founderSchema = {
