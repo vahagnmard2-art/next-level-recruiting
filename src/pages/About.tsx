@@ -30,7 +30,7 @@ const numbers = [
   { val: '10', label: 'Sports Covered', sub: 'Basketball to Tennis' },
   { val: 'ALL', label: 'Ages Welcome', sub: 'Youth through Transfer Portal' },
   { val: 'SoCal', label: 'Where It Started', sub: 'AAU Gyms & Travel Sports' },
-  { val: '∞', label: 'Franchise Vision', sub: 'National Expansion Coming' },
+  { val: '24hr', label: 'Response Time', sub: 'Every inquiry answered same day' },
 ]
 
 const founderSchema = {
@@ -54,7 +54,7 @@ export default function About() {
   return (
     <>
       <PageSEO
-        title="About — Andrew Ayvazian, Founder"
+        title="About NLR — Southern California Athlete Recruiting Agency"
         description="Meet Andrew Ayvazian, founder of Next Level Recruiting. Learn how NLR was built to give every Southern California athlete — regardless of background — professional recruiting tools and college exposure across 10 sports."
         canonical="/about"
         schema={founderSchema}
@@ -87,15 +87,19 @@ export default function About() {
               <AnimatedSection direction="left">
                 <div className="relative">
                   <div className="relative overflow-hidden bg-gradient-to-b from-nlr-green/10 to-nlr-darker">
-                    <img
-                      src="/andrew-ayvazian.png"
-                      alt="Andrew Ayvazian, founder of Next Level Recruiting, standing with arms crossed wearing an Adidas polo"
-                      width={600}
-                      height={750}
-                      className="w-full h-auto object-cover object-top"
-                      loading="eager"
-                      decoding="async"
-                    />
+                    <picture>
+                      <source srcSet="/andrew-ayvazian.webp" type="image/webp" />
+                      <img
+                        src="/andrew-ayvazian.png"
+                        alt="Andrew Ayvazian, founder of Next Level Recruiting, standing with arms crossed wearing an Adidas polo"
+                        width={750}
+                        height={1000}
+                        className="w-full h-auto object-cover object-top"
+                        loading="eager"
+                        decoding="async"
+                        fetchPriority="high"
+                      />
+                    </picture>
                     {/* Corner accents */}
                     <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-nlr-gold pointer-events-none" aria-hidden="true" />
                     <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-nlr-gold pointer-events-none" aria-hidden="true" />

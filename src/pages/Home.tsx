@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
 import {
-  ChevronRight, Play, Star, Award, Users, TrendingUp,
+  ChevronRight, Play, Award, Users, TrendingUp,
   Video, FileText, Globe, Headphones, CheckCircle, ArrowRight,
+  Instagram, Camera, MessageSquare,
 } from 'lucide-react'
 import AnimatedSection from '../components/AnimatedSection'
 import PageSEO from '../components/PageSEO'
@@ -37,24 +38,21 @@ const services = [
   },
 ]
 
-const testimonials = [
+const socialProofItems = [
   {
-    quote: "NLR built my son's highlight tape and within 3 weeks he had coaches reaching out. We were overwhelmed and so grateful.",
-    name: 'Marcus T.',
-    sport: 'Basketball — Class of 2025',
-    rating: 5,
+    icon: <Camera size={24} aria-hidden="true" />,
+    title: 'Behind the Tape',
+    desc: 'See how NLR produces every reel — from raw game footage to a coach-ready highlight package. Real process, real quality.',
   },
   {
-    quote: "The recruiting profile website was a game changer. My daughter could share one link and coaches saw everything. So professional.",
-    name: 'Jennifer R.',
-    sport: 'Volleyball — Class of 2026',
-    rating: 5,
+    icon: <Instagram size={24} aria-hidden="true" />,
+    title: 'Athlete Spotlights',
+    desc: 'Follow athletes from first session to commitment day. We document the journey so coaches see the full picture.',
   },
   {
-    quote: "Andrew understood exactly what D1 coaches look for. The film breakdown sold my story better than I could have done myself.",
-    name: 'Diego M.',
-    sport: 'Baseball — Transfer Portal',
-    rating: 5,
+    icon: <MessageSquare size={24} aria-hidden="true" />,
+    title: 'Recruiting Tips',
+    desc: 'Weekly content on what college coaches actually look for, how to reach them, and what separates watched tapes from ignored ones.',
   },
 ]
 
@@ -207,7 +205,7 @@ export default function Home() {
                 { val: '10', label: 'Sports Covered' },
                 { val: 'ALL', label: 'Ages Welcome' },
                 { val: 'SoCal', label: 'Based & Trusted' },
-                { val: '∞', label: 'Franchise Vision' },
+                { val: '24hr', label: 'Response Time' },
               ].map((stat) => (
                 <div key={stat.label} className="bg-nlr-darker/50 px-6 py-4 text-center">
                   <dt className="font-display text-2xl text-nlr-gold tracking-wider">{stat.val}</dt>
@@ -344,8 +342,8 @@ export default function Home() {
             <div className="flex items-center justify-center gap-4 mb-8">
               <span className="font-display text-6xl text-nlr-gold">$999</span>
               <div className="text-left">
-                <p className="text-white/40 text-sm line-through">$1,300+ value</p>
-                <p className="text-white/70 text-sm font-heading">Save $300+</p>
+                <p className="text-white/40 text-sm line-through">$1,500+ value</p>
+                <p className="text-white/70 text-sm font-heading">Save $500+</p>
               </div>
             </div>
             <Link to="/contact" className="btn-gold text-sm py-4 px-12 inline-flex items-center gap-2">
@@ -355,45 +353,48 @@ export default function Home() {
           </AnimatedSection>
         </section>
 
-        {/* TESTIMONIALS */}
-        <section className="py-24 lg:py-32 bg-nlr-dark" aria-labelledby="testimonials-heading">
+        {/* SOCIAL PROOF */}
+        <section className="py-24 lg:py-32 bg-nlr-dark" aria-labelledby="social-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <AnimatedSection className="text-center mb-16">
-              <p className="section-label">What Athletes Say</p>
-              <h2 id="testimonials-heading" className="display-heading text-5xl sm:text-7xl text-white mt-3">
-                REAL RESULTS,<br /><span className="text-nlr-gold">REAL ATHLETES</span>
+              <p className="section-label">Follow the Journey</p>
+              <h2 id="social-heading" className="display-heading text-5xl sm:text-7xl text-white mt-3">
+                SEE NLR<br /><span className="text-nlr-gold">IN ACTION</span>
               </h2>
               <div className="gold-line mx-auto mt-6" aria-hidden="true" />
+              <p className="text-white/50 text-base mt-6 max-w-xl mx-auto">
+                Follow <strong className="text-nlr-gold">@NLRAthletes</strong> on Instagram for behind-the-scenes tape production, athlete spotlights, and weekly recruiting tips.
+              </p>
             </AnimatedSection>
 
-            <ul className="grid grid-cols-1 md:grid-cols-3 gap-6 list-none m-0 p-0" role="list">
-              {testimonials.map((t, i) => (
-                <AnimatedSection key={t.name} delay={i * 120}>
-                  <li className="bg-nlr-navy border border-white/5 p-8 h-full flex flex-col hover:border-nlr-gold/20 transition-all duration-300">
-                    <div className="flex gap-1 mb-6" aria-label={`${t.rating} out of 5 stars`}>
-                      {Array.from({ length: t.rating }).map((_, j) => (
-                        <Star key={j} size={14} className="fill-nlr-gold text-nlr-gold" aria-hidden="true" />
-                      ))}
+            <ul className="grid grid-cols-1 md:grid-cols-3 gap-6 list-none m-0 p-0 mb-12" role="list">
+              {socialProofItems.map((item, i) => (
+                <AnimatedSection key={item.title} delay={i * 120}>
+                  <li className="bg-nlr-navy border border-white/5 p-8 h-full flex flex-col group hover:border-nlr-gold/20 transition-all duration-300">
+                    <div className="text-nlr-gold mb-5 group-hover:scale-110 transition-transform duration-300">
+                      {item.icon}
                     </div>
-                    <blockquote className="text-white/70 text-sm leading-relaxed flex-1 mb-6 italic">
-                      "{t.quote}"
-                    </blockquote>
-                    <footer className="border-t border-white/5 pt-6 flex items-center gap-3">
-                      <div
-                        className="w-10 h-10 bg-nlr-green/30 border border-nlr-green/50 flex items-center justify-center flex-shrink-0"
-                        aria-hidden="true"
-                      >
-                        <span className="font-display text-nlr-gold text-sm">{t.name.charAt(0)}</span>
-                      </div>
-                      <div>
-                        <cite className="font-heading font-bold text-white text-sm tracking-wide not-italic">{t.name}</cite>
-                        <p className="text-white/40 text-xs font-heading tracking-widest uppercase mt-0.5">{t.sport}</p>
-                      </div>
-                    </footer>
+                    <h3 className="font-heading font-bold text-white text-xl tracking-wide uppercase mb-3">
+                      {item.title}
+                    </h3>
+                    <p className="text-white/55 text-sm leading-relaxed flex-1">{item.desc}</p>
                   </li>
                 </AnimatedSection>
               ))}
             </ul>
+
+            <AnimatedSection className="text-center">
+              <a
+                href="https://instagram.com/NLRAthletes"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-gold text-sm py-4 px-10 inline-flex items-center gap-3"
+                aria-label="Follow NLR on Instagram — opens in new tab"
+              >
+                <Instagram size={18} aria-hidden="true" />
+                Follow @NLRAthletes
+              </a>
+            </AnimatedSection>
           </div>
         </section>
 

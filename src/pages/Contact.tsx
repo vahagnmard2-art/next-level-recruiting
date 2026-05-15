@@ -1,7 +1,10 @@
 import { useState, FormEvent, useId } from 'react'
-import { Mail, Instagram, MapPin, Phone, ChevronRight, CheckCircle, Send } from 'lucide-react'
+import { Mail, Instagram, MapPin, Phone, ChevronRight, CheckCircle, Send, AlertCircle } from 'lucide-react'
 import AnimatedSection from '../components/AnimatedSection'
 import PageSEO from '../components/PageSEO'
+
+// Sign up free at formspree.io, create a form, paste your form ID here
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORMSPREE_ID'
 
 const PHONE = '(818) 521-7493'
 const PHONE_HREF = 'tel:+18185217493'
@@ -32,6 +35,14 @@ const grades = [
   'College Freshman', 'College Sophomore',
   'College Junior', 'College Senior',
   'Transfer Portal',
+]
+
+const serviceAreas = [
+  { region: 'Los Angeles County', cities: 'LA, Glendale, Pasadena, Burbank' },
+  { region: 'San Fernando Valley', cities: 'Sherman Oaks, Studio City, Van Nuys' },
+  { region: 'Orange County', cities: 'Anaheim, Irvine, Santa Ana' },
+  { region: 'Inland Empire', cities: 'San Bernardino, Riverside, Ontario' },
+  { region: 'Ventura County', cities: 'Thousand Oaks, Oxnard, Ventura' },
 ]
 
 const contactSchema = {
@@ -75,6 +86,7 @@ export default function Contact() {
   const [form, setForm] = useState<FormData>(INITIAL)
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [submitError, setSubmitError] = useState(false)
   const [errors, setErrors] = useState<Partial<FormData>>({})
 
   const validate = (): boolean => {
@@ -88,12 +100,27 @@ export default function Contact() {
     return Object.keys(e).length === 0
   }
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
     if (!validate()) return
     setLoading(true)
-    // Replace with real form endpoint (Formspree, etc.)
-    setTimeout(() => { setLoading(false); setSubmitted(true) }, 1200)
+    setSubmitError(false)
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (res.ok) {
+        setSubmitted(true)
+      } else {
+        setSubmitError(true)
+      }
+    } catch {
+      setSubmitError(true)
+    } finally {
+      setLoading(false)
+    }
   }
 
   const handleChange = (
@@ -112,7 +139,7 @@ export default function Contact() {
     value: form[name],
     onChange: handleChange,
     'aria-describedby': errors[name] ? `${formId}-${name}-error` : undefined,
-    'aria-invalid': errors[name] ? true : undefined,
+    'aria-invalid': errors[name] ? (true as const) : undefined,
   })
 
   return (
@@ -346,6 +373,16 @@ export default function Contact() {
                         />
                       </div>
 
+                      {submitError && (
+                        <div className="flex items-center gap-3 bg-red-400/10 border border-red-400/30 px-4 py-3" role="alert" aria-live="assertive">
+                          <AlertCircle size={16} className="text-red-400 flex-shrink-0" aria-hidden="true" />
+                          <p className="text-red-400 text-sm">
+                            Something went wrong. Please try again or email us directly at{' '}
+                            <a href={`mailto:${EMAIL}`} className="underline hover:no-underline">{EMAIL}</a>.
+                          </p>
+                        </div>
+                      )}
+
                       <button
                         type="submit"
                         disabled={loading}
@@ -437,29 +474,23 @@ export default function Contact() {
                   </p>
                 </div>
 
-                {/* Map placeholder */}
-                <div className="bg-nlr-navy border border-white/5 overflow-hidden" aria-label="Service area: Southern California">
-                  <div className="aspect-video bg-gradient-to-br from-nlr-dark to-nlr-navy relative flex items-center justify-center">
-                    <div
-                      className="absolute inset-0 opacity-20"
-                      aria-hidden="true"
-                      style={{
-                        backgroundImage: 'linear-gradient(rgba(26,122,60,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(26,122,60,0.3) 1px, transparent 1px)',
-                        backgroundSize: '30px 30px',
-                      }}
-                    />
-                    <div className="relative text-center">
-                      <MapPin size={32} className="text-nlr-gold mx-auto mb-2" aria-hidden="true" />
-                      <p className="font-heading font-bold text-white text-sm tracking-widest uppercase">Southern California</p>
-                      <p className="text-white/40 text-xs mt-1">Los Angeles &amp; surrounding areas</p>
-                    </div>
-                    <div className="absolute bottom-0 left-0 right-0 p-3 bg-nlr-darker/80 border-t border-white/5">
-                      <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-nlr-gold" aria-hidden="true" />
-                        <span className="font-heading text-white/60 text-xs tracking-widest uppercase">NLR Service Area — All SoCal</span>
-                      </div>
-                    </div>
-                  </div>
+                {/* Service Area */}
+                <div className="bg-nlr-navy border border-white/5 p-6" aria-label="NLR service area">
+                  <h3 className="font-heading font-bold text-white text-sm tracking-widest uppercase mb-4 flex items-center gap-2">
+                    <MapPin size={14} className="text-nlr-gold" aria-hidden="true" />
+                    Service Area
+                  </h3>
+                  <ul className="space-y-3 list-none m-0 p-0" role="list">
+                    {serviceAreas.map((area) => (
+                      <li key={area.region} className="border-l-2 border-nlr-gold/40 pl-3">
+                        <p className="font-heading font-bold text-white text-xs tracking-wide uppercase">{area.region}</p>
+                        <p className="text-white/40 text-xs mt-0.5">{area.cities}</p>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-white/30 text-xs mt-4 font-body">
+                    Mobile — we come to your gym or facility.
+                  </p>
                 </div>
               </AnimatedSection>
             </div>
