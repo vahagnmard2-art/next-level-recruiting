@@ -118,17 +118,34 @@ export default function About() {
 
                 <div className="space-y-5 text-white/65 leading-relaxed text-sm sm:text-base">
                   <p>
-                    Andrew Ayvazian grew up watching talented athletes in Southern California gyms never get their shot — not because they weren't good enough, but because nobody saw them. The right tape wasn't made. The right coach wasn't contacted. The right story was never told.
+                    Andrew Ayvazian's journey in basketball began where it means the most — giving back. In 2018, he returned to his roots at Chamlian Armenian School as a youth coach, spending three seasons pouring into the same community that shaped him. It was there that he discovered his gift: not just teaching the game, but building the people who play it.
                   </p>
                   <p>
-                    That observation became an obsession. Working inside AAU programs and travel sports facilities across SoCal, Andrew saw firsthand how the recruiting process was broken — gatekept by access, budget, and connections. He decided to fix it.
+                    From Chamlian, Andrew brought his passion to Homenetmen Azadamard, where he volunteered at multiple tournaments and became known for something coaches rarely prioritize — fundamentals. The footwork, the decision-making, the habits that separate good players from great ones. He built that foundation, one rep at a time.
                   </p>
                   <p>
-                    Next Level Recruiting was built to democratize the recruiting process. To bring the same tools that elite programs and well-connected families take for granted to every athlete who has the talent and the drive — regardless of where they come from.
+                    Today, Andrew serves as the Head Freshman Coach at St. Francis High School, where his philosophy is simple and non-negotiable: a team is a family. Every player on the roster must trust each other — not just on the court, but beyond it. He doesn't just coach basketball. He builds the kind of brotherhood that St. Francis has stood for for generations.
                   </p>
                   <p>
-                    From youth athletes just discovering their potential to college transfers navigating the portal, NLR is the agency Andrew wished existed when he first started seeing these stories unfold. This isn't just business. It's a mission.
+                    Next Level Recruiting was born from everything Andrew witnessed along the way — talented athletes overlooked not because of ability, but because of access. He built NLR to close that gap. To give every young athlete the professional tools, the exposure, and the guidance that used to be reserved for the well-connected few.
                   </p>
+                  <p>
+                    When he's not on the court, you'll find him training and developing the next generation, studying the game he loves, or spending time with friends and family. Everything he does points back to one belief: every athlete deserves a shot.
+                  </p>
+                </div>
+
+                {/* Coaching credentials */}
+                <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  {[
+                    { label: 'Chamlian Armenian School', sub: 'Youth Coach · 2018–2021' },
+                    { label: 'Homenetmen Azadamard', sub: 'Volunteer Coach · Tournaments' },
+                    { label: 'St. Francis High School', sub: 'Head Freshman Coach' },
+                  ].map((cred) => (
+                    <div key={cred.label} className="border-l-2 border-nlr-gold pl-4 py-1">
+                      <p className="font-heading font-bold text-white text-xs tracking-wide uppercase leading-snug">{cred.label}</p>
+                      <p className="text-white/40 text-xs mt-0.5">{cred.sub}</p>
+                    </div>
+                  ))}
                 </div>
 
                 <div className="mt-8 flex flex-wrap items-center gap-4">
