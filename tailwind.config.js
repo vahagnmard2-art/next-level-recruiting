@@ -26,13 +26,12 @@ export default {
         'hero-gradient': 'linear-gradient(135deg, #070F16 0%, #0D1F2D 50%, #0A1F10 100%)',
         'green-gradient': 'linear-gradient(135deg, #145F2E 0%, #1A7A3C 100%)',
         'gold-gradient': 'linear-gradient(135deg, #A88830 0%, #C9A84C 50%, #E0C060 100%)',
-        'card-gradient': 'linear-gradient(145deg, rgba(26,122,60,0.08) 0%, rgba(13,31,45,0.95) 100%)',
       },
       animation: {
         'fade-up': 'fadeUp 0.7s ease-out forwards',
         'fade-in': 'fadeIn 0.7s ease-out forwards',
         'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
-        'shimmer': 'shimmer 2s linear infinite',
+        'bounce-slow': 'bounce 2s ease-in-out infinite',
       },
       keyframes: {
         fadeUp: {
@@ -46,10 +45,6 @@ export default {
         pulseGlow: {
           '0%, 100%': { boxShadow: '0 0 20px rgba(201,168,76,0.3)' },
           '50%': { boxShadow: '0 0 40px rgba(201,168,76,0.6)' },
-        },
-        shimmer: {
-          '0%': { backgroundPosition: '-200% center' },
-          '100%': { backgroundPosition: '200% center' },
         },
       },
     },

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://next-level-recruiting-theta.vercel.app/sitemap.xml

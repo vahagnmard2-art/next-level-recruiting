@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ChevronRight } from 'lucide-react'
 import AnimatedSection from '../components/AnimatedSection'
+import PageSEO from '../components/PageSEO'
 
 const sports = [
   {
@@ -77,6 +78,12 @@ const sports = [
 
 export default function Sports() {
   return (
+    <>
+      <PageSEO
+        title="Sports We Cover — Basketball, Baseball, Football & 7 More"
+        description="Next Level Recruiting covers 10 sports in Southern California: Basketball, Baseball, Football, Soccer, Volleyball, Softball, Track & Field, Lacrosse, Wrestling, and Tennis. All ages, all positions."
+        canonical="/sports"
+      />
     <div className="overflow-x-hidden">
       {/* HERO */}
       <section className="relative pt-32 pb-20 bg-nlr-darker overflow-hidden">
@@ -188,5 +195,6 @@ export default function Sports() {
         </AnimatedSection>
       </section>
     </div>
+    </>
   )
 }

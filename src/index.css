@@ -17,6 +17,31 @@
     box-sizing: border-box;
   }
 
+  /* Skip navigation — visually hidden until focused */
+  .skip-nav {
+    @apply fixed top-4 left-4 z-[100] bg-nlr-gold text-nlr-darker font-heading font-bold text-sm px-4 py-2 uppercase tracking-widest;
+    transform: translateY(-200%);
+    transition: transform 0.2s;
+  }
+
+  .skip-nav:focus {
+    transform: translateY(0);
+    outline: 3px solid white;
+    outline-offset: 2px;
+  }
+
+  /* Global focus ring — visible for keyboard nav */
+  :focus-visible {
+    outline: 2px solid #C9A84C;
+    outline-offset: 3px;
+    border-radius: 1px;
+  }
+
+  /* Reset outline for mouse users */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
   ::-webkit-scrollbar {
     width: 6px;
   }
@@ -33,6 +58,11 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #C9A84C;
   }
+
+  /* main anchor target — don't show focus ring on programmatic focus */
+  #main-content:focus {
+    outline: none;
+  }
 }
 
 @layer components {
@@ -45,12 +75,18 @@
     box-shadow: 0 6px 30px rgba(201, 168, 76, 0.45);
   }
 
+  .btn-gold:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+  }
+
   .btn-outline {
     @apply border-2 border-nlr-gold text-nlr-gold font-heading font-bold tracking-widest uppercase px-8 py-3 text-sm transition-all duration-300 hover:bg-nlr-gold hover:text-nlr-darker inline-block;
   }
 
-  .btn-green {
-    @apply bg-nlr-green text-white font-heading font-bold tracking-widest uppercase px-8 py-3 text-sm transition-all duration-300 hover:bg-nlr-green-light hover:scale-105 inline-block;
+  .btn-outline:focus-visible {
+    outline: 2px solid #C9A84C;
+    outline-offset: 3px;
   }
 
   .section-label {
@@ -61,14 +97,11 @@
     @apply font-display tracking-wide;
   }
 
-  .card-dark {
-    @apply bg-nlr-navy border border-white/5 rounded-none;
-  }
-
   .gold-line {
     @apply w-16 h-1 bg-nlr-gold;
   }
 
+  /* Scroll animation base states */
   .animate-on-scroll {
     opacity: 0;
     transform: translateY(30px);
@@ -101,6 +134,21 @@
     opacity: 1;
     transform: translateX(0);
   }
+
+  /* Respect reduced-motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-on-scroll,
+    .animate-on-scroll-left,
+    .animate-on-scroll-right {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+
+    .animate-marquee {
+      animation: none !important;
+    }
+  }
 }
 
 @layer utilities {
@@ -111,22 +159,23 @@
     background-clip: text;
   }
 
-  .text-gradient-green {
-    background: linear-gradient(135deg, #1A7A3C 0%, #22A050 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  /* Infinite marquee for sports ticker */
+  .animate-marquee {
+    animation: marquee 35s linear infinite;
+    will-change: transform;
   }
 
-  .bg-noise {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  .animate-marquee:hover {
+    animation-play-state: paused;
   }
+}
 
-  .clip-diagonal {
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+/* Marquee keyframes — outside @layer so they're not purged */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
   }
-
-  .clip-diagonal-reverse {
-    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+  100% {
+    transform: translateX(-50%);
   }
 }

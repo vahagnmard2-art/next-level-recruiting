@@ -1,6 +1,22 @@
 import { Link } from 'react-router-dom'
 import { ChevronRight, Video, FileText, Globe, Headphones, Users, Star, Zap, CheckCircle } from 'lucide-react'
 import AnimatedSection from '../components/AnimatedSection'
+import PageSEO from '../components/PageSEO'
+
+const servicesSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Next Level Recruiting Services & Pricing',
+  description: 'Athlete recruiting services including highlight tapes, film breakdowns, recruiting profiles, and college consulting in Southern California.',
+  itemListElement: [
+    { '@type': 'Offer', position: 1, name: 'Highlight Tape Standard', price: '300', priceCurrency: 'USD' },
+    { '@type': 'Offer', position: 2, name: 'Highlight Tape Premium', price: '450', priceCurrency: 'USD' },
+    { '@type': 'Offer', position: 3, name: 'Film Breakdown', price: '300', priceCurrency: 'USD' },
+    { '@type': 'Offer', position: 4, name: 'Recruiting Profile Website', price: '250', priceCurrency: 'USD' },
+    { '@type': 'Offer', position: 5, name: 'College Recruiting Consulting', price: '500', priceCurrency: 'USD' },
+    { '@type': 'Offer', position: 6, name: 'Full Recruiting Package', price: '999', priceCurrency: 'USD' },
+  ],
+}
 
 const services = [
   {
@@ -123,6 +139,13 @@ const packageFeatures = [
 
 export default function Services() {
   return (
+    <>
+      <PageSEO
+        title="Services & Pricing — Highlight Tapes, Film Breakdowns, Recruiting Profiles"
+        description="NLR services & pricing: Highlight Tape Standard ($300), Premium ($450), Film Breakdown ($300), Recruiting Profile ($250), College Consulting ($500/mo), Full Package ($999). Southern California athlete recruiting."
+        canonical="/services"
+        schema={servicesSchema}
+      />
     <div className="overflow-x-hidden">
       {/* HERO */}
       <section className="relative pt-32 pb-20 bg-nlr-darker overflow-hidden">
@@ -271,5 +294,6 @@ export default function Services() {
         </div>
       </section>
     </div>
+    </>
   )
 }
