@@ -30,7 +30,7 @@ export default function PageSEO({ title, description, canonical, ogImage = DEFAU
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:image:alt" content="Next Level Recruiting — Southern California's premier athlete recruiting agency" />
+      <meta property="og:image:alt" content="Next Level Recruiting — Southern California athlete recruiting agency" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:locale" content="en_US" />
@@ -42,7 +42,7 @@ export default function PageSEO({ title, description, canonical, ogImage = DEFAU
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:image:alt" content="Next Level Recruiting — Southern California's premier athlete recruiting agency" />
+      <meta name="twitter:image:alt" content="Next Level Recruiting — Southern California athlete recruiting agency" />
 
       {/* JSON-LD structured data */}
       {schema && (

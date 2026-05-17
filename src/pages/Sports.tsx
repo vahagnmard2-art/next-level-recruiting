@@ -86,13 +86,13 @@ export default function Sports() {
       />
     <div className="overflow-x-hidden">
       {/* HERO */}
-      <section className="relative pt-32 pb-20 bg-nlr-darker overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-nlr-green/5 via-transparent to-nlr-gold/5" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-nlr-green/8 blur-[150px]" />
+      <section className="relative pt-32 pb-20 bg-nlr-darker overflow-hidden" aria-labelledby="sports-hero-heading">
+        <div className="absolute inset-0 bg-gradient-to-br from-nlr-green/5 via-transparent to-nlr-gold/5" aria-hidden="true" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-nlr-green/8 blur-[150px]" aria-hidden="true" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection>
             <p className="section-label">10 Sports. All Ages.</p>
-            <h1 className="display-heading text-6xl sm:text-8xl text-white mt-3 mb-6">
+            <h1 id="sports-hero-heading" className="display-heading text-6xl sm:text-8xl text-white mt-3 mb-6">
               YOUR SPORT.<br /><span className="text-nlr-gold">OUR EXPERTISE.</span>
             </h1>
             <div className="gold-line mb-6" />
@@ -104,7 +104,7 @@ export default function Sports() {
       </section>
 
       {/* SPORTS GRID */}
-      <section className="py-24 lg:py-32 bg-nlr-dark">
+      <section className="py-24 lg:py-32 bg-nlr-dark" aria-label="Sports we cover">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {sports.map((sport, i) => (
@@ -155,10 +155,10 @@ export default function Sports() {
       </section>
 
       {/* DON'T SEE YOUR SPORT */}
-      <section className="py-16 bg-nlr-green">
+      <section className="py-16 bg-nlr-green" aria-labelledby="sports-missing-heading">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
-            <h2 className="display-heading text-4xl sm:text-6xl text-white mb-4">
+            <h2 id="sports-missing-heading" className="display-heading text-4xl sm:text-6xl text-white mb-4">
               DON'T SEE YOUR SPORT?
             </h2>
             <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
@@ -173,11 +173,11 @@ export default function Sports() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-nlr-darker relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-nlr-green/5 to-nlr-gold/5" />
+      <section className="py-24 bg-nlr-darker relative overflow-hidden" aria-labelledby="sports-cta-heading">
+        <div className="absolute inset-0 bg-gradient-to-r from-nlr-green/5 to-nlr-gold/5" aria-hidden="true" />
         <AnimatedSection className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <p className="section-label">Ready to Start?</p>
-          <h2 className="display-heading text-5xl sm:text-7xl text-white mt-4 mb-6">
+          <h2 id="sports-cta-heading" className="display-heading text-5xl sm:text-7xl text-white mt-4 mb-6">
             LET'S BUILD<br /><span className="text-nlr-gold">YOUR TAPE</span>
           </h2>
           <p className="text-white/60 text-lg mb-10">

@@ -157,16 +157,16 @@ export default function Services() {
       />
     <div className="overflow-x-hidden">
       {/* HERO */}
-      <section className="relative pt-32 pb-20 bg-nlr-darker overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-nlr-green/5 via-transparent to-nlr-gold/5" />
-        <div className="absolute top-0 right-0 w-96 h-96 bg-nlr-green/10 blur-[150px]" />
+      <section className="relative pt-32 pb-20 bg-nlr-darker overflow-hidden" aria-labelledby="services-hero-heading">
+        <div className="absolute inset-0 bg-gradient-to-br from-nlr-green/5 via-transparent to-nlr-gold/5" aria-hidden="true" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-nlr-green/10 blur-[150px]" aria-hidden="true" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection>
             <p className="section-label">Pricing & Services</p>
-            <h1 className="display-heading text-6xl sm:text-8xl text-white mt-3 mb-6">
+            <h1 id="services-hero-heading" className="display-heading text-6xl sm:text-8xl text-white mt-3 mb-6">
               INVEST IN<br /><span className="text-nlr-gold">YOUR FUTURE</span>
             </h1>
-            <div className="gold-line mb-6" />
+            <div className="gold-line mb-6" aria-hidden="true" />
             <p className="text-white/60 text-lg max-w-2xl leading-relaxed">
               Professional recruiting services priced for every stage of your athletic career. No hidden fees. No gimmicks. Just results.
             </p>
@@ -187,17 +187,17 @@ export default function Services() {
       </section>
 
       {/* BEST VALUE PACKAGE */}
-      <section className="py-16 bg-nlr-dark">
+      <section className="py-16 bg-nlr-dark" aria-labelledby="services-package-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="relative bg-gradient-to-br from-nlr-green via-nlr-green-dark to-nlr-darker border border-nlr-gold/30 p-8 lg:p-12 overflow-hidden">
               {/* Best value badge */}
-              <div className="absolute top-0 right-0">
+              <div className="absolute top-0 right-0" aria-hidden="true">
                 <div className="bg-nlr-gold text-nlr-darker font-heading font-bold text-xs tracking-widest uppercase px-6 py-2">
                   Best Value
                 </div>
               </div>
-              <div className="absolute bottom-0 right-0 w-64 h-64 bg-nlr-gold/5 blur-[100px]" />
+              <div className="absolute bottom-0 right-0 w-64 h-64 bg-nlr-gold/5 blur-[100px]" aria-hidden="true" />
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative">
                 <div>
@@ -205,7 +205,7 @@ export default function Services() {
                     <Zap size={24} className="text-nlr-gold" />
                     <span className="font-heading font-bold text-nlr-gold tracking-widest uppercase text-sm">Full Recruiting Package</span>
                   </div>
-                  <h2 className="display-heading text-5xl sm:text-7xl text-white mb-4">
+                  <h2 id="services-package-heading" className="display-heading text-5xl sm:text-7xl text-white mb-4">
                     EVERYTHING<br />YOU NEED
                   </h2>
                   <p className="text-white/70 leading-relaxed mb-8">
@@ -239,14 +239,14 @@ export default function Services() {
       </section>
 
       {/* INDIVIDUAL SERVICES */}
-      <section className="py-24 lg:py-32 bg-nlr-darker">
+      <section className="py-24 lg:py-32 bg-nlr-darker" aria-labelledby="services-individual-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
             <p className="section-label">Individual Services</p>
-            <h2 className="display-heading text-5xl sm:text-7xl text-white mt-3">
+            <h2 id="services-individual-heading" className="display-heading text-5xl sm:text-7xl text-white mt-3">
               PICK WHAT<br /><span className="text-nlr-gold">YOU NEED</span>
             </h2>
-            <div className="gold-line mx-auto mt-6" />
+            <div className="gold-line mx-auto mt-6" aria-hidden="true" />
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -321,10 +321,10 @@ export default function Services() {
       </section>
 
       {/* FAQ / PROCESS NOTE */}
-      <section className="py-16 bg-nlr-green">
+      <section className="py-16 bg-nlr-green" aria-labelledby="services-cta-heading">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
-            <h2 className="display-heading text-4xl sm:text-6xl text-white mb-4">
+            <h2 id="services-cta-heading" className="display-heading text-4xl sm:text-6xl text-white mb-4">
               NOT SURE WHERE TO START?
             </h2>
             <p className="text-white/70 text-lg mb-8 leading-relaxed">

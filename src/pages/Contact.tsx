@@ -103,6 +103,10 @@ export default function Contact() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
     if (!validate()) return
+    if (!import.meta.env.VITE_FORMSPREE_ID) {
+      setSubmitError(true)
+      return
+    }
     setLoading(true)
     setSubmitError(false)
     try {
