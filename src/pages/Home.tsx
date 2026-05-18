@@ -2,41 +2,20 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   ChevronRight, Play, Award, Users, Clock,
-  Video, FileText, Globe, Headphones, CheckCircle, ArrowRight,
-  Instagram,
+  CheckCircle, XCircle, Instagram,
 } from 'lucide-react'
 import AnimatedSection from '../components/AnimatedSection'
 import PageSEO from '../components/PageSEO'
 
-const services = [
-  {
-    icon: <Video size={28} aria-hidden="true" />,
-    title: 'Highlight Tapes',
-    desc: 'Professional highlight reels that showcase your best moments — edited to get coaches watching from the first second.',
-    price: 'From $300',
-    link: '/services',
-  },
-  {
-    icon: <FileText size={28} aria-hidden="true" />,
-    title: 'Film Breakdowns',
-    desc: 'Frame-by-frame analysis of your gameplay with coach-ready commentary that demonstrates your IQ and instincts.',
-    price: '$300',
-    link: '/services',
-  },
-  {
-    icon: <Globe size={28} aria-hidden="true" />,
-    title: 'Recruiting Profiles',
-    desc: 'Your personal recruiting website — stats, highlights, contact info — all in one shareable link coaches trust.',
-    price: '$250',
-    link: '/services',
-  },
-  {
-    icon: <Headphones size={28} aria-hidden="true" />,
-    title: 'Recruiting Consulting',
-    desc: 'One-on-one strategy sessions, school targeting, application guidance — we navigate the recruiting process with you.',
-    price: 'From $500/mo',
-    link: '/services',
-  },
+const compareRows = [
+  { feature: 'Who Builds Your Tape', nlr: 'Active head coach — NCAA Certified', other: 'Freelance video editors' },
+  { feature: 'Tape Strategy', nlr: 'Position-specific, coach-calibrated', other: 'Generic highlight reel' },
+  { feature: 'Turnaround', nlr: '5–7 days standard', other: '2–4 weeks average' },
+  { feature: 'Consultation', nlr: 'Free 15-min call, every client', other: 'Self-serve online form' },
+  { feature: 'Coach Network', nlr: 'D1–JUCO coaches contact NLR directly', other: 'Mass email distribution' },
+  { feature: 'Pricing Model', nlr: 'Pay per project, no subscription', other: 'Monthly fees, locked contracts' },
+  { feature: 'Revisions', nlr: 'Included, no surprise charges', other: 'Billed separately' },
+  { feature: 'Sports Covered', nlr: '10 sports, every position', other: 'Limited or sport-specific' },
 ]
 
 const steps = [
@@ -187,20 +166,6 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Stats bar */}
-            <dl className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/5 border border-white/5 max-w-2xl mx-auto">
-              {[
-                { val: '10', label: 'Sports Covered' },
-                { val: '$300', label: 'Starting Price' },
-                { val: '5–7', label: 'Day Delivery' },
-                { val: 'Free', label: 'Consultation' },
-              ].map((stat) => (
-                <div key={stat.label} className="bg-nlr-darker/50 px-6 py-4 text-center">
-                  <dt className="font-display text-2xl text-nlr-gold tracking-wider">{stat.val}</dt>
-                  <dd className="font-heading text-white/40 text-xs tracking-widest uppercase mt-0.5">{stat.label}</dd>
-                </div>
-              ))}
-            </dl>
           </div>
 
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2" aria-hidden="true">
@@ -271,78 +236,68 @@ export default function Home() {
           </div>
         </section>
 
-        {/* SERVICES PREVIEW */}
-        <section className="py-24 lg:py-32 bg-nlr-darker" aria-labelledby="services-preview-heading">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <AnimatedSection className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-16 gap-6">
-              <div>
-                <p className="section-label">What We Do</p>
-                <h2 id="services-preview-heading" className="display-heading text-5xl sm:text-7xl text-white mt-3">
-                  OUR<br /><span className="text-nlr-gold">SERVICES</span>
-                </h2>
-                <div className="gold-line mt-6" aria-hidden="true" />
-              </div>
-              <Link to="/services" className="btn-outline text-xs py-3 px-6 flex items-center gap-2 whitespace-nowrap">
-                Full Pricing
-                <ArrowRight size={14} aria-hidden="true" />
-              </Link>
+        {/* HOW WE COMPARE */}
+        <section className="py-24 lg:py-32 bg-nlr-darker" aria-labelledby="compare-heading">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <AnimatedSection className="text-center mb-16">
+              <p className="section-label">The Difference</p>
+              <h2 id="compare-heading" className="display-heading text-5xl sm:text-7xl text-white mt-3">
+                HOW WE<br /><span className="text-nlr-gold">STACK UP</span>
+              </h2>
+              <div className="gold-line mx-auto mt-6" aria-hidden="true" />
+              <p className="text-white/50 text-base mt-6 max-w-xl mx-auto">
+                Most recruiting platforms sell you a video. NLR gives you a strategy built by someone inside the process.
+              </p>
             </AnimatedSection>
 
-            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 list-none m-0 p-0" role="list">
-              {services.map((svc, i) => (
-                <AnimatedSection key={svc.title} delay={i * 100}>
-                  <li className="card-dark p-8 h-full flex flex-col group hover:-translate-y-1">
-                    <div className="text-nlr-gold mb-6 group-hover:scale-110 transition-transform duration-300">
-                      {svc.icon}
+            <AnimatedSection>
+              <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
+                <div className="min-w-[580px]">
+                  {/* Column headers */}
+                  <div className="grid grid-cols-[2fr_3fr_3fr] gap-px bg-white/5 mb-px">
+                    <div className="bg-nlr-darker p-5" />
+                    <div className="bg-nlr-green p-5 text-center">
+                      <p className="font-display text-white text-2xl tracking-widest leading-none">NLR</p>
+                      <p className="text-white/80 text-xs font-heading tracking-widest uppercase mt-1">Next Level Recruiting</p>
                     </div>
-                    <h3 className="font-heading font-bold text-white text-lg tracking-wide uppercase mb-3">
-                      {svc.title}
-                    </h3>
-                    <p className="text-white/55 text-sm leading-relaxed flex-1 mb-6">{svc.desc}</p>
-                    <div className="flex items-center justify-between">
-                      <span className="font-heading font-bold text-nlr-gold text-lg">{svc.price}</span>
-                      <Link
-                        to={svc.link}
-                        className="text-white/40 hover:text-nlr-gold transition-colors flex items-center gap-1 text-xs font-heading tracking-widest uppercase"
-                        aria-label={`View details for ${svc.title}`}
-                      >
-                        Details <ChevronRight size={12} aria-hidden="true" />
-                      </Link>
+                    <div className="bg-nlr-navy p-5 text-center">
+                      <p className="font-heading font-bold text-white/40 text-sm tracking-widest uppercase">Other Platforms</p>
+                      <p className="text-white/25 text-xs font-body mt-1">NCSA · Generic services</p>
                     </div>
-                  </li>
-                </AnimatedSection>
-              ))}
-            </ul>
-          </div>
-        </section>
+                  </div>
 
-        {/* BEST VALUE BANNER */}
-        <section className="py-16 bg-nlr-green relative overflow-hidden" aria-labelledby="package-heading">
-          <div className="absolute inset-0 opacity-10" aria-hidden="true" style={{
-            backgroundImage: 'repeating-linear-gradient(45deg, rgba(255,255,255,0.1) 0px, rgba(255,255,255,0.1) 1px, transparent 1px, transparent 50px)',
-          }} />
-          <AnimatedSection className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-            <span className="inline-block bg-nlr-gold text-nlr-darker font-heading font-bold text-xs tracking-widest uppercase px-4 py-1.5 mb-6">
-              Best Value
-            </span>
-            <h2 id="package-heading" className="display-heading text-5xl sm:text-7xl text-white mb-4">
-              FULL RECRUITING PACKAGE
-            </h2>
-            <p className="text-white/70 text-lg mb-4">
-              Highlight Tape + Film Breakdown + Recruiting Profile + Consulting — everything you need to compete for a spot.
-            </p>
-            <div className="flex items-center justify-center gap-4 mb-8">
-              <span className="font-display text-6xl text-nlr-gold">$999</span>
-              <div className="text-left">
-                <p className="text-white/40 text-sm line-through">$1,500+ value</p>
-                <p className="text-white/70 text-sm font-heading">Save $500+</p>
+                  {/* Comparison rows */}
+                  {compareRows.map((row, i) => (
+                    <div key={row.feature} className="grid grid-cols-[2fr_3fr_3fr] gap-px bg-white/5">
+                      <div className={`p-4 sm:p-5 flex items-center ${i % 2 === 0 ? 'bg-nlr-darker' : 'bg-nlr-dark'}`}>
+                        <span className="font-heading font-bold text-white/55 text-xs sm:text-sm tracking-wide uppercase leading-snug">
+                          {row.feature}
+                        </span>
+                      </div>
+                      <div className={`p-4 sm:p-5 flex items-start gap-2 sm:gap-3 ${i % 2 === 0 ? 'bg-nlr-green/10' : 'bg-nlr-green/6'}`}>
+                        <CheckCircle size={14} className="text-nlr-green flex-shrink-0 mt-0.5" aria-hidden="true" />
+                        <span className="text-white text-xs sm:text-sm font-body leading-snug">{row.nlr}</span>
+                      </div>
+                      <div className={`p-4 sm:p-5 flex items-start gap-2 sm:gap-3 ${i % 2 === 0 ? 'bg-nlr-navy' : 'bg-nlr-dark'}`}>
+                        <XCircle size={14} className="text-white/20 flex-shrink-0 mt-0.5" aria-hidden="true" />
+                        <span className="text-white/40 text-xs sm:text-sm font-body leading-snug">{row.other}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-            <Link to="/contact" className="btn-gold text-sm py-4 px-12 inline-flex items-center gap-2">
-              Get the Package
-              <ChevronRight size={16} aria-hidden="true" />
-            </Link>
-          </AnimatedSection>
+
+              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Link to="/contact" className="btn-gold text-sm py-4 px-12 flex items-center gap-2">
+                  Book Free Consultation
+                  <ChevronRight size={16} aria-hidden="true" />
+                </Link>
+                <Link to="/services" className="btn-outline text-sm py-4 px-10">
+                  View Pricing
+                </Link>
+              </div>
+            </AnimatedSection>
+          </div>
         </section>
 
         {/* SEE THE WORK */}
