@@ -14,16 +14,20 @@ export default function AnimatedSection({ children, className = '', delay = 0, d
     const el = ref.current
     if (!el) return
 
+    const cappedDelay = Math.min(delay, 120)
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setTimeout(() => {
+          if (cappedDelay > 0) {
+            setTimeout(() => { el.classList.add('visible') }, cappedDelay)
+          } else {
             el.classList.add('visible')
-          }, delay)
+          }
           observer.unobserve(el)
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.05, rootMargin: '0px 0px -20px 0px' }
     )
 
     observer.observe(el)

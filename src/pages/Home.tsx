@@ -156,8 +156,8 @@ export default function Home() {
               backgroundSize: '60px 60px',
             }}
           />
-          <div className="absolute top-0 left-0 w-64 h-64 bg-nlr-green/5 blur-[120px]" aria-hidden="true" />
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-nlr-gold/5 blur-[120px]" aria-hidden="true" />
+          <div className="hidden sm:block absolute top-0 left-0 w-64 h-64 bg-nlr-green/5 blur-[120px]" aria-hidden="true" />
+          <div className="hidden sm:block absolute bottom-0 right-0 w-96 h-96 bg-nlr-gold/5 blur-[120px]" aria-hidden="true" />
 
           <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24">
             <div className="inline-flex items-center gap-3 mb-8">
@@ -438,7 +438,7 @@ export default function Home() {
         {/* FINAL CTA */}
         <section className="py-24 lg:py-32 bg-nlr-darker relative overflow-hidden" aria-labelledby="cta-heading">
           <div className="absolute inset-0 bg-gradient-to-br from-nlr-green/10 via-transparent to-nlr-gold/5" aria-hidden="true" />
-          <div className="absolute top-0 right-0 w-96 h-96 bg-nlr-gold/5 blur-[150px]" aria-hidden="true" />
+          <div className="hidden sm:block absolute top-0 right-0 w-96 h-96 bg-nlr-gold/5 blur-[150px]" aria-hidden="true" />
           <AnimatedSection className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
             <p className="section-label">Take the Next Step</p>
             <h2 id="cta-heading" className="display-heading text-6xl sm:text-8xl text-white mt-4 mb-6">

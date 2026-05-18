@@ -114,11 +114,13 @@
 
 @layer components {
   .btn-gold {
-    @apply bg-nlr-gold text-nlr-darker font-heading font-bold tracking-widest uppercase px-8 py-3 text-sm transition-all duration-300 hover:bg-nlr-gold-light hover:scale-105 hover:shadow-lg inline-block;
+    @apply bg-nlr-gold text-nlr-darker font-heading font-bold tracking-widest uppercase px-8 py-3 text-sm inline-block;
     box-shadow: 0 4px 20px rgba(201, 168, 76, 0.25);
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   }
 
   .btn-gold:hover {
+    @apply bg-nlr-gold-light scale-105;
     box-shadow: 0 6px 30px rgba(201, 168, 76, 0.45);
   }
 
@@ -128,7 +130,12 @@
   }
 
   .btn-outline {
-    @apply border-2 border-nlr-gold text-nlr-gold font-heading font-bold tracking-widest uppercase px-8 py-3 text-sm transition-all duration-300 hover:bg-nlr-gold hover:text-nlr-darker inline-block;
+    @apply border-2 border-nlr-gold text-nlr-gold font-heading font-bold tracking-widest uppercase px-8 py-3 text-sm inline-block;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .btn-outline:hover {
+    @apply bg-nlr-gold text-nlr-darker;
   }
 
   .btn-outline:focus-visible {
@@ -151,8 +158,8 @@
   /* Scroll animation base states */
   .animate-on-scroll {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    transform: translateY(14px);
+    transition: opacity 0.45s ease-out, transform 0.45s ease-out;
   }
 
   .animate-on-scroll.visible {
@@ -162,8 +169,8 @@
 
   .animate-on-scroll-left {
     opacity: 0;
-    transform: translateX(-30px);
-    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    transform: translateX(-20px);
+    transition: opacity 0.45s ease-out, transform 0.45s ease-out;
   }
 
   .animate-on-scroll-left.visible {
@@ -173,8 +180,8 @@
 
   .animate-on-scroll-right {
     opacity: 0;
-    transform: translateX(30px);
-    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    transform: translateX(20px);
+    transition: opacity 0.45s ease-out, transform 0.45s ease-out;
   }
 
   .animate-on-scroll-right.visible {
