@@ -416,10 +416,10 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ul className="grid grid-cols-2 lg:grid-cols-4 gap-8 list-none m-0 p-0" role="list">
               {[
-                { icon: <Award size={24} aria-hidden="true" />, title: 'Coach-Built', sub: 'Made by someone who coaches, not just edits' },
-                { icon: <Users size={24} aria-hidden="true" />, title: 'All Ages Welcome', sub: 'Youth through transfer portal' },
+                { icon: <Award size={24} aria-hidden="true" />, title: 'Coach-Built', sub: 'NCAA Certified founder who coaches daily' },
+                { icon: <Users size={24} aria-hidden="true" />, title: 'All Ages Welcome', sub: 'Youth, HS, AAU, transfer portal' },
                 { icon: <Clock size={24} aria-hidden="true" />, title: '5–7 Day Delivery', sub: 'Rush turnaround available' },
-                { icon: <CheckCircle size={24} aria-hidden="true" />, title: 'Transparent Pricing', sub: 'No hidden fees, ever' },
+                { icon: <CheckCircle size={24} aria-hidden="true" />, title: 'Coaches Contact NLR', sub: 'Programs from D1 to JUCO reach out nationally' },
               ].map((item, i) => (
                 <AnimatedSection key={item.title} delay={i * 100}>
                   <li className="flex items-center gap-4">

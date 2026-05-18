@@ -31,4 +31,46 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://next-level-recruiting-theta.vercel.app/blog</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://next-level-recruiting-theta.vercel.app/blog/what-college-coaches-look-for-in-a-highlight-tape</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://next-level-recruiting-theta.vercel.app/blog/ncaa-recruiting-rules-explained-for-athletes-and-parents</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://next-level-recruiting-theta.vercel.app/blog/how-to-get-recruited-for-college-basketball-complete-guide</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://next-level-recruiting-theta.vercel.app/blog/transfer-portal-recruiting-what-college-athletes-need-to-know</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://next-level-recruiting-theta.vercel.app/blog/recruiting-profile-website-why-every-athlete-needs-one</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://next-level-recruiting-theta.vercel.app/careers</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

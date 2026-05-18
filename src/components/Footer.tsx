@@ -54,6 +54,8 @@ export default function Footer() {
                 { label: 'Home', path: '/' },
                 { label: 'Services & Pricing', path: '/services' },
                 { label: 'Sports We Cover', path: '/sports' },
+                { label: 'Blog', path: '/blog' },
+                { label: 'Careers', path: '/careers' },
                 { label: 'About NLR', path: '/about' },
                 { label: 'Book / Contact', path: '/contact' },
               ].map((link) => (

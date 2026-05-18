@@ -11,6 +11,9 @@ const Services = lazy(() => import('./pages/Services'))
 const Sports = lazy(() => import('./pages/Sports'))
 const About = lazy(() => import('./pages/About'))
 const Contact = lazy(() => import('./pages/Contact'))
+const Blog = lazy(() => import('./pages/Blog'))
+const BlogPost = lazy(() => import('./pages/BlogPost'))
+const Careers = lazy(() => import('./pages/Careers'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 
 function App() {
@@ -29,6 +32,9 @@ function App() {
                   <Route path="/sports" element={<Sports />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/contact" element={<Contact />} />
+                  <Route path="/blog" element={<Blog />} />
+                  <Route path="/blog/:slug" element={<BlogPost />} />
+                  <Route path="/careers" element={<Careers />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>

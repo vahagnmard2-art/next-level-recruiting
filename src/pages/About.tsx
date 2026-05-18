@@ -27,10 +27,10 @@ const values = [
 ]
 
 const numbers = [
-  { val: '2018', label: 'Coaching Since', sub: 'Chamlian Armenian School' },
-  { val: '3', label: 'Coaching Roles', sub: 'Chamlian · Homenetmen · St. Francis' },
+  { val: '20+', label: 'Athletes Served', sub: 'Male & Female, All Sports' },
   { val: '10', label: 'Sports Covered', sub: 'Basketball to Tennis' },
-  { val: 'SoCal', label: 'Where It Started', sub: 'AAU Gyms & Travel Sports' },
+  { val: '2018', label: 'Coaching Since', sub: 'Chamlian Armenian School' },
+  { val: 'D1–JUCO', label: 'Programs Reached', sub: 'Coaches Contact NLR Nationally' },
 ]
 
 const founderSchema = {
@@ -131,7 +131,7 @@ export default function About() {
                     Today, Andrew serves as the Head Freshman Coach at St. Francis High School, where his philosophy is simple and non-negotiable: a team is a family. Every player on the roster must trust each other — not just on the court, but beyond it. He doesn't just coach basketball. He builds the kind of brotherhood that St. Francis has stood for for generations.
                   </p>
                   <p>
-                    Next Level Recruiting was born from everything Andrew witnessed along the way — talented athletes overlooked not because of ability, but because of access. He built NLR to close that gap. To give every young athlete the professional tools, the exposure, and the guidance that used to be reserved for the well-connected few.
+                    Next Level Recruiting was born from everything Andrew witnessed along the way — talented athletes overlooked not because of ability, but because of access. He built NLR to close that gap. To give every young athlete — male or female, across 10 sports — the professional tools, the exposure, and the guidance that used to be reserved for the well-connected few.
                   </p>
                   <p>
                     When he's not on the court, you'll find him training and developing the next generation, studying the game he loves, or spending time with friends and family. Everything he does points back to one belief: every athlete deserves a shot.
@@ -150,6 +150,18 @@ export default function About() {
                       <p className="text-white/40 text-xs mt-0.5">{cred.sub}</p>
                     </div>
                   ))}
+                </div>
+
+                {/* Certifications */}
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <div className="flex items-center gap-2 bg-nlr-navy border border-nlr-gold/30 px-4 py-2">
+                    <span className="w-2 h-2 rounded-full bg-nlr-gold flex-shrink-0" aria-hidden="true" />
+                    <span className="font-heading font-bold text-nlr-gold text-xs tracking-widest uppercase">Gold License Certified</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-nlr-navy border border-nlr-gold/30 px-4 py-2">
+                    <span className="w-2 h-2 rounded-full bg-nlr-gold flex-shrink-0" aria-hidden="true" />
+                    <span className="font-heading font-bold text-nlr-gold text-xs tracking-widest uppercase">NCAA Certified</span>
+                  </div>
                 </div>
 
                 <div className="mt-8 flex flex-wrap items-center gap-4">

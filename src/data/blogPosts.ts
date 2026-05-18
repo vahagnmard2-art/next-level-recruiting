@@ -1,0 +1,206 @@
+export interface BlogPost {
+  slug: string
+  title: string
+  description: string
+  date: string
+  readTime: string
+  category: string
+  body: BlogSection[]
+}
+
+export interface BlogSection {
+  type: 'p' | 'h2' | 'h3' | 'ul' | 'ol' | 'blockquote'
+  content: string | string[]
+}
+
+export const blogPosts: BlogPost[] = [
+  {
+    slug: 'what-college-coaches-look-for-in-a-highlight-tape',
+    title: 'What College Coaches Actually Look for in a Highlight Tape',
+    description: 'Most recruiting tapes lose a coach in the first 20 seconds. Here\'s what coaches want to see — and what makes them stop watching.',
+    date: '2026-05-10',
+    readTime: '6 min read',
+    category: 'Highlight Tapes',
+    body: [
+      { type: 'p', content: 'College coaches watch hundreds of recruiting tapes every evaluation period. Most get skipped within 30 seconds. If you want yours to make it past the opening sequence, you need to understand what a coach is actually evaluating — not what you think looks impressive.' },
+      { type: 'h2', content: 'The First 20 Seconds Are Everything' },
+      { type: 'p', content: 'A coach\'s decision to keep watching or close the tab happens almost immediately. That window is your audition. Open with your three best plays — not a montage of your face, not your team\'s championship celebration, and not a slow-motion walk to the court. Your best basketball goes first. Full stop.' },
+      { type: 'p', content: 'This is one of the most common mistakes we see in self-edited tapes. Athletes lead with highlights that matter to them personally — the overtime buzzer-beater against their rival — instead of the clips that demonstrate the specific skills a coach at their target level needs to see.' },
+      { type: 'h2', content: 'Position-Specific Production' },
+      { type: 'p', content: 'A D1 coach recruiting a point guard isn\'t watching the same thing as one recruiting a center. Your tape should be built around what coaches at your position and target level prioritize.' },
+      { type: 'ul', content: [
+        'Point guards: court vision, decision-making in the pick-and-roll, pull-up efficiency',
+        'Wings: switchability, three-point shooting off movement, transition play',
+        'Bigs: rim protection, drop coverage, short-roll reads, rebounding angles',
+        'All positions: effort plays — screens, deflections, charges taken',
+      ]},
+      { type: 'p', content: 'A tape that doesn\'t speak the language of the position is a tape that doesn\'t get shared to the head coach\'s inbox.' },
+      { type: 'h2', content: 'What Coaches Skip Over' },
+      { type: 'ul', content: [
+        'Anything longer than 5 minutes (3–4 is the sweet spot)',
+        'Plays where the result is lucky — you want displays of skill and IQ, not happy accidents',
+        'Defensive clips with no context — coaches can\'t evaluate your positioning without the full play',
+        'Low-quality audio that makes the tape feel unfinished',
+        'Intros that run past 10 seconds',
+      ]},
+      { type: 'h2', content: 'The Credibility Frame' },
+      { type: 'p', content: 'Your tape needs to answer three questions in the first 60 seconds: Who is this athlete? What level are they playing at? Can they play at my level? Name, number, school, position, and grad year should appear early — coaches shouldn\'t have to search your email for basic info.' },
+      { type: 'blockquote', content: '"I\'ve closed tapes at the 15-second mark because I couldn\'t figure out what position the kid played. Don\'t make me work to evaluate you." — Division I assistant coach' },
+      { type: 'h2', content: 'The Production Standard' },
+      { type: 'p', content: 'A rough color grade, inconsistent audio mixing, and jarring jump cuts all signal that the athlete didn\'t take the tape seriously. Whether that\'s fair or not is irrelevant — production quality communicates investment level. Coaches make judgments about your character from the tape before they ever meet you.' },
+      { type: 'p', content: 'This is why having a coach build your tape — someone who has sat in recruiting meetings and watched film as an evaluator — matters. The decisions made in the editing room are informed by the same criteria coaches use to make their scholarship decisions.' },
+    ],
+  },
+  {
+    slug: 'ncaa-recruiting-rules-explained-for-athletes-and-parents',
+    title: 'NCAA Recruiting Rules Explained: What Every Athlete and Parent Needs to Know',
+    description: 'The NCAA recruiting calendar, contact rules, dead periods, and evaluation windows — broken down in plain language so you don\'t make a costly mistake.',
+    date: '2026-05-05',
+    readTime: '8 min read',
+    category: 'Recruiting 101',
+    body: [
+      { type: 'p', content: 'The NCAA recruiting rulebook is dense, frequently updated, and written in language that assumes you\'re a compliance officer. Most families learn the rules the hard way — after a violation has already occurred. This breakdown covers the fundamentals every athlete and parent must understand before engaging with college programs.' },
+      { type: 'h2', content: 'The Recruiting Calendar' },
+      { type: 'p', content: 'The NCAA divides the recruiting year into distinct periods that control when and how coaches can contact athletes. Understanding these windows is critical — a coach reaching out to you during a dead period isn\'t flattering, it\'s a violation.' },
+      { type: 'h3', content: 'Contact Period' },
+      { type: 'p', content: 'Coaches may have in-person contact with prospective athletes and their families off-campus. This is when official visits, home visits, and live evaluations happen. The contact period is when recruiting relationships are built.' },
+      { type: 'h3', content: 'Evaluation Period' },
+      { type: 'p', content: 'Coaches can watch you compete in person at games and tournaments, but cannot have off-campus contact with you or your family. This is your window to perform in front of live evaluators — and why having a polished tape to send before the evaluation period begins is so valuable.' },
+      { type: 'h3', content: 'Dead Period' },
+      { type: 'p', content: 'No in-person contact of any kind. Coaches can still communicate via phone, text, and email — but cannot see you play or meet with you off-campus. Violations during dead periods can result in program penalties.' },
+      { type: 'h3', content: 'Quiet Period' },
+      { type: 'p', content: 'Coaches may have in-person contact with you on their campus only (official visits), but cannot evaluate you off-campus or attend your games.' },
+      { type: 'h2', content: 'When Can Coaches Contact You?' },
+      { type: 'p', content: 'For Division I basketball, coaches cannot initiate contact until June 15 before your junior year. Before that date, you can contact coaches — but they cannot respond beyond a camp brochure or questionnaire.' },
+      { type: 'ul', content: [
+        'D1 basketball first contact: June 15 before junior year',
+        'Official visits: No more than 5 total (D1), starting after your sophomore year',
+        'Unofficial visits: Unlimited and can occur at any time',
+        'Verbal offers: Not binding — either party can rescind',
+        'National Letter of Intent (NLI): Binding — read carefully before signing',
+      ]},
+      { type: 'h2', content: 'What Athletes Can Do Before Contact Periods Open' },
+      { type: 'p', content: 'The most common misconception is that recruiting doesn\'t start until coaches can contact you. Wrong. The groundwork — your highlight tape, your recruiting profile, and your target school list — should be built well before any coach can legally reach out.' },
+      { type: 'p', content: 'Programs are evaluating athletes long before they can send a text. Coaches have seen your tape, talked to your AAU coach, and discussed you internally before you ever hear from them. Getting your materials in front of programs early, through unofficial channels and direct outreach on your end, is how you get in the conversation.' },
+      { type: 'h2', content: 'The Transfer Portal' },
+      { type: 'p', content: 'Since 2021, the transfer portal has fundamentally changed college recruiting. Athletes can now enter the portal once per year and transfer without sitting out a season. This has created an entirely new recruiting market — and a new need for professional recruiting materials at the collegiate level.' },
+      { type: 'p', content: 'If you\'re a college athlete considering a transfer, your tape and profile are just as important as they were in high school — maybe more so, because coaches now have full game film to evaluate rather than highlight clips.' },
+    ],
+  },
+  {
+    slug: 'how-to-get-recruited-for-college-basketball-complete-guide',
+    title: 'How to Get Recruited for College Basketball: A Complete Guide for SoCal Athletes',
+    description: 'From AAU exposure to official visits — everything a Southern California basketball player needs to do, in the right order, to earn a college offer.',
+    date: '2026-04-28',
+    readTime: '10 min read',
+    category: 'Basketball',
+    body: [
+      { type: 'p', content: 'Southern California is one of the most talent-dense basketball regions in the country. That\'s an opportunity and a challenge. The opportunity: you\'re playing against and alongside elite competition every day, which raises your game. The challenge: coaches have seen thousands of SoCal players and their filters are calibrated accordingly. Here\'s how to cut through.' },
+      { type: 'h2', content: 'Build Your Foundation (Freshman & Sophomore Year)' },
+      { type: 'p', content: 'Most athletes and families think recruiting starts junior year. Programs are tracking players from 8th and 9th grade. What you do — and how you present yourself — in your first two years of high school sets the table for everything that follows.' },
+      { type: 'ul', content: [
+        'Play for a reputable AAU program with tournament exposure (Nike EYBL, Adidas 3SSB, Under Armour)',
+        'Build a relationship with your high school coach — their endorsement matters to college coaches',
+        'Create a basic recruiting profile with your stats, GPA, and contact information',
+        'Start attending college camps and showcases — Nike Elite 100, Top 100 Camp, program-specific camps',
+        'Begin a target school list at 3 tiers: reach, target, and likely',
+      ]},
+      { type: 'h2', content: 'Create Your Recruiting Materials (Early Junior Year)' },
+      { type: 'p', content: 'Before June 15 of your junior year — when D1 coaches can legally contact you — your tape, profile, and outreach materials should be complete. This is the most critical mistake SoCal athletes make: waiting until coaches can call them to prepare materials, when they should be in coaches\' hands already.' },
+      { type: 'ul', content: [
+        'Professional highlight tape: position-specific, 3–5 minutes, best plays first',
+        'Recruiting profile website: one link coaches can share internally',
+        'Film breakdown: full game analysis showing your IQ and decision-making',
+        'Outreach email template: one paragraph intro, stats, tape link, contact info',
+      ]},
+      { type: 'h2', content: 'Make Direct Contact with Programs' },
+      { type: 'p', content: 'You can contact coaches at any time — it\'s only the other direction that has restrictions. Use this. Send your tape and profile to every program on your list before the contact period opens. A coach who already knows who you are when they can finally reach out is far more likely to do so.' },
+      { type: 'p', content: 'Target assistants first — they\'re the ones doing most of the film work and prospect identification. A relationship with an assistant often leads to an introduction to the head coach.' },
+      { type: 'h2', content: 'Perform in the Right Environments' },
+      { type: 'p', content: 'SoCal coaches know the AAU circuit inside and out. They know which programs are legitimate evaluation environments and which are travel showcases. If you\'re serious about D1, you need to be competing in the right tournaments:' },
+      { type: 'ul', content: [
+        'Nike EYBL (Peach Jam in July is the most watched event of the summer)',
+        'Adidas 3SSB Circuit',
+        'Under Armour Association',
+        'Cal Swag events and SoCal-specific showcases',
+        'High school CIF playoffs — coaches attend in December/January',
+      ]},
+      { type: 'h2', content: 'The Visit Process' },
+      { type: 'p', content: 'Official visits are your five bullets — use them strategically. An official visit means the program is serious. Unofficial visits are unlimited and can happen at any time — use them to evaluate campuses before committing your five officials.' },
+      { type: 'h2', content: 'Understanding Your Level' },
+      { type: 'p', content: 'D1 is the goal for most players, but the right D2 or D3 situation will advance your development and life prospects more than the wrong D1 situation. Work with someone who can honestly evaluate your current level and project where you\'ll be as a senior, not just where you are today. Chasing a D1 offer at the expense of real opportunities at D2 and D3 programs is a path that ends in disappointment for many talented SoCal athletes.' },
+    ],
+  },
+  {
+    slug: 'transfer-portal-recruiting-what-college-athletes-need-to-know',
+    title: 'Transfer Portal Recruiting: What College Athletes Need to Know in 2026',
+    description: 'The transfer portal has changed college athletics forever. Here\'s how to navigate it successfully — from deciding to enter to landing in the right spot.',
+    date: '2026-04-15',
+    readTime: '7 min read',
+    category: 'Transfer Portal',
+    body: [
+      { type: 'p', content: 'The NCAA transfer portal has created a second recruiting market that moves faster, with less patience, and with higher stakes than high school recruiting. If you\'re a college athlete considering a transfer — or you\'re a high school recruit trying to understand how portal dynamics affect your own recruitment — this guide is for you.' },
+      { type: 'h2', content: 'The New Transfer Landscape' },
+      { type: 'p', content: 'Since 2021, athletes can transfer once per year and maintain immediate eligibility. What this has done is create a year-round recruiting market. Programs that used to fill one or two roster spots via transfer now build significant portions of their rosters through the portal. That means more opportunity — but also a faster, more competitive process.' },
+      { type: 'p', content: 'The window that matters most is immediately after seasons end. Programs identify needs, coaching staffs start pulling film, and decisions move fast. If you enter the portal without professional materials ready, you\'re behind from day one.' },
+      { type: 'h2', content: 'Before You Enter' },
+      { type: 'p', content: 'Entering the portal is not a decision to make lightly. Once you\'re in, you\'re in — and the clock starts. Before you enter, have answers to these questions:' },
+      { type: 'ul', content: [
+        'What specifically isn\'t working at your current program?',
+        'What are you looking for in a new situation (role, location, coaching style, academic program)?',
+        'What is your realistic market? Be honest about your level of play and production.',
+        'Do you have professional materials ready to send immediately upon entering?',
+        'Do you have relationships with coaches at target programs already?',
+      ]},
+      { type: 'h2', content: 'Your Portal Materials' },
+      { type: 'p', content: 'Transfer portal recruiting moves at a different speed than high school recruiting. A D1 program with a scholarship to fill and a 30-day window isn\'t waiting for you to put together a tape. They need your materials immediately.' },
+      { type: 'ul', content: [
+        'College highlight tape: updated from this season, position-specific, 3–5 minutes',
+        'Full game film: coaches will ask for this — have 2–3 recent games ready',
+        'Recruiting profile: updated stats, GPA, major, eligibility remaining',
+        'One-paragraph bio: position, production, what you\'re looking for, available eligibility',
+      ]},
+      { type: 'h2', content: 'How Programs Evaluate Portal Players Differently' },
+      { type: 'p', content: 'Coaches recruiting from the portal know exactly what to look for — because they have full game film, not just highlights. They can see your defensive rotations, your reaction time, how you play off-ball. This is why a film breakdown that shows your IQ and decision-making is as important as your highlight tape in the portal.' },
+      { type: 'p', content: 'They\'re also evaluating fit and character. Programs can talk to your current coaches, your AAU coaches, your teammates. Your reputation follows you into the portal.' },
+      { type: 'h2', content: 'The 30-Day Window' },
+      { type: 'p', content: 'After entering, most transfer decisions are made within 30 days. Programs act quickly to fill specific needs, and athletes who are slow to respond or slow to provide materials get passed over. Speed matters. Having your tape, film, profile, and a clear communication strategy ready before you enter is what separates athletes who land in the right situation from those who accept the only offer left standing.' },
+      { type: 'blockquote', content: '"The portal is not a second chance — it\'s a second audition. Come prepared or don\'t come at all."' },
+    ],
+  },
+  {
+    slug: 'recruiting-profile-website-why-every-athlete-needs-one',
+    title: 'Why Every Serious Recruit Needs a Recruiting Profile Website',
+    description: 'A recruiting profile website is the one link that does all the work — giving coaches everything they need to evaluate you without digging through emails.',
+    date: '2026-04-05',
+    readTime: '5 min read',
+    category: 'Recruiting Profiles',
+    body: [
+      { type: 'p', content: 'When a college coach receives your email, they have approximately 45 seconds to decide if you\'re worth further evaluation. If they have to search three different places for your highlight tape, your stats, your GPA, and your contact information — most won\'t. A recruiting profile website solves this problem completely.' },
+      { type: 'h2', content: 'One Link, Everything a Coach Needs' },
+      { type: 'p', content: 'Your recruiting profile is a personal webpage that houses every piece of information a coach needs to evaluate you: highlight tape, full game film, academic stats, athletic stats, contact information, and a direct inquiry form. One link that a coach can bookmark, share with their staff, and return to across an entire recruiting cycle.' },
+      { type: 'ul', content: [
+        'Embedded highlight tape (no download required)',
+        'Athletic stats: points, assists, percentages, combine numbers — whatever is relevant to your sport',
+        'Academic info: GPA, test scores, graduation year, intended major',
+        'Contact form that reaches you and your family directly',
+        'Permanent URL that doesn\'t expire or change',
+      ]},
+      { type: 'h2', content: 'Why Email Attachments and Social Media Aren\'t Enough' },
+      { type: 'p', content: 'Sending a coach an email with a Hudl link and a Dropbox attachment is the standard approach — which means it\'s the crowded approach. Coaches receiving 200 emails in an evaluation window are not opening Dropbox folders and piecing together a profile. The athletes who stand out are the ones who make it easy.' },
+      { type: 'p', content: 'Social media handles are also not a substitute. Coaches do look at Instagram, but a grid of personal posts mixed with game clips is not a professional recruiting document. Your profile website is separate from your social presence — it\'s purpose-built for evaluation.' },
+      { type: 'h2', content: 'The Shareable Factor' },
+      { type: 'p', content: 'When an assistant coach sees something they like, they need to be able to share it with the head coach instantly. A clean URL — one that pulls up a professional page immediately — is what gets shared. A collection of files stored in a shared Google Drive does not.' },
+      { type: 'p', content: 'This is also how unofficial visits happen. A coach sees your profile, forwards the link to their head coach, they watch the tape, and suddenly you\'re getting a call. The link is the mechanism. Make it professional.' },
+      { type: 'h2', content: 'Permanent and Always Accessible' },
+      { type: 'p', content: 'Unlike Hudl links that expire, Google Drive links that require permission, or social media accounts that get deactivated, your recruiting profile website is permanent. It lives at a stable URL for the entirety of your recruiting process — and can be updated as your stats and highlights improve.' },
+      { type: 'h2', content: 'Who Should Have One' },
+      { type: 'p', content: 'Any athlete actively pursuing college athletics. High school athletes beginning their outreach sophomore or junior year, transfer portal athletes moving quickly, and even club or AAU players getting early attention from coaches. If you\'re sending emails to college programs, you need a profile website. It\'s not optional at the level you\'re competing for.' },
+      { type: 'blockquote', content: '"Every athlete I\'ve helped get seen had one thing in common: when a coach asked for more information, they had one link that answered every question."' },
+    ],
+  },
+]
+
+export function getPostBySlug(slug: string): BlogPost | undefined {
+  return blogPosts.find(p => p.slug === slug)
+}
