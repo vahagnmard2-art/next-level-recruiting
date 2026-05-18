@@ -1,7 +1,3 @@
-/**
- * Generated from Supabase schema. Re-generate with:
- *   npx supabase gen types typescript --project-id <id> > types/database.types.ts
- */
 export type Json = string | number | boolean | null | { [key: string]: Json | undefined } | Json[]
 
 export interface Database {
@@ -34,7 +30,19 @@ export interface Database {
           avatar_url?: string | null
           role?: 'athlete' | 'admin'
         }
-        Update: Partial<Database['public']['Tables']['profiles']['Insert']>
+        Update: {
+          id?: string
+          full_name?: string | null
+          sport?: string | null
+          grad_year?: number | null
+          school?: string | null
+          gpa?: string | null
+          email?: string
+          phone?: string | null
+          avatar_url?: string | null
+          role?: 'athlete' | 'admin'
+          updated_at?: string
+        }
       }
       tapes: {
         Row: {
@@ -60,7 +68,17 @@ export interface Database {
           notes?: string | null
           delivery_date?: string | null
         }
-        Update: Partial<Database['public']['Tables']['tapes']['Insert']>
+        Update: {
+          athlete_id?: string
+          title?: string
+          sport?: string
+          status?: 'submitted' | 'in_progress' | 'review' | 'delivered'
+          file_url?: string | null
+          shareable_url?: string | null
+          notes?: string | null
+          delivery_date?: string | null
+          updated_at?: string
+        }
       }
       messages: {
         Row: {
@@ -77,7 +95,12 @@ export interface Database {
           content: string
           read?: boolean
         }
-        Update: Partial<Database['public']['Tables']['messages']['Insert']>
+        Update: {
+          athlete_id?: string
+          sender?: 'athlete' | 'admin'
+          content?: string
+          read?: boolean
+        }
       }
     }
     Views: Record<string, never>

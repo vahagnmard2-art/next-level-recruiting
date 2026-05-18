@@ -1,7 +1,7 @@
 import { createServerClient, type CookieOptions } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
 
-const PROTECTED_PREFIXES = ['/dashboard', '/tapes', '/profile']
+const PROTECTED_PREFIXES = ['/dashboard', '/tapes', '/messages', '/profile']
 const AUTH_ROUTES = ['/login', '/signup']
 
 export async function middleware(request: NextRequest) {

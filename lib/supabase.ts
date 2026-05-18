@@ -1,12 +1,8 @@
 import { createBrowserClient } from '@supabase/ssr'
-import type { Database } from '@/types/database.types'
 
-/**
- * Browser-side Supabase client.
- * Use in Client Components ('use client').
- */
 export function createClient() {
-  return createBrowserClient<Database>(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return createBrowserClient<any>(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
   )

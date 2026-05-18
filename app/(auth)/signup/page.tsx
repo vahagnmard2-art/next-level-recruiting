@@ -1,16 +1,16 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import LoginForm from '@/components/portal/login-form'
+import SignupForm from '@/components/portal/signup-form'
 
 export const metadata: Metadata = {
-  title: 'Athlete Portal Login — Next Level Recruiting',
+  title: 'Create Athlete Account — Next Level Recruiting',
   robots: { index: false, follow: false },
 }
 
-export default function LoginPage() {
+export default function SignupPage() {
   return (
     <div className="min-h-screen bg-nlr-darker flex flex-col items-center justify-center px-4 py-12">
-      <div className="w-full max-w-sm">
+      <div className="w-full max-w-lg">
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center gap-2.5 mb-6">
             <div className="w-10 h-10 bg-nlr-gold flex items-center justify-center">
@@ -21,12 +21,12 @@ export default function LoginPage() {
               <div className="font-heading font-semibold text-nlr-gold text-[10px] tracking-[0.35em] uppercase">Recruiting</div>
             </div>
           </Link>
-          <h1 className="font-heading font-bold text-white text-2xl uppercase tracking-wide">Athlete Portal</h1>
-          <p className="text-white/40 text-sm mt-1">Sign in to track your tapes and message Andrew.</p>
+          <h1 className="font-heading font-bold text-white text-2xl uppercase tracking-wide">Create Your Account</h1>
+          <p className="text-white/40 text-sm mt-1">Track your tapes, message Andrew, and manage your recruiting journey.</p>
         </div>
 
         <div className="bg-nlr-dark border border-white/5 p-8">
-          <LoginForm />
+          <SignupForm />
         </div>
 
         <p className="text-center mt-6">

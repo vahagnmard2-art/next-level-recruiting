@@ -104,6 +104,12 @@ export default function Navbar() {
 
           <div className="flex items-center gap-4">
             <Link
+              href="/login"
+              className="hidden lg:block text-white/50 hover:text-white text-xs font-heading font-bold tracking-widest uppercase transition-colors"
+            >
+              Athlete Login
+            </Link>
+            <Link
               href="/contact"
               className="hidden sm:flex btn-gold text-xs py-2.5 px-6 items-center gap-2"
             >
@@ -173,9 +179,12 @@ export default function Navbar() {
               ))}
             </ul>
           </nav>
-          <div className="p-6 border-t border-white/5">
+          <div className="p-6 border-t border-white/5 space-y-3">
             <Link href="/contact" className="btn-gold w-full text-center block py-4">
               Book Now
+            </Link>
+            <Link href="/login" className="block text-center text-white/40 hover:text-white text-xs font-heading tracking-widest uppercase transition-colors py-2">
+              Athlete Login
             </Link>
           </div>
         </div>
