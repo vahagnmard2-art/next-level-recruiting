@@ -226,7 +226,7 @@ export default function About() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {values.map((val, i) => (
                 <AnimatedSection key={val.title} delay={i * 100}>
-                  <div className="bg-nlr-navy border border-white/5 p-8 flex gap-6 group hover:border-nlr-gold/20 transition-all duration-300">
+                  <div className="card-dark p-8 flex gap-6 group">
                     <div className="text-nlr-gold flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300" aria-hidden="true">
                       {val.icon}
                     </div>

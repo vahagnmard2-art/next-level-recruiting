@@ -255,7 +255,7 @@ export default function Home() {
 
               {steps.map((step, i) => (
                 <AnimatedSection key={step.num} delay={i * 150} className="relative z-10">
-                  <li className="bg-nlr-navy border border-white/5 p-8 hover:border-nlr-gold/30 transition-all duration-300 group">
+                  <li className="card-dark p-8 group">
                     <div className="font-display text-7xl text-nlr-gold/15 group-hover:text-nlr-gold/25 transition-all duration-300 leading-none mb-4" aria-hidden="true">
                       {step.num}
                     </div>
@@ -291,7 +291,7 @@ export default function Home() {
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 list-none m-0 p-0" role="list">
               {services.map((svc, i) => (
                 <AnimatedSection key={svc.title} delay={i * 100}>
-                  <li className="bg-nlr-navy border border-white/5 p-8 h-full flex flex-col group hover:border-nlr-gold/30 hover:-translate-y-1 transition-all duration-300">
+                  <li className="card-dark p-8 h-full flex flex-col group hover:-translate-y-1">
                     <div className="text-nlr-gold mb-6 group-hover:scale-110 transition-transform duration-300">
                       {svc.icon}
                     </div>
@@ -361,7 +361,7 @@ export default function Home() {
 
             <AnimatedSection>
               {sampleTapeId ? (
-                <div className="relative w-full border border-white/10" style={{ paddingBottom: '56.25%' }}>
+                <div className="relative w-full aspect-video border border-white/10">
                   <iframe
                     className="absolute inset-0 w-full h-full"
                     src={`https://www.youtube.com/embed/${sampleTapeId}?rel=0&modestbranding=1`}

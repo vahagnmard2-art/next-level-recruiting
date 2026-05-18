@@ -148,7 +148,11 @@
   }
 
   .display-heading {
-    @apply font-display tracking-wide;
+    @apply font-display tracking-wide text-balance;
+  }
+
+  .card-dark {
+    @apply bg-nlr-navy border border-white/5 transition-colors duration-300 hover:border-nlr-gold/25;
   }
 
   .gold-line {

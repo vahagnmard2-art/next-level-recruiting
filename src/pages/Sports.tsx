@@ -109,7 +109,7 @@ export default function Sports() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {sports.map((sport, i) => (
               <AnimatedSection key={sport.name} delay={i * 60}>
-                <div className="bg-nlr-navy border border-white/5 p-8 group hover:border-nlr-gold/25 transition-all duration-300 hover:-translate-y-0.5 h-full">
+                <div className="card-dark p-8 group hover:-translate-y-0.5 h-full">
                   <div className="flex items-start gap-5">
                     {/* Emoji icon */}
                     <div className="text-5xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300 leading-none mt-1">

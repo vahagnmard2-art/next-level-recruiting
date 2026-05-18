@@ -96,11 +96,7 @@ export default function Navbar() {
               <li key={link.path}>
                 <Link
                   to={link.path}
-                  className={`font-heading font-semibold text-sm tracking-widest uppercase transition-colors duration-200 ${
-                    location.pathname === link.path
-                      ? 'text-nlr-gold'
-                      : 'text-white/80 hover:text-white'
-                  }`}
+                  className="font-heading font-semibold text-sm tracking-widest uppercase transition-colors duration-200 text-white/80 hover:text-white aria-[current=page]:text-nlr-gold"
                   aria-current={location.pathname === link.path ? 'page' : undefined}
                 >
                   {link.label}
@@ -178,11 +174,7 @@ export default function Navbar() {
                   <Link
                     ref={i === 0 ? firstMenuItemRef : undefined}
                     to={link.path}
-                    className={`flex items-center justify-between py-4 px-4 border-b border-white/5 font-heading font-bold text-lg tracking-widest uppercase transition-all duration-200 ${
-                      location.pathname === link.path
-                        ? 'text-nlr-gold bg-nlr-gold/5'
-                        : 'text-white/80 hover:text-white hover:bg-white/5'
-                    }`}
+                    className="flex items-center justify-between py-4 px-4 border-b border-white/5 font-heading font-bold text-lg tracking-widest uppercase transition-colors duration-200 text-white/80 hover:text-white hover:bg-white/5 aria-[current=page]:text-nlr-gold aria-[current=page]:bg-nlr-gold/5"
                     aria-current={location.pathname === link.path ? 'page' : undefined}
                   >
                     {link.label}

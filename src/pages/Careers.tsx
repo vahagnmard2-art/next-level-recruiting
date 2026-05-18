@@ -203,7 +203,7 @@ export default function Careers() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               {roles.map((role, i) => (
                 <AnimatedSection key={role.title} delay={i * 100}>
-                  <div className="bg-nlr-navy border border-white/5 p-8 h-full flex flex-col hover:border-nlr-gold/20 transition-all duration-300">
+                  <div className="card-dark p-8 h-full flex flex-col">
                     <div className="text-nlr-gold mb-5" aria-hidden="true">{role.icon}</div>
                     <h3 className="font-heading font-bold text-white text-xl tracking-wide uppercase mb-2 leading-snug">
                       {role.title}
@@ -268,7 +268,7 @@ export default function Careers() {
             </AnimatedSection>
 
             <AnimatedSection>
-              <div className="bg-nlr-navy border border-white/5 p-8 sm:p-12">
+              <div className="card-dark p-8 sm:p-12">
                 <ContactForm />
               </div>
             </AnimatedSection>

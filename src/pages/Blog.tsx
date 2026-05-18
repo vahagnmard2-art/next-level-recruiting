@@ -59,7 +59,7 @@ export default function Blog() {
               <p className="section-label mb-6">Featured Article</p>
               <Link
                 to={`/blog/${featured.slug}`}
-                className="group block bg-nlr-navy border border-white/5 hover:border-nlr-gold/25 transition-all duration-300 p-8 sm:p-12"
+                className="card-dark group block p-8 sm:p-12"
                 aria-labelledby="featured-post-heading"
               >
                 <div className="flex flex-wrap items-center gap-3 mb-4">
@@ -95,7 +95,7 @@ export default function Blog() {
                 <AnimatedSection key={post.slug} delay={i * 80}>
                   <Link
                     to={`/blog/${post.slug}`}
-                    className="group block bg-nlr-navy border border-white/5 hover:border-nlr-gold/25 transition-all duration-300 hover:-translate-y-0.5 p-8 h-full"
+                    className="card-dark group block hover:-translate-y-0.5 p-8 h-full"
                     aria-label={`Read: ${post.title}`}
                   >
                     <div className="flex flex-wrap items-center gap-3 mb-4">

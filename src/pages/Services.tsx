@@ -252,7 +252,7 @@ export default function Services() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((svc, i) => (
               <AnimatedSection key={svc.title} delay={i * 80}>
-                <div className="bg-nlr-navy border border-white/5 flex flex-col h-full group hover:border-nlr-gold/20 transition-all duration-300 hover:-translate-y-1">
+                <div className="card-dark flex flex-col h-full group hover:-translate-y-1">
                   {/* Card header */}
                   <div className="p-8 border-b border-white/5">
                     <div className="flex items-start justify-between mb-4">
@@ -310,7 +310,7 @@ export default function Services() {
           <dl className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {faqs.map((faq, i) => (
               <AnimatedSection key={faq.q} delay={i * 80}>
-                <div className="bg-nlr-navy border border-white/5 p-8 h-full hover:border-nlr-gold/20 transition-all duration-300">
+                <div className="card-dark p-8 h-full">
                   <dt className="font-heading font-bold text-white text-lg tracking-wide uppercase mb-3">{faq.q}</dt>
                   <dd className="text-white/60 text-sm leading-relaxed">{faq.a}</dd>
                 </div>

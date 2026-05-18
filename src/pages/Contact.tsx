@@ -424,7 +424,7 @@ export default function Contact() {
 
               {/* CONTACT INFO */}
               <AnimatedSection direction="right" className="space-y-8">
-                <div className="bg-nlr-navy border border-white/5 p-8">
+                <div className="card-dark p-8">
                   <h2 className="font-heading font-bold text-white text-lg tracking-widest uppercase mb-6 flex items-center gap-2">
                     <span className="w-4 h-0.5 bg-nlr-gold" aria-hidden="true" />
                     Reach Us Directly
@@ -488,7 +488,7 @@ export default function Contact() {
                 </div>
 
                 {/* Service Area */}
-                <div className="bg-nlr-navy border border-white/5 p-6" aria-label="NLR service area">
+                <div className="card-dark p-6" aria-label="NLR service area">
                   <h3 className="font-heading font-bold text-white text-sm tracking-widest uppercase mb-4 flex items-center gap-2">
                     <MapPin size={14} className="text-nlr-gold" aria-hidden="true" />
                     Service Area

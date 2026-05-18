@@ -28,21 +28,9 @@ export default {
         'gold-gradient': 'linear-gradient(135deg, #A88830 0%, #C9A84C 50%, #E0C060 100%)',
       },
       animation: {
-        'fade-up': 'fadeUp 0.7s ease-out forwards',
-        'fade-in': 'fadeIn 0.7s ease-out forwards',
-        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
         'pulse-glow-once': 'pulseGlow 2s ease-in-out 3',
-        'bounce-slow': 'bounce 2s ease-in-out infinite',
       },
       keyframes: {
-        fadeUp: {
-          '0%': { opacity: '0', transform: 'translateY(30px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
         pulseGlow: {
           '0%, 100%': { boxShadow: '0 0 20px rgba(201,168,76,0.3)' },
           '50%': { boxShadow: '0 0 40px rgba(201,168,76,0.6)' },
