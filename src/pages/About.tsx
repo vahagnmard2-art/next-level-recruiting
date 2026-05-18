@@ -29,7 +29,7 @@ const values = [
 const numbers = [
   { val: '20+', label: 'Athletes Served', sub: 'Male & Female, All Sports' },
   { val: '10', label: 'Sports Covered', sub: 'Basketball to Tennis' },
-  { val: '2018', label: 'Coaching Since', sub: 'Chamlian Armenian School' },
+  { val: '2018', label: 'Coaching Since', sub: '' },
   { val: 'D1–JUCO', label: 'Programs Reached', sub: 'Coaches Contact NLR Nationally' },
 ]
 
@@ -104,11 +104,6 @@ export default function About() {
                     <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-nlr-gold pointer-events-none" aria-hidden="true" />
                     <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-nlr-gold pointer-events-none" aria-hidden="true" />
                   </div>
-                  {/* Floating badge */}
-                  <div className="absolute -bottom-4 -right-4 bg-nlr-gold p-5 text-nlr-darker" aria-hidden="true">
-                    <div className="font-display text-2xl leading-none">NLR</div>
-                    <div className="font-heading font-bold text-xs tracking-widest uppercase">Founder</div>
-                  </div>
                 </div>
               </AnimatedSection>
 
@@ -136,20 +131,6 @@ export default function About() {
                   <p>
                     When he's not on the court, you'll find him training and developing the next generation, studying the game he loves, or spending time with friends and family. Everything he does points back to one belief: every athlete deserves a shot.
                   </p>
-                </div>
-
-                {/* Coaching credentials */}
-                <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  {[
-                    { label: 'Chamlian Armenian School', sub: 'Youth Coach · 2018–2021' },
-                    { label: 'Homenetmen Azadamard', sub: 'Volunteer Coach · Tournaments' },
-                    { label: 'St. Francis High School', sub: 'Head Freshman Coach' },
-                  ].map((cred) => (
-                    <div key={cred.label} className="border-l-2 border-nlr-gold pl-4 py-1">
-                      <p className="font-heading font-bold text-white text-xs tracking-wide uppercase leading-snug">{cred.label}</p>
-                      <p className="text-white/40 text-xs mt-0.5">{cred.sub}</p>
-                    </div>
-                  ))}
                 </div>
 
                 {/* Certifications */}
