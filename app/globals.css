@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* shadcn/ui semantic tokens — light mode (unused, site is dark-only) */
+    --background: 220 20% 5%;
+    --foreground: 0 0% 93%;
+    --card: 220 22% 10%;
+    --card-foreground: 0 0% 93%;
+    --popover: 220 22% 10%;
+    --popover-foreground: 0 0% 93%;
+    --primary: 43 52% 55%;       /* nlr-gold */
+    --primary-foreground: 220 20% 5%;
+    --secondary: 145 65% 29%;    /* nlr-green */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 18% 15%;
+    --muted-foreground: 0 0% 50%;
+    --accent: 220 18% 15%;
+    --accent-foreground: 0 0% 93%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 18% 16%;
+    --input: 220 18% 16%;
+    --ring: 43 52% 55%;
+    --radius: 0.25rem;
+
+    /* NLR brand tokens */
+    --nlr-green: 145 65% 29%;
+    --nlr-green-dark: 145 65% 22%;
+    --nlr-green-light: 145 65% 37%;
+    --nlr-gold: 43 52% 55%;
+    --nlr-gold-light: 43 52% 63%;
+    --nlr-gold-dark: 43 52% 41%;
+    --nlr-dark: 210 50% 11%;
+    --nlr-darker: 220 42% 6%;
+    --nlr-navy: 215 42% 11%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Focus ring — visible for keyboard, hidden for mouse */
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+
+  :focus:not(:focus-visible) {
+    @apply outline-none;
+  }
+
+  /* Skip nav */
+  .skip-nav {
+    @apply fixed top-4 left-4 z-[100] bg-nlr-gold text-nlr-darker font-heading font-bold text-sm px-4 py-2 uppercase tracking-widest;
+    transform: translateY(-200%);
+    transition: transform 0.2s;
+  }
+
+  .skip-nav:focus {
+    transform: translateY(0);
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply bg-nlr-gold text-nlr-darker font-heading font-bold tracking-widest uppercase px-8 py-3 text-sm inline-block;
+    box-shadow: 0 4px 20px rgba(201, 168, 76, 0.25);
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .btn-gold:hover {
+    @apply bg-nlr-gold-light scale-105;
+    box-shadow: 0 6px 30px rgba(201, 168, 76, 0.45);
+  }
+
+  .btn-gold:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+  }
+
+  .btn-outline {
+    @apply border-2 border-nlr-gold text-nlr-gold font-heading font-bold tracking-widest uppercase px-8 py-3 text-sm inline-block;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .btn-outline:hover {
+    @apply bg-nlr-gold text-nlr-darker;
+  }
+
+  .btn-outline:focus-visible {
+    outline: 2px solid hsl(var(--nlr-gold));
+    outline-offset: 3px;
+  }
+
+  .section-label {
+    @apply font-heading font-bold tracking-[0.3em] text-nlr-gold uppercase text-sm;
+  }
+
+  .display-heading {
+    @apply font-display tracking-wide text-balance;
+  }
+
+  .card-dark {
+    @apply bg-nlr-navy border border-white/5 transition-colors duration-300 hover:border-nlr-gold/25;
+  }
+
+  .gold-line {
+    @apply w-16 h-1 bg-nlr-gold;
+  }
+
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.45s ease-out, transform 0.45s ease-out;
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .animate-on-scroll-left {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.45s ease-out, transform 0.45s ease-out;
+  }
+
+  .animate-on-scroll-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .animate-on-scroll-right {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.45s ease-out, transform 0.45s ease-out;
+  }
+
+  .animate-on-scroll-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-on-scroll,
+    .animate-on-scroll-left,
+    .animate-on-scroll-right {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(var(--nlr-gold)) 0%, hsl(var(--nlr-gold-light)) 50%, hsl(var(--nlr-gold)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .animate-marquee {
+    will-change: transform;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-marquee {
+      animation: none !important;
+    }
+  }
+}
+
+/* Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--nlr-green)) hsl(var(--nlr-dark));
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: hsl(var(--nlr-dark)); }
+::-webkit-scrollbar-thumb { background: hsl(var(--nlr-green)); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: hsl(var(--nlr-gold)); }

@@ -1,127 +1,36 @@
-# Next Level Recruiting — Marketing Website
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-**"Your Game. Your Future. Next Level."**
+## Getting Started
 
-Production-ready marketing website for Next Level Recruiting (NLR), Southern California's premier athlete recruiting agency. Built with React, Vite, TypeScript, Tailwind CSS, and React Router.
-
----
-
-## Live Site
-
-**Vercel:** https://next-level-recruiting-theta.vercel.app
-**GitHub:** https://github.com/vahagnmard2-art/next-level-recruiting
-
----
-
-## Pages
-
-| Page | Route | Description |
-|------|-------|-------------|
-| Home | `/` | Hero, how it works, services preview, testimonials, CTA |
-| Services | `/services` | Full pricing menu with package cards |
-| Sports | `/sports` | All 10 sports with position-specific blurbs |
-| About | `/about` | Founder story, mission, NLR by the numbers |
-| Contact / Book | `/contact` | Intake form, direct contact, map placeholder |
-
----
-
-## Tech Stack
-
-- **React 18** + **TypeScript**
-- **Vite 5** (build tool)
-- **React Router 6** (client-side routing)
-- **Tailwind CSS 3** (styling)
-- **Lucide React** (icons)
-- **Google Fonts** — Bebas Neue, Barlow Condensed, Inter
-
----
-
-## Run Locally
+First, run the development server:
 
 ```bash
-# Clone
-git clone https://github.com/vahagnmard2-art/next-level-recruiting.git
-cd next-level-recruiting
-
-# Install
-npm install
-
-# Dev server (http://localhost:5173)
 npm run dev
-
-# Production build
-npm run build
-
-# Preview production build locally
-npm run preview
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
----
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Project Structure
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-```
-src/
-├── components/
-│   ├── Navbar.tsx          # Sticky nav with mobile hamburger
-│   ├── Footer.tsx          # Full footer with links
-│   ├── AnimatedSection.tsx # Scroll-triggered fade/slide wrapper
-│   └── ScrollToTop.tsx     # Route-change scroll reset
-├── hooks/
-│   └── useScrollAnimation.ts
-├── pages/
-│   ├── Home.tsx
-│   ├── Services.tsx
-│   ├── Sports.tsx
-│   ├── About.tsx
-│   └── Contact.tsx
-├── App.tsx                 # Router setup
-├── main.tsx
-└── index.css               # Tailwind + custom utility classes
-```
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
----
+## Learn More
 
-## Deploy to Vercel
+To learn more about Next.js, take a look at the following resources:
 
-The project is already connected to Vercel via GitHub. Any push to `main` auto-deploys.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-**Manual deploy:**
-```bash
-npm install -g vercel
-vercel --prod
-```
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-**Deploy to Netlify:**
-```bash
-npm run build
-# Drag and drop the `dist/` folder to netlify.com/drop
-# Or: netlify deploy --prod --dir=dist
-```
+## Deploy on Vercel
 
----
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## Customization Checklist
-
-- [ ] Replace placeholder phone `(310) 555-0100` with real number
-- [ ] Replace `info@nextlevelrecruiting.com` with real email
-- [ ] Add founder photo to About page (replace placeholder in `About.tsx`)
-- [ ] Add hero background video (replace gradient placeholder in `Home.tsx`)
-- [ ] Connect contact form to Formspree or email service
-- [ ] Add real testimonials with athlete names
-- [ ] Set up custom domain in Vercel dashboard
-
----
-
-## Brand Colors
-
-| Token | Hex | Use |
-|-------|-----|-----|
-| `nlr-dark` | `#0D1F2D` | Primary background |
-| `nlr-darker` | `#070F16` | Deeper sections |
-| `nlr-green` | `#1A7A3C` | Brand green, CTAs |
-| `nlr-gold` | `#C9A84C` | Accents, buttons, highlights |
-
----
-
-Built by Next Level Recruiting × Claude Code
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
