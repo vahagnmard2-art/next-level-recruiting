@@ -6,7 +6,7 @@ import AnimatedSection from '@/components/marketing/animated-section'
 
 export const metadata: Metadata = {
   title: 'About NLR — Southern California Athlete Recruiting Agency',
-  description: 'Meet Andrew Ayvazian, founder of Next Level Recruiting. Learn how NLR was built to give every Southern California athlete — regardless of background — professional recruiting tools and college exposure across 10 sports.',
+  description: 'Meet Andrew Ayvazian, founder of Next Level Recruiting. Learn how NLR was built to give every Southern California athlete professional recruiting tools and college exposure across 10 sports.',
   alternates: { canonical: '/about' },
 }
 
@@ -51,7 +51,7 @@ export default function AboutPage() {
               </h1>
               <div className="gold-line mb-6" aria-hidden="true" />
               <p className="text-white/60 text-lg max-w-2xl leading-relaxed">
-                Born in the gyms and fields of Southern California. Built to give every athlete — regardless of background — the professional edge they deserve.
+                Born in the gyms and fields of Southern California. Built to give every athlete the professional edge they deserve.
               </p>
             </AnimatedSection>
           </div>
