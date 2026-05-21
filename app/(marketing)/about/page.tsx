@@ -134,7 +134,7 @@ export default function AboutPage() {
               <h2 id="mission-heading" className="display-heading text-4xl sm:text-6xl text-white mt-3 mb-8">THE STANDARD WE HOLD</h2>
               <div className="w-16 h-1 bg-white/30 mx-auto mb-10" aria-hidden="true" />
               <blockquote className="text-white text-xl sm:text-2xl leading-relaxed font-body font-light italic max-w-3xl mx-auto">
-                &ldquo;To give every athlete — regardless of background — the professional recruiting tools and exposure they need to compete at the next level.&rdquo;
+                &ldquo;To give every athlete the professional recruiting tools and exposure they need to compete at the next level.&rdquo;
               </blockquote>
               <p className="mt-10 font-heading font-bold text-white/60 tracking-widest uppercase text-sm">— Next Level Recruiting Mission Statement</p>
             </AnimatedSection>
