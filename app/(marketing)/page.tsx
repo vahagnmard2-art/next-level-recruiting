@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ChevronRight, Play, Award, Users, Clock, CheckCircle, XCircle } from 'lucide-react'
 import InstagramIcon from '@/components/marketing/instagram-icon'
 import AnimatedSection from '@/components/marketing/animated-section'
@@ -62,11 +63,11 @@ export default function HomePage() {
       <div className="overflow-x-hidden">
         {/* HERO */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-labelledby="hero-heading">
-          <div className="absolute inset-0 bg-hero-gradient" aria-hidden="true" />
-          <div className="absolute inset-0 opacity-[0.04]" aria-hidden="true"
+          <Image src="/images/hero-athlete.png" alt="" fill priority className="object-cover object-center" aria-hidden="true" />
+          <div className="absolute inset-0 bg-nlr-darker/75" aria-hidden="true" />
+          <div className="absolute inset-0 bg-hero-gradient opacity-60" aria-hidden="true" />
+          <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true"
             style={{ backgroundImage: 'linear-gradient(rgba(201,168,76,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.5) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
-          <div className="hidden sm:block absolute top-0 left-0 w-64 h-64 bg-nlr-green/5 blur-[120px]" aria-hidden="true" />
-          <div className="hidden sm:block absolute bottom-0 right-0 w-96 h-96 bg-nlr-gold/5 blur-[120px]" aria-hidden="true" />
 
           <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24">
             <div className="inline-flex items-center gap-3 mb-8">

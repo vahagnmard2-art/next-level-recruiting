@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ChevronRight, Video, FileText, Globe, Headphones, Users, Star, Zap, CheckCircle } from 'lucide-react'
 import AnimatedSection from '@/components/marketing/animated-section'
 
@@ -115,8 +116,9 @@ export default function ServicesPage() {
 
       <div className="overflow-x-hidden">
         <section className="relative pt-32 pb-20 bg-nlr-darker overflow-hidden" aria-labelledby="services-hero-heading">
-          <div className="absolute inset-0 bg-gradient-to-br from-nlr-green/5 via-transparent to-nlr-gold/5" aria-hidden="true" />
-          <div className="absolute top-0 right-0 w-96 h-96 bg-nlr-green/10 blur-[150px]" aria-hidden="true" />
+          <Image src="/images/hero-football-field.png" alt="" fill priority className="object-cover object-center" aria-hidden="true" />
+          <div className="absolute inset-0 bg-nlr-darker/80" aria-hidden="true" />
+          <div className="absolute inset-0 bg-gradient-to-br from-nlr-green/10 via-transparent to-nlr-gold/10" aria-hidden="true" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <AnimatedSection>
               <p className="section-label">Pricing & Services</p>
