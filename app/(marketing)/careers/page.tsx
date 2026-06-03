@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ChevronRight, Globe, Users, Zap, MapPin } from 'lucide-react'
+import { ChevronRight, Users, Zap, MapPin } from 'lucide-react'
 import AnimatedSection from '@/components/marketing/animated-section'
 import CareersForm from '@/components/marketing/careers-form'
 
 export const metadata: Metadata = {
-  title: 'Careers & Franchise Opportunities — Join the NLR Team',
-  description: 'Join Next Level Recruiting as a video editor, recruiting consultant, or franchise partner. NLR is building a national athlete recruiting agency — starting in Southern California.',
+  title: 'Careers — Join the NLR Team',
+  description: 'Join Next Level Recruiting as a video editor or recruiting consultant. NLR is building a national athlete recruiting agency — starting in Southern California.',
   alternates: { canonical: '/careers' },
 }
 
@@ -35,19 +35,6 @@ const roles = [
       'Comfortable with 1-on-1 family consultations',
       'Network within SoCal AAU or high school sports',
       "Ability to assess athletes' realistic college level",
-    ],
-  },
-  {
-    icon: <Globe size={24} />,
-    title: 'Franchise Partner',
-    type: 'Business Ownership',
-    location: 'Any Major Market (Nationwide)',
-    desc: "NLR is building toward a national franchise model. If you're in a major sports market and want to bring the NLR model to your city — run your own athlete recruiting agency under the NLR brand.",
-    requirements: [
-      'Passion for youth and college athletics',
-      'Existing network in local sports (AAU, travel, HS coaches)',
-      'Business acumen and self-direction',
-      'Capital to launch a local operation',
     ],
   },
 ]
@@ -106,19 +93,6 @@ export default function CareersPage() {
               </AnimatedSection>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-nlr-green relative overflow-hidden" aria-labelledby="franchise-heading">
-        <div className="absolute inset-0 opacity-10" aria-hidden="true" style={{ backgroundImage: 'repeating-linear-gradient(-45deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 60px)' }} />
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-          <AnimatedSection>
-            <h2 id="franchise-heading" className="display-heading text-4xl sm:text-6xl text-white mb-4">BRING NLR TO YOUR CITY</h2>
-            <p className="text-white/70 text-lg mb-4 max-w-2xl mx-auto leading-relaxed">
-              We&apos;re building the playbook to take NLR national — inside AAU gyms, high schools, and travel sports programs in every major market.
-            </p>
-            <p className="text-white/50 text-sm font-heading tracking-widest uppercase mb-8">Franchise inquiries now open</p>
-          </AnimatedSection>
         </div>
       </section>
 
