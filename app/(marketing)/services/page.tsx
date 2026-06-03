@@ -193,51 +193,6 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* 3-SERVICE HIGHLIGHT — Image 2 style */}
-        <section className="py-24 lg:py-32 bg-nlr-darker relative overflow-hidden" aria-labelledby="services-featured-heading">
-          <Image src="/images/hero-football-field.webp" alt="" fill className="object-cover object-center opacity-15" aria-hidden="true" />
-          <div className="absolute inset-0 vignette" aria-hidden="true" />
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            <AnimatedSection className="text-center mb-16">
-              <p className="section-label">Your Path to the Next Level</p>
-              <h2 id="services-featured-heading" className="display-heading text-5xl sm:text-7xl text-white mt-3">
-                CORE<br /><span className="text-gradient-gold">SERVICES</span>
-              </h2>
-              <div className="gold-line mx-auto mt-6" aria-hidden="true" />
-              <p className="text-white/60 text-lg mt-6 max-w-2xl mx-auto">
-                Comprehensive athlete recruiting services designed for high school and college players.
-              </p>
-            </AnimatedSection>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-              {services.slice(0, 3).map((svc, i) => (
-                <AnimatedSection key={svc.title} delay={i * 100}>
-                  <div className="card-glow p-8 flex flex-col h-full group">
-                    <div className="glow-frame w-16 h-16 mb-6"><div className="text-nlr-gold">{svc.icon}</div></div>
-                    <h3 className="font-heading font-bold text-gradient-gold text-2xl tracking-wide uppercase mb-3">{svc.title}</h3>
-                    <p className="text-white/60 text-sm leading-relaxed flex-1 mb-6">{svc.desc}</p>
-                    <ul className="space-y-2 mb-8">
-                      {svc.features.slice(0, 3).map((f) => (
-                        <li key={f} className="flex items-start gap-2">
-                          <CheckCircle size={13} className="text-nlr-green mt-0.5 flex-shrink-0" />
-                          <span className="text-white/55 text-xs">{f}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <Link href="/contact" className="btn-outline text-xs py-3 px-6 text-center flex items-center justify-center gap-2">
-                      View Details <ChevronRight size={12} />
-                    </Link>
-                  </div>
-                </AnimatedSection>
-              ))}
-            </div>
-            <div className="text-center">
-              <Link href="#services-individual-heading" className="btn-gold text-sm py-4 px-12 inline-flex items-center gap-2">
-                Explore All Services <ChevronRight size={16} />
-              </Link>
-            </div>
-          </div>
-        </section>
-
         {/* INDIVIDUAL SERVICES */}
         <section className="py-24 lg:py-32 bg-nlr-dark" aria-labelledby="services-individual-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
