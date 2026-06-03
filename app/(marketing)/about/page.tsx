@@ -1,12 +1,11 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 import { ChevronRight, Target, Heart, TrendingUp, Globe } from 'lucide-react'
 import AnimatedSection from '@/components/marketing/animated-section'
 
 export const metadata: Metadata = {
   title: 'About NLR — Southern California Athlete Recruiting Agency',
-  description: 'Meet the founder of Next Level Recruiting — an active head coach and NCAA certified recruiting specialist. NLR was built to give every Southern California athlete professional recruiting tools and college exposure across 10 sports.',
+  description: 'About Next Level Recruiting — active coaches and NCAA certified recruiting specialists. NLR was built to give every Southern California athlete professional recruiting tools and college exposure across 10 sports.',
   alternates: { canonical: '/about' },
 }
 
@@ -57,68 +56,49 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* FOUNDER STORY */}
+        {/* WHO WE ARE */}
         <section className="py-24 lg:py-32 bg-nlr-dark" aria-labelledby="founder-heading">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <AnimatedSection direction="left">
-                <div className="relative">
-                  <div className="relative overflow-hidden bg-gradient-to-b from-nlr-green/10 to-nlr-darker">
-                    <Image
-                      src="/andrew-ayvazian.png"
-                      alt="NLR founder and head coach, NCAA certified recruiting specialist"
-                      width={750}
-                      height={1000}
-                      className="w-full h-auto object-cover object-top"
-                      priority
-                    />
-                    <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-nlr-gold pointer-events-none" aria-hidden="true" />
-                    <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-nlr-gold pointer-events-none" aria-hidden="true" />
-                  </div>
-                </div>
-              </AnimatedSection>
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <AnimatedSection>
+              <p className="section-label">Who We Are</p>
+              <h2 id="founder-heading" className="display-heading text-5xl sm:text-6xl text-white mt-3 mb-6">
+                THE NLR<br /><span className="text-nlr-gold">APPROACH</span>
+              </h2>
+              <div className="gold-line mb-8" aria-hidden="true" />
 
-              <AnimatedSection direction="right">
-                <p className="section-label">Meet the Founder</p>
-                <h2 id="founder-heading" className="display-heading text-5xl sm:text-6xl text-white mt-3 mb-6">
-                  MEET THE<br /><span className="text-nlr-gold">FOUNDER</span>
-                </h2>
-                <div className="gold-line mb-8" aria-hidden="true" />
+              <div className="space-y-5 text-white/65 leading-relaxed text-sm sm:text-base">
+                <p>
+                  NLR wasn&apos;t built by video editors who discovered recruiting. We are active coaches — on the sideline every season, in the gym every week, and in the film room when everyone else has gone home. We built NLR because we watched talented athletes go unseen not because of a lack of ability, but because of a lack of access.
+                </p>
+                <p>
+                  NCAA certified and Gold License certified, we have spent years building relationships across the D1, D2, D3, and JUCO landscapes. College coaches reach out to NLR directly — not because of a marketing budget, but because the quality of the work speaks for itself. When a coach opens a tape from NLR, they know exactly what they&apos;re going to see.
+                </p>
+                <p>
+                  What separates NLR from every other recruiting service is simple: the people building your tape have stood on the other side of the table. We have evaluated athletes, sat through hundreds of tapes from a coach&apos;s perspective, and know exactly what makes a coach stop scrolling and pick up the phone. That insight cannot be replicated by a freelance editor. It is built from years of being inside the game.
+                </p>
+                <p>
+                  Every athlete NLR works with gets the same commitment: a tape that represents the best version of who they are on the field or court, a strategy that targets the right programs, and a partner who is invested in their outcome — not just their transaction.
+                </p>
+              </div>
 
-                <div className="space-y-5 text-white/65 leading-relaxed text-sm sm:text-base">
-                  <p>
-                    The founder of NLR isn&apos;t a video editor who discovered recruiting. He&apos;s an active head coach at the high school level — on the sideline every season, in the gym every week, and in the film room when everyone else has gone home. He built NLR because he watched talented athletes go unseen not because of a lack of ability, but because of a lack of access.
-                  </p>
-                  <p>
-                    NCAA certified and Gold License certified, he has spent years building relationships across the D1, D2, D3, and JUCO landscapes. College coaches reach out to NLR directly — not because of a marketing budget, but because the quality of the work speaks for itself. When a coach opens a tape from NLR, they know exactly what they&apos;re going to see.
-                  </p>
-                  <p>
-                    What separates NLR from every other recruiting service is simple: the person building your tape has stood on the other side of the table. He has evaluated athletes, sat through hundreds of tapes from a coach&apos;s perspective, and knows exactly what makes a coach stop scrolling and pick up the phone. That insight cannot be replicated by a freelance editor. It is built from years of being inside the game.
-                  </p>
-                  <p>
-                    Every athlete NLR works with gets the same commitment: a tape that represents the best version of who they are on the field or court, a strategy that targets the right programs, and a partner who is invested in their outcome — not just their transaction.
-                  </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <div className="flex items-center gap-2 bg-nlr-navy border border-nlr-gold/30 px-4 py-2">
+                  <span className="w-2 h-2 rounded-full bg-nlr-gold flex-shrink-0" aria-hidden="true" />
+                  <span className="font-heading font-bold text-nlr-gold text-xs tracking-widest uppercase">Gold License Certified</span>
                 </div>
+                <div className="flex items-center gap-2 bg-nlr-navy border border-nlr-gold/30 px-4 py-2">
+                  <span className="w-2 h-2 rounded-full bg-nlr-gold flex-shrink-0" aria-hidden="true" />
+                  <span className="font-heading font-bold text-nlr-gold text-xs tracking-widest uppercase">NCAA Certified</span>
+                </div>
+              </div>
 
-                <div className="mt-6 flex flex-wrap gap-3">
-                  <div className="flex items-center gap-2 bg-nlr-navy border border-nlr-gold/30 px-4 py-2">
-                    <span className="w-2 h-2 rounded-full bg-nlr-gold flex-shrink-0" aria-hidden="true" />
-                    <span className="font-heading font-bold text-nlr-gold text-xs tracking-widest uppercase">Gold License Certified</span>
-                  </div>
-                  <div className="flex items-center gap-2 bg-nlr-navy border border-nlr-gold/30 px-4 py-2">
-                    <span className="w-2 h-2 rounded-full bg-nlr-gold flex-shrink-0" aria-hidden="true" />
-                    <span className="font-heading font-bold text-nlr-gold text-xs tracking-widest uppercase">NCAA Certified</span>
-                  </div>
-                </div>
-
-                <div className="mt-8 flex flex-wrap items-center gap-4">
-                  <Link href="/contact" className="btn-gold text-sm py-3 px-8 flex items-center gap-2">
-                    Work With Us <ChevronRight size={14} aria-hidden="true" />
-                  </Link>
-                  <Link href="/services" className="btn-outline text-sm py-3 px-8">Our Services</Link>
-                </div>
-              </AnimatedSection>
-            </div>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <Link href="/contact" className="btn-gold text-sm py-3 px-8 flex items-center gap-2">
+                  Work With Us <ChevronRight size={14} aria-hidden="true" />
+                </Link>
+                <Link href="/services" className="btn-outline text-sm py-3 px-8">Our Services</Link>
+              </div>
+            </AnimatedSection>
           </div>
         </section>
 
