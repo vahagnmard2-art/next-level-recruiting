@@ -19,7 +19,7 @@ const values = [
 const numbers = [
   { val: '20+', label: 'Athletes Served', sub: 'Male & Female, All Sports' },
   { val: '10', label: 'Sports Covered', sub: 'Basketball to Tennis' },
-  { val: '2018', label: 'Coaching Since', sub: '' },
+  { val: '2018', label: 'Coaching Since', sub: 'Actively on the Sideline' },
   { val: 'D1–JUCO', label: 'Programs Reached', sub: 'Coaches Contact NLR Nationally' },
 ]
 
@@ -128,10 +128,10 @@ export default function AboutPage() {
               </h2>
               <div className="gold-line mx-auto mt-6" aria-hidden="true" />
             </AnimatedSection>
-            <dl className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/5">
+            <dl className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 items-stretch">
               {numbers.map((stat, i) => (
-                <AnimatedSection key={stat.label} delay={i * 100}>
-                  <div className="card-glow p-10 text-center group">
+                <AnimatedSection key={stat.label} delay={i * 100} className="h-full">
+                  <div className="card-glow p-10 text-center group h-full flex flex-col items-center justify-center">
                     <dt className="font-display text-6xl sm:text-7xl text-gradient-gold leading-none mb-3">{stat.val}</dt>
                     <dd>
                       <span className="font-heading font-bold text-white text-sm tracking-widest uppercase block mb-1">{stat.label}</span>
