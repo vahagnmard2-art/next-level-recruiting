@@ -152,7 +152,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             <h2 id="post-cta-heading" className="display-heading text-5xl sm:text-7xl text-white mt-4 mb-6">
               READY TO GET<br /><span className="text-nlr-gold">SEEN?</span>
             </h2>
-            <p className="text-white/60 text-lg mb-10">Book a free consultation — no commitment, just a straight conversation about your athlete&apos;s situation.</p>
+            <p className="text-white/75 text-lg mb-10">Book a free consultation — no commitment, just a straight conversation about your athlete&apos;s situation.</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/contact" className="btn-gold text-sm py-4 px-12 flex items-center gap-2">
                 Book Free Consultation <ChevronRight size={16} aria-hidden="true" />

@@ -50,7 +50,7 @@ export default function AboutPage() {
                 BUILT FOR<br /><span className="text-nlr-gold">EVERY ATHLETE</span>
               </h1>
               <div className="gold-line mb-6" aria-hidden="true" />
-              <p className="text-white/60 text-lg max-w-2xl leading-relaxed">
+              <p className="text-white/75 text-lg max-w-2xl leading-relaxed">
                 Born in the gyms and fields of Southern California. Built to give every athlete the professional edge they deserve.
               </p>
             </AnimatedSection>
@@ -202,7 +202,7 @@ export default function AboutPage() {
             <h2 id="franchise-heading" className="display-heading text-5xl sm:text-7xl text-white mt-4 mb-6">
               BUILT TO<br /><span className="text-nlr-gold">GO NATIONAL</span>
             </h2>
-            <p className="text-white/60 text-lg mb-10 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-white/75 text-lg mb-10 leading-relaxed max-w-2xl mx-auto">
               NLR started in Southern California, but the vision is national. We&apos;re building the systems, the brand, and the playbook to bring NLR to every major market.
             </p>
             <p className="text-white/40 text-sm mb-10 font-heading tracking-widest uppercase">Franchise opportunities coming soon</p>

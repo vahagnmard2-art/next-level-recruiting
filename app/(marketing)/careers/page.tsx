@@ -65,7 +65,7 @@ export default function CareersPage() {
               BUILD WITH<br /><span className="text-nlr-gold">NLR</span>
             </h1>
             <div className="gold-line mb-6" aria-hidden="true" />
-            <p className="text-white/60 text-lg max-w-2xl leading-relaxed">
+            <p className="text-white/75 text-lg max-w-2xl leading-relaxed">
               NLR is growing. We&apos;re looking for people who love the game, care about athletes, and want to be part of building something national — starting from SoCal.
             </p>
           </AnimatedSection>
@@ -159,7 +159,7 @@ export default function CareersPage() {
           <h2 id="careers-cta-heading" className="display-heading text-5xl sm:text-7xl text-white mt-4 mb-6">
             ATHLETE?<br /><span className="text-nlr-gold">BOOK NOW</span>
           </h2>
-          <p className="text-white/60 text-lg mb-10">
+          <p className="text-white/75 text-lg mb-10">
             If you&apos;re an athlete looking for recruiting help — not a job — head to the contact page and book your free consultation.
           </p>
           <Link href="/contact" className="btn-gold text-sm py-4 px-12 inline-flex items-center gap-2">

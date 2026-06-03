@@ -116,7 +116,7 @@ export default function ServicesPage() {
 
       <div className="overflow-x-hidden">
         <section className="relative pt-32 pb-20 bg-nlr-darker overflow-hidden" aria-labelledby="services-hero-heading">
-          <Image src="/images/hero-football-field.png" alt="" fill priority className="object-cover object-center" aria-hidden="true" />
+          <Image src="/images/hero-football-field.webp" alt="" fill priority className="object-cover object-center" aria-hidden="true" />
           <div className="absolute inset-0 bg-nlr-darker/80" aria-hidden="true" />
           <div className="absolute inset-0 bg-gradient-to-br from-nlr-green/10 via-transparent to-nlr-gold/10" aria-hidden="true" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -126,7 +126,7 @@ export default function ServicesPage() {
                 INVEST IN<br /><span className="text-nlr-gold">YOUR FUTURE</span>
               </h1>
               <div className="gold-line mb-6" aria-hidden="true" />
-              <p className="text-white/60 text-lg max-w-2xl leading-relaxed">
+              <p className="text-white/75 text-lg max-w-2xl leading-relaxed">
                 Professional recruiting services priced for every stage of your athletic career. No hidden fees. No gimmicks. Just results.
               </p>
             </AnimatedSection>

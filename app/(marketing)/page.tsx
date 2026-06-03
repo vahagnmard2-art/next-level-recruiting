@@ -63,7 +63,7 @@ export default function HomePage() {
       <div className="overflow-x-hidden">
         {/* HERO */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-labelledby="hero-heading">
-          <Image src="/images/hero-athlete.png" alt="" fill priority className="object-cover object-center" aria-hidden="true" />
+          <Image src="/images/hero-athlete.webp" alt="" fill priority className="object-cover object-center" aria-hidden="true" />
           <div className="absolute inset-0 bg-nlr-darker/75" aria-hidden="true" />
           <div className="absolute inset-0 bg-hero-gradient opacity-60" aria-hidden="true" />
           <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true"
@@ -279,7 +279,7 @@ export default function HomePage() {
             <h2 id="cta-heading" className="display-heading text-6xl sm:text-8xl text-white mt-4 mb-6">
               READY TO GO<br /><span className="text-nlr-gold">NEXT LEVEL?</span>
             </h2>
-            <p className="text-white/60 text-lg mb-10 leading-relaxed">
+            <p className="text-white/75 text-lg mb-10 leading-relaxed">
               Book a free 15-minute consultation. No commitment, no pressure — just a straight conversation about your athlete&apos;s situation.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -55,7 +55,7 @@ export default function ContactPage() {
                 LET&apos;S GET<br /><span className="text-nlr-gold">TO WORK</span>
               </h1>
               <div className="gold-line mb-6" aria-hidden="true" />
-              <p className="text-white/60 text-lg max-w-2xl leading-relaxed">
+              <p className="text-white/75 text-lg max-w-2xl leading-relaxed">
                 Fill out the form below and we&apos;ll reach out within 24 hours to confirm your booking and next steps.
               </p>
             </AnimatedSection>

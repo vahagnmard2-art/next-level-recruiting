@@ -75,14 +75,22 @@
 
 @layer components {
   .btn-gold {
-    @apply bg-nlr-gold text-nlr-darker font-heading font-bold tracking-widest uppercase px-8 py-3 text-sm inline-block;
+    @apply bg-nlr-gold text-nlr-darker font-heading font-bold tracking-widest uppercase px-8 py-3 text-sm inline-block cursor-pointer;
+    /* min 44px touch target height */
+    min-height: 44px;
     box-shadow: 0 4px 20px rgba(201, 168, 76, 0.25);
-    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    transition: background-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
   }
 
   .btn-gold:hover {
-    @apply bg-nlr-gold-light scale-105;
-    box-shadow: 0 6px 30px rgba(201, 168, 76, 0.45);
+    @apply bg-nlr-gold-light;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 32px rgba(201, 168, 76, 0.5);
+  }
+
+  .btn-gold:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 2px 10px rgba(201, 168, 76, 0.3);
   }
 
   .btn-gold:focus-visible {
@@ -91,12 +99,18 @@
   }
 
   .btn-outline {
-    @apply border-2 border-nlr-gold text-nlr-gold font-heading font-bold tracking-widest uppercase px-8 py-3 text-sm inline-block;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    @apply border-2 border-nlr-gold text-nlr-gold font-heading font-bold tracking-widest uppercase px-8 py-3 text-sm inline-block cursor-pointer;
+    min-height: 44px;
+    transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
   }
 
   .btn-outline:hover {
     @apply bg-nlr-gold text-nlr-darker;
+    transform: translateY(-1px);
+  }
+
+  .btn-outline:active {
+    transform: translateY(0);
   }
 
   .btn-outline:focus-visible {
@@ -113,7 +127,12 @@
   }
 
   .card-dark {
-    @apply bg-nlr-navy border border-white/5 transition-colors duration-300 hover:border-nlr-gold/25;
+    @apply bg-nlr-navy border border-white/5 transition-all duration-200 hover:border-nlr-gold/25;
+  }
+
+  /* Accessible body text — minimum ~4.5:1 on dark backgrounds */
+  .text-accessible {
+    @apply text-white/80;
   }
 
   .gold-line {

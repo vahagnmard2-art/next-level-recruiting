@@ -1,11 +1,23 @@
 'use client'
 
 import { useState, useId, type FormEvent } from 'react'
+import { z } from 'zod'
 import { ChevronDown, CheckCircle, Send, AlertCircle } from 'lucide-react'
 
 const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID ?? ''
 const EMAIL = 'info@nextlevelrecruiting.com'
 const PHONE = '(818) 521-7493'
+
+const schema = z.object({
+  athleteName: z.string().min(2, 'Athlete name is required'),
+  parentName: z.string().optional(),
+  email: z.string().email('Valid email is required'),
+  phone: z.string().regex(/^[\d\s\-()+]{7,}$/, 'Valid phone number required'),
+  sport: z.string().min(1, 'Please select a sport'),
+  grade: z.string().optional(),
+  service: z.string().min(1, 'Please select a service'),
+  message: z.string().optional(),
+})
 
 const sports = [
   'Basketball', 'Baseball', 'Football', 'Soccer', 'Volleyball',
@@ -59,14 +71,15 @@ export default function ContactForm() {
   const [errors, setErrors] = useState<Partial<FormData>>({})
 
   const validate = (): boolean => {
+    const result = schema.safeParse(form)
+    if (result.success) { setErrors({}); return true }
     const e: Partial<FormData> = {}
-    if (!form.athleteName.trim()) e.athleteName = 'Athlete name is required'
-    if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = 'Valid email is required'
-    if (!form.phone.trim() || !/^[\d\s\-()+]{7,}$/.test(form.phone)) e.phone = 'Valid phone number required'
-    if (!form.sport) e.sport = 'Please select a sport'
-    if (!form.service) e.service = 'Please select a service'
+    result.error.issues.forEach(issue => {
+      const key = issue.path[0] as keyof FormData
+      if (key) e[key] = issue.message
+    })
     setErrors(e)
-    return Object.keys(e).length === 0
+    return false
   }
 
   const handleSubmit = async (e: FormEvent) => {

@@ -41,7 +41,7 @@ export default function BlogPage() {
                 THE NLR<br /><span className="text-nlr-gold">PLAYBOOK</span>
               </h1>
               <div className="gold-line mb-6" aria-hidden="true" />
-              <p className="text-white/60 text-lg max-w-2xl leading-relaxed">
+              <p className="text-white/75 text-lg max-w-2xl leading-relaxed">
                 Recruiting tips, NCAA rules explained, highlight tape strategy, and everything else athletes and parents need to navigate the process.
               </p>
             </AnimatedSection>

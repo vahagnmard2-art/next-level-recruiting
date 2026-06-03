@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, type FormEvent } from 'react'
 import { Send, Loader2 } from 'lucide-react'
 import { createClient } from '@/lib/supabase'
+import { useDebounce } from '@/hooks/use-debounce'
 import type { Tables } from '@/types'
 
 interface Props {
@@ -17,6 +18,7 @@ function formatTime(ts: string) {
 export default function MessageComposer({ athleteId, initialMessages }: Props) {
   const [messages, setMessages] = useState(initialMessages)
   const [body, setBody] = useState('')
+  const debouncedBody = useDebounce(body, 150)
   const [sending, setSending] = useState(false)
   const [error, setError] = useState('')
   const bottomRef = useRef<HTMLDivElement>(null)
@@ -110,7 +112,7 @@ export default function MessageComposer({ athleteId, initialMessages }: Props) {
             rows={1}
             className="flex-1 bg-nlr-navy border border-white/10 px-4 py-3 text-white placeholder-white/25 text-sm focus:outline-none focus:border-nlr-gold transition-colors resize-none"
           />
-          <button type="submit" disabled={sending || !body.trim()}
+          <button type="submit" disabled={sending || !debouncedBody.trim()}
             className="btn-gold px-4 py-3 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed flex-shrink-0">
             {sending ? <Loader2 size={16} className="animate-spin" /> : <Send size={16} />}
           </button>
