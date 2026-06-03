@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ChevronRight, Video, FileText, Globe, Headphones, Users, Star, Zap, CheckCircle } from 'lucide-react'
+import { ChevronRight, Video, FileText, Globe, Headphones, Users, Zap, CheckCircle } from 'lucide-react'
 import AnimatedSection from '@/components/marketing/animated-section'
 
 export const metadata: Metadata = {
@@ -73,15 +73,6 @@ const services = [
     desc: 'We contact coaches on your behalf — sending your tape, profile, and follow-up messages to your target school list each month.',
     features: ['Up to 30 schools/month', 'Personalized coach emails', 'Follow-up sequences', 'Response tracking', 'Monthly progress report'],
     cta: 'Start Outreach',
-  },
-  {
-    icon: <Star size={32} />,
-    title: 'Combine / Showcase Event',
-    price: '$75 / athlete',
-    badge: 'Event',
-    desc: 'Participate in NLR-run combines and showcases inside SoCal AAU gyms and travel sports facilities, with coaches and scouts in attendance.',
-    features: ['Live showcase with coaches', 'On-site film capture', 'Measurables recorded', 'Certificate of participation', 'Post-event highlight clip'],
-    cta: 'Register Now',
   },
 ]
 

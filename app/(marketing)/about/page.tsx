@@ -180,7 +180,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {values.map((val, i) => (
                 <AnimatedSection key={val.title} delay={i * 100}>
-                  <div className="card-glow p-8 flex gap-6 group">
+                  <div className="card-glow p-8 flex gap-6 group h-full">
                     <div className="text-nlr-gold flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300" aria-hidden="true">{val.icon}</div>
                     <div>
                       <h3 className="font-heading font-bold text-white text-xl tracking-wide uppercase mb-3">{val.title}</h3>
@@ -193,24 +193,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* FRANCHISE VISION */}
-        <section className="py-24 bg-nlr-darker relative overflow-hidden" aria-labelledby="franchise-heading">
-          <div className="absolute inset-0 bg-gradient-to-r from-nlr-green/5 to-nlr-gold/5" aria-hidden="true" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-nlr-gold/5 blur-[150px]" aria-hidden="true" />
-          <AnimatedSection className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-            <p className="section-label">The Big Picture</p>
-            <h2 id="franchise-heading" className="display-heading text-5xl sm:text-7xl text-white mt-4 mb-6">
-              BUILT TO<br /><span className="text-nlr-gold">GO NATIONAL</span>
-            </h2>
-            <p className="text-white/75 text-lg mb-10 leading-relaxed max-w-2xl mx-auto">
-              NLR started in Southern California, but the vision is national. We&apos;re building the systems, the brand, and the playbook to bring NLR to every major market.
-            </p>
-            <p className="text-white/40 text-sm mb-10 font-heading tracking-widest uppercase">Franchise inquiries now open</p>
-            <a href="mailto:info@nextlevelrecruiting.com?subject=Franchise%20Inquiry" className="btn-gold text-sm py-4 px-12 inline-flex items-center gap-2">
-              Inquire About Franchise <ChevronRight size={16} aria-hidden="true" />
-            </a>
-          </AnimatedSection>
-        </section>
       </div>
     </>
   )
