@@ -130,6 +130,32 @@
     @apply bg-nlr-navy border border-white/5 transition-all duration-200 hover:border-nlr-gold/25;
   }
 
+  /* Gold neon glow card */
+  .card-glow {
+    @apply bg-nlr-navy border border-nlr-gold/30;
+    box-shadow: 0 0 0 1px rgba(201,168,76,0.15), 0 0 20px rgba(201,168,76,0.12), inset 0 1px 0 rgba(201,168,76,0.08);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  }
+  .card-glow:hover {
+    border-color: rgba(201,168,76,0.55);
+    box-shadow: 0 0 0 1px rgba(201,168,76,0.3), 0 0 35px rgba(201,168,76,0.22), inset 0 1px 0 rgba(201,168,76,0.12);
+    transform: translateY(-2px);
+  }
+
+  /* Sport / icon glow frame */
+  .glow-frame {
+    @apply border-2 border-nlr-gold/50 bg-nlr-darker flex items-center justify-center flex-shrink-0;
+    box-shadow: 0 0 18px rgba(201,168,76,0.35), inset 0 0 12px rgba(201,168,76,0.08);
+  }
+  .glow-frame-pulse {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  /* Vignette overlay */
+  .vignette {
+    background: radial-gradient(ellipse at center, transparent 30%, rgba(7,15,22,0.88) 100%);
+  }
+
   /* Accessible body text — minimum ~4.5:1 on dark backgrounds */
   .text-accessible {
     @apply text-white/80;

@@ -52,7 +52,7 @@ export default function BlogPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <AnimatedSection>
               <p className="section-label mb-6">Featured Article</p>
-              <Link href={`/blog/${featured.slug}`} className="card-dark group block p-8 sm:p-12" aria-labelledby="featured-post-heading">
+              <Link href={`/blog/${featured.slug}`} className="card-glow group block p-8 sm:p-12" aria-labelledby="featured-post-heading">
                 <div className="flex flex-wrap items-center gap-3 mb-4">
                   <span className="bg-nlr-gold text-nlr-darker font-heading font-bold text-xs tracking-widest uppercase px-3 py-1">{featured.category}</span>
                   <span className="flex items-center gap-1 text-white/30 text-xs font-heading">
@@ -77,7 +77,7 @@ export default function BlogPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {rest.map((post, i) => (
                 <AnimatedSection key={post.slug} delay={i * 80}>
-                  <Link href={`/blog/${post.slug}`} className="card-dark group block hover:-translate-y-0.5 p-8 h-full" aria-label={`Read: ${post.title}`}>
+                  <Link href={`/blog/${post.slug}`} className="card-glow group block hover:-translate-y-0.5 p-8 h-full" aria-label={`Read: ${post.title}`}>
                     <div className="flex flex-wrap items-center gap-3 mb-4">
                       <span className="border border-nlr-gold/30 text-nlr-gold font-heading font-bold text-xs tracking-widest uppercase px-2 py-0.5">{post.category}</span>
                       <span className="flex items-center gap-1 text-white/30 text-xs font-heading">

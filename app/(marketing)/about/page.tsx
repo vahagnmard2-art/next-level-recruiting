@@ -155,7 +155,7 @@ export default function AboutPage() {
               {numbers.map((stat, i) => (
                 <AnimatedSection key={stat.label} delay={i * 100}>
                   <div className="bg-nlr-navy p-10 text-center border border-transparent hover:border-nlr-gold/20 transition-all duration-300 group">
-                    <dt className="font-display text-6xl sm:text-7xl text-nlr-gold group-hover:text-nlr-gold-light transition-colors duration-300 leading-none mb-3">{stat.val}</dt>
+                    <dt className="font-display text-6xl sm:text-7xl text-gradient-gold leading-none mb-3">{stat.val}</dt>
                     <dd>
                       <span className="font-heading font-bold text-white text-sm tracking-widest uppercase block mb-1">{stat.label}</span>
                       <span className="text-white/30 text-xs font-body">{stat.sub}</span>
@@ -180,7 +180,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {values.map((val, i) => (
                 <AnimatedSection key={val.title} delay={i * 100}>
-                  <div className="card-dark p-8 flex gap-6 group">
+                  <div className="card-glow p-8 flex gap-6 group">
                     <div className="text-nlr-gold flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300" aria-hidden="true">{val.icon}</div>
                     <div>
                       <h3 className="font-heading font-bold text-white text-xl tracking-wide uppercase mb-3">{val.title}</h3>

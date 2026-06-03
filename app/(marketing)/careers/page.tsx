@@ -84,7 +84,7 @@ export default function CareersPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {roles.map((role, i) => (
               <AnimatedSection key={role.title} delay={i * 100}>
-                <div className="card-dark p-8 h-full flex flex-col">
+                <div className="card-glow p-8 h-full flex flex-col">
                   <div className="text-nlr-gold mb-5" aria-hidden="true">{role.icon}</div>
                   <h3 className="font-heading font-bold text-white text-xl tracking-wide uppercase mb-2 leading-snug">{role.title}</h3>
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -135,7 +135,7 @@ export default function CareersPage() {
             </p>
           </AnimatedSection>
           <AnimatedSection>
-            <div className="card-dark p-8 sm:p-12">
+            <div className="card-glow p-8 sm:p-12">
               <CareersForm />
             </div>
           </AnimatedSection>

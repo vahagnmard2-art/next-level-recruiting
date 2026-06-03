@@ -142,7 +142,8 @@ export default function HomePage() {
                 <div className="min-w-[580px]">
                   <div className="grid grid-cols-[2fr_3fr_3fr] gap-px bg-white/5 mb-px">
                     <div className="bg-nlr-darker p-5" />
-                    <div className="bg-nlr-green p-5 text-center">
+                    <div className="p-5 text-center border-b-2 border-nlr-gold bg-gradient-to-br from-nlr-green to-nlr-green-dark"
+                      style={{ boxShadow: '0 0 20px rgba(201,168,76,0.2)' }}>
                       <p className="font-display text-white text-2xl tracking-widest leading-none">NLR</p>
                       <p className="text-white/80 text-xs font-heading tracking-widest uppercase mt-1">Next Level Recruiting</p>
                     </div>
@@ -156,7 +157,7 @@ export default function HomePage() {
                       <div className={`p-4 sm:p-5 flex items-center ${i % 2 === 0 ? 'bg-nlr-darker' : 'bg-nlr-dark'}`}>
                         <span className="font-heading font-bold text-white/55 text-xs sm:text-sm tracking-wide uppercase leading-snug">{row.feature}</span>
                       </div>
-                      <div className={`p-4 sm:p-5 flex items-start gap-2 sm:gap-3 ${i % 2 === 0 ? 'bg-nlr-green/10' : 'bg-nlr-green/[0.06]'}`}>
+                      <div className={`p-4 sm:p-5 flex items-start gap-2 sm:gap-3 border-l border-nlr-gold/20 ${i % 2 === 0 ? 'bg-nlr-green/10' : 'bg-nlr-green/[0.06]'}`}>
                         <CheckCircle size={14} className="text-nlr-green flex-shrink-0 mt-0.5" aria-hidden="true" />
                         <span className="text-white text-xs sm:text-sm font-body leading-snug">{row.nlr}</span>
                       </div>

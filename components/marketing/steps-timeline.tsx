@@ -47,7 +47,7 @@ export default function StepsTimeline({ steps }: { steps: Step[] }) {
       {steps.map((step, i) => (
         <li
           key={step.num}
-          className="relative z-10 card-dark p-8 group transition-all duration-500 ease-out"
+          className="relative z-10 card-glow p-8 group transition-all duration-500 ease-out"
           style={{
             opacity: visibleCount > i ? 1 : 0,
             transform: visibleCount > i ? 'translateY(0)' : 'translateY(20px)',

@@ -44,27 +44,31 @@ export default function SportsPage() {
         </div>
       </section>
 
-      <section className="py-24 lg:py-32 bg-nlr-dark" aria-label="Sports we cover">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 lg:py-32 bg-nlr-darker relative overflow-hidden" aria-label="Sports we cover">
+        <div className="absolute inset-0 opacity-[0.035]" aria-hidden="true"
+          style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(201,168,76,0.9) 1px, transparent 0)', backgroundSize: '32px 32px' }} />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {sports.map((sport, i) => (
               <AnimatedSection key={sport.name} delay={i * 60}>
-                <div className="card-dark p-8 group hover:-translate-y-0.5 h-full">
+                <div className="card-glow p-8 group h-full">
                   <div className="flex items-start gap-5">
-                    <div className="text-5xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300 leading-none mt-1">{sport.emoji}</div>
+                    <div className={`glow-frame w-20 h-20 text-4xl flex-shrink-0 ${sport.badge ? 'glow-frame-pulse' : ''}`}>
+                      {sport.emoji}
+                    </div>
                     <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-2">
-                        <h2 className="font-heading font-bold text-white text-2xl tracking-wide uppercase">{sport.name}</h2>
+                      <div className="flex items-center gap-3 mb-2 flex-wrap">
+                        <h2 className="font-heading font-bold text-gradient-gold text-2xl tracking-wide uppercase">{sport.name}</h2>
                         {sport.badge && (
                           <span className="bg-nlr-gold text-nlr-darker font-heading font-bold text-xs tracking-widest uppercase px-3 py-0.5">{sport.badge}</span>
                         )}
                       </div>
-                      <p className="text-white/50 text-sm leading-relaxed mb-5">{sport.desc}</p>
+                      <p className="text-white/60 text-sm leading-relaxed mb-5">{sport.desc}</p>
                       <div className="grid grid-cols-2 gap-2 mb-6">
                         {sport.focuses.map((f) => (
                           <div key={f} className="flex items-start gap-2">
-                            <span className="w-1 h-1 rounded-full bg-nlr-gold mt-2 flex-shrink-0" aria-hidden="true" />
-                            <span className="text-white/40 text-xs leading-relaxed">{f}</span>
+                            <span className="w-1.5 h-1.5 rounded-full bg-nlr-gold/70 mt-1.5 flex-shrink-0" aria-hidden="true" />
+                            <span className="text-white/55 text-xs leading-relaxed">{f}</span>
                           </div>
                         ))}
                       </div>

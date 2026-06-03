@@ -144,42 +144,55 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section className="py-16 bg-nlr-dark" aria-labelledby="services-package-heading">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* FULL PACKAGE — Image 1 style */}
+        <section className="py-16 bg-nlr-darker relative overflow-hidden" aria-labelledby="services-package-heading">
+          <Image src="/images/hero-athlete.webp" alt="" fill className="object-cover object-center opacity-20" aria-hidden="true" />
+          <div className="absolute inset-0 vignette" aria-hidden="true" />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <AnimatedSection>
-              <div className="relative bg-gradient-to-br from-nlr-green via-nlr-green-dark to-nlr-darker border border-nlr-gold/30 p-8 lg:p-12 overflow-hidden">
+              <div className="border border-nlr-gold/30 p-8 lg:p-12 overflow-hidden relative"
+                style={{ boxShadow: '0 0 60px rgba(201,168,76,0.12), inset 0 1px 0 rgba(201,168,76,0.1)', background: 'rgba(13,23,38,0.85)' }}>
                 <div className="absolute top-0 right-0" aria-hidden="true">
                   <div className="bg-nlr-gold text-nlr-darker font-heading font-bold text-xs tracking-widest uppercase px-6 py-2">Best Value</div>
                 </div>
-                <div className="absolute bottom-0 right-0 w-64 h-64 bg-nlr-gold/5 blur-[100px]" aria-hidden="true" />
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                   <div>
                     <div className="flex items-center gap-3 mb-4">
                       <Zap size={24} className="text-nlr-gold" />
-                      <span className="font-heading font-bold text-nlr-gold tracking-widest uppercase text-sm">Full Recruiting Package</span>
+                      <span className="section-label">Full Recruiting Package</span>
                     </div>
                     <h2 id="services-package-heading" className="display-heading text-5xl sm:text-7xl text-white mb-4">
-                      EVERYTHING<br />YOU NEED
+                      PREMIUM<br />PACKAGE<br /><span className="text-gradient-gold">DETAILS</span>
                     </h2>
-                    <p className="text-white/70 leading-relaxed mb-8">
-                      The complete NLR experience — tape, breakdown, profile, and consulting under one roof. Designed for athletes serious about playing at the next level.
-                    </p>
-                    <div className="flex items-end gap-4 mb-8">
-                      <span className="font-display text-7xl text-nlr-gold">$999</span>
-                      <div className="pb-2">
+                    <div className="flex items-end gap-4 mb-6">
+                      <span className="font-display text-8xl text-gradient-gold leading-none">$999</span>
+                      <div className="pb-3">
                         <div className="text-white/40 text-base line-through">$1,500+ value</div>
-                        <div className="text-nlr-gold/80 text-sm font-heading font-bold tracking-wide">Save $500+</div>
+                        <div className="text-nlr-gold font-heading font-bold tracking-wide text-sm">Save $500+</div>
                       </div>
                     </div>
+                    <p className="text-white/70 leading-relaxed mb-8 max-w-md">
+                      The complete NLR experience — tape, breakdown, profile, and consulting under one roof.
+                    </p>
                     <Link href="/contact" className="btn-gold text-sm py-4 px-10 inline-flex items-center gap-2">
                       Get the Full Package <ChevronRight size={16} />
                     </Link>
                   </div>
-                  <div className="grid grid-cols-1 gap-3">
-                    {packageFeatures.map((feature) => (
-                      <div key={feature} className="flex items-center gap-3 bg-white/5 px-4 py-3 border-l-2 border-nlr-gold">
-                        <CheckCircle size={16} className="text-nlr-gold flex-shrink-0" />
-                        <span className="text-white/80 text-sm font-body">{feature}</span>
+
+                  {/* Vertical icon timeline */}
+                  <div className="space-y-0">
+                    {packageFeatures.map((feature, i) => (
+                      <div key={feature} className="flex items-start gap-4 group">
+                        <div className="flex flex-col items-center">
+                          <div className="w-8 h-8 border border-nlr-gold/50 bg-nlr-darker flex items-center justify-center flex-shrink-0"
+                            style={{ boxShadow: '0 0 10px rgba(201,168,76,0.25)' }}>
+                            <CheckCircle size={14} className="text-nlr-gold" />
+                          </div>
+                          {i < packageFeatures.length - 1 && (
+                            <div className="w-px h-6 bg-gradient-to-b from-nlr-gold/40 to-nlr-gold/10" />
+                          )}
+                        </div>
+                        <p className="text-white/80 text-sm font-body pt-1.5 pb-5">{feature}</p>
                       </div>
                     ))}
                   </div>
@@ -189,7 +202,53 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section className="py-24 lg:py-32 bg-nlr-darker" aria-labelledby="services-individual-heading">
+        {/* 3-SERVICE HIGHLIGHT — Image 2 style */}
+        <section className="py-24 lg:py-32 bg-nlr-darker relative overflow-hidden" aria-labelledby="services-featured-heading">
+          <Image src="/images/hero-football-field.webp" alt="" fill className="object-cover object-center opacity-15" aria-hidden="true" />
+          <div className="absolute inset-0 vignette" aria-hidden="true" />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <AnimatedSection className="text-center mb-16">
+              <p className="section-label">Your Path to the Next Level</p>
+              <h2 id="services-featured-heading" className="display-heading text-5xl sm:text-7xl text-white mt-3">
+                CORE<br /><span className="text-gradient-gold">SERVICES</span>
+              </h2>
+              <div className="gold-line mx-auto mt-6" aria-hidden="true" />
+              <p className="text-white/60 text-lg mt-6 max-w-2xl mx-auto">
+                Comprehensive athlete recruiting services designed for high school and college players.
+              </p>
+            </AnimatedSection>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+              {services.slice(0, 3).map((svc, i) => (
+                <AnimatedSection key={svc.title} delay={i * 100}>
+                  <div className="card-glow p-8 flex flex-col h-full group">
+                    <div className="glow-frame w-16 h-16 mb-6 text-nlr-gold">{svc.icon}</div>
+                    <h3 className="font-heading font-bold text-gradient-gold text-2xl tracking-wide uppercase mb-3">{svc.title}</h3>
+                    <p className="text-white/60 text-sm leading-relaxed flex-1 mb-6">{svc.desc}</p>
+                    <ul className="space-y-2 mb-8">
+                      {svc.features.slice(0, 3).map((f) => (
+                        <li key={f} className="flex items-start gap-2">
+                          <CheckCircle size={13} className="text-nlr-green mt-0.5 flex-shrink-0" />
+                          <span className="text-white/55 text-xs">{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Link href="/contact" className="btn-outline text-xs py-3 px-6 text-center flex items-center justify-center gap-2">
+                      View Details <ChevronRight size={12} />
+                    </Link>
+                  </div>
+                </AnimatedSection>
+              ))}
+            </div>
+            <div className="text-center">
+              <Link href="#services-individual-heading" className="btn-gold text-sm py-4 px-12 inline-flex items-center gap-2">
+                Explore All Services <ChevronRight size={16} />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* INDIVIDUAL SERVICES */}
+        <section className="py-24 lg:py-32 bg-nlr-dark" aria-labelledby="services-individual-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <AnimatedSection className="text-center mb-16">
               <p className="section-label">Individual Services</p>
@@ -201,8 +260,8 @@ export default function ServicesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map((svc, i) => (
                 <AnimatedSection key={svc.title} delay={i * 80}>
-                  <div className="card-dark flex flex-col h-full group hover:-translate-y-1">
-                    <div className="p-8 border-b border-white/5">
+                  <div className="card-glow flex flex-col h-full group">
+                    <div className="p-8 border-b border-nlr-gold/10">
                       <div className="flex items-start justify-between mb-4">
                         <div className="text-nlr-gold group-hover:scale-110 transition-transform duration-300">{svc.icon}</div>
                         {svc.badge && (
@@ -210,15 +269,15 @@ export default function ServicesPage() {
                         )}
                       </div>
                       <h3 className="font-heading font-bold text-white text-xl tracking-wide uppercase mb-2">{svc.title}</h3>
-                      <div className="font-display text-4xl text-nlr-gold mb-4">{svc.price}</div>
-                      <p className="text-white/50 text-sm leading-relaxed">{svc.desc}</p>
+                      <div className="font-display text-4xl text-gradient-gold mb-4">{svc.price}</div>
+                      <p className="text-white/55 text-sm leading-relaxed">{svc.desc}</p>
                     </div>
                     <div className="p-8 flex-1 flex flex-col">
                       <ul className="space-y-3 flex-1">
                         {svc.features.map((f) => (
                           <li key={f} className="flex items-start gap-3">
                             <CheckCircle size={14} className="text-nlr-green mt-0.5 flex-shrink-0" />
-                            <span className="text-white/60 text-sm">{f}</span>
+                            <span className="text-white/65 text-sm">{f}</span>
                           </li>
                         ))}
                       </ul>
@@ -233,7 +292,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section className="py-24 lg:py-32 bg-nlr-dark" aria-labelledby="faq-heading">
+        <section className="py-24 lg:py-32 bg-nlr-darker" aria-labelledby="faq-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <AnimatedSection className="text-center mb-16">
               <p className="section-label">Common Questions</p>
@@ -245,9 +304,9 @@ export default function ServicesPage() {
             <dl className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {faqs.map((faq, i) => (
                 <AnimatedSection key={faq.q} delay={i * 80}>
-                  <div className="card-dark p-8 h-full">
+                  <div className="card-glow p-8 h-full">
                     <dt className="font-heading font-bold text-white text-lg tracking-wide uppercase mb-3">{faq.q}</dt>
-                    <dd className="text-white/60 text-sm leading-relaxed">{faq.a}</dd>
+                    <dd className="text-white/65 text-sm leading-relaxed">{faq.a}</dd>
                   </div>
                 </AnimatedSection>
               ))}
