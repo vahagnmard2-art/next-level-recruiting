@@ -53,7 +53,7 @@ export default function SportsPage() {
               <AnimatedSection key={sport.name} delay={i * 60}>
                 <div className="card-glow p-8 group h-full">
                   <div className="flex items-start gap-5">
-                    <div className={`glow-frame w-20 h-20 text-4xl flex-shrink-0 ${sport.badge ? 'glow-frame-pulse' : ''}`}>
+                    <div className="glow-frame w-16 h-16 text-3xl flex-shrink-0">
                       {sport.emoji}
                     </div>
                     <div className="flex-1">
@@ -72,7 +72,7 @@ export default function SportsPage() {
                           </div>
                         ))}
                       </div>
-                      <Link href="/contact" className="inline-flex items-center gap-2 text-nlr-gold hover:text-nlr-gold-light font-heading font-bold text-xs tracking-widest uppercase transition-colors duration-200 group/link">
+                      <Link href={`/contact?sport=${encodeURIComponent(sport.name)}`} className="inline-flex items-center gap-2 text-nlr-gold hover:text-nlr-gold-light font-heading font-bold text-xs tracking-widest uppercase transition-colors duration-200 group/link">
                         Book {sport.name} Package
                         <ChevronRight size={12} className="group-hover/link:translate-x-1 transition-transform" />
                       </Link>

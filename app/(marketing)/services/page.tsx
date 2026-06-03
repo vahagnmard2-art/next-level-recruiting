@@ -221,7 +221,7 @@ export default function ServicesPage() {
               {services.slice(0, 3).map((svc, i) => (
                 <AnimatedSection key={svc.title} delay={i * 100}>
                   <div className="card-glow p-8 flex flex-col h-full group">
-                    <div className="glow-frame w-16 h-16 mb-6 text-nlr-gold">{svc.icon}</div>
+                    <div className="glow-frame w-16 h-16 mb-6"><div className="text-nlr-gold">{svc.icon}</div></div>
                     <h3 className="font-heading font-bold text-gradient-gold text-2xl tracking-wide uppercase mb-3">{svc.title}</h3>
                     <p className="text-white/60 text-sm leading-relaxed flex-1 mb-6">{svc.desc}</p>
                     <ul className="space-y-2 mb-8">
@@ -317,12 +317,12 @@ export default function ServicesPage() {
         <section className="py-16 bg-nlr-green" aria-labelledby="services-cta-heading">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <AnimatedSection>
-              <h2 id="services-cta-heading" className="display-heading text-4xl sm:text-6xl text-white mb-4">NOT SURE WHERE TO START?</h2>
+              <h2 id="services-cta-heading" className="display-heading text-4xl sm:text-6xl text-white mb-4">READY TO GET<br />TO WORK?</h2>
               <p className="text-white/70 text-lg mb-8 leading-relaxed">
-                Every athlete&apos;s situation is different. Book a free 15-minute call and we&apos;ll build the right package around your goals, sport, and timeline.
+                Pick your service, book your call, and Andrew takes it from there. No contracts, no gimmicks. Just results.
               </p>
               <Link href="/contact" className="btn-gold text-sm py-4 px-10 inline-flex items-center gap-2">
-                Book a Free Consultation <ChevronRight size={16} />
+                Book Free Consultation <ChevronRight size={16} />
               </Link>
             </AnimatedSection>
           </div>

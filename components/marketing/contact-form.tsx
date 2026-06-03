@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useId, type FormEvent } from 'react'
+import { useState, useId, useEffect, type FormEvent } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { z } from 'zod'
 import { ChevronDown, CheckCircle, Send, AlertCircle } from 'lucide-react'
 
@@ -64,11 +65,24 @@ const INITIAL: FormData = {
 
 export default function ContactForm() {
   const formId = useId()
+  const searchParams = useSearchParams()
   const [form, setForm] = useState<FormData>(INITIAL)
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
   const [submitError, setSubmitError] = useState(false)
   const [errors, setErrors] = useState<Partial<FormData>>({})
+
+  useEffect(() => {
+    const sport = searchParams.get('sport')
+    const service = searchParams.get('service')
+    if (sport || service) {
+      setForm(prev => ({
+        ...prev,
+        ...(sport && sports.includes(sport) ? { sport } : {}),
+        ...(service ? { service } : {}),
+      }))
+    }
+  }, [searchParams])
 
   const validate = (): boolean => {
     const result = schema.safeParse(form)

@@ -126,7 +126,7 @@ export default function Footer() {
               </ul>
               <div className="mt-8">
                 <Link href="/contact" className="btn-gold text-xs py-3 px-6 block text-center">
-                  Get Started Today
+                  Book Your Tape
                 </Link>
               </div>
             </address>

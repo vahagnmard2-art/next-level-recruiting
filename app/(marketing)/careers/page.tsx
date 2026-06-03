@@ -117,7 +117,7 @@ export default function CareersPage() {
             <p className="text-white/70 text-lg mb-4 max-w-2xl mx-auto leading-relaxed">
               We&apos;re building the playbook to take NLR national — inside AAU gyms, high schools, and travel sports programs in every major market.
             </p>
-            <p className="text-white/50 text-sm font-heading tracking-widest uppercase mb-8">Franchise opportunities · Coming 2026</p>
+            <p className="text-white/50 text-sm font-heading tracking-widest uppercase mb-8">Franchise inquiries now open</p>
           </AnimatedSection>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Suspense } from 'react'
 import { Mail, MapPin, Phone, CheckCircle } from 'lucide-react'
 import AnimatedSection from '@/components/marketing/animated-section'
 import ContactForm from '@/components/marketing/contact-form'
@@ -67,7 +68,9 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               <div className="lg:col-span-2">
                 <AnimatedSection>
-                  <ContactForm />
+                  <Suspense fallback={<div className="h-96 bg-nlr-navy border border-white/5 animate-pulse" />}>
+                    <ContactForm />
+                  </Suspense>
                 </AnimatedSection>
               </div>
 
@@ -147,11 +150,11 @@ export default function ContactPage() {
         <section className="py-16 bg-nlr-green" aria-labelledby="contact-cta-heading">
           <AnimatedSection className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 id="contact-cta-heading" className="display-heading text-4xl sm:text-6xl text-white mb-4">
-              YOUR NEXT LEVEL<br />STARTS TODAY
+              PREFER TO TALK<br />RIGHT NOW?
             </h2>
-            <p className="text-white/70 text-lg mb-8">Don&apos;t let another season pass without the recruiting tools you deserve.</p>
-            <a href="https://instagram.com/NLRAthletes" target="_blank" rel="noopener noreferrer" className="btn-gold text-sm py-4 px-10 inline-flex items-center gap-2">
-              Follow @NLRAthletes
+            <p className="text-white/70 text-lg mb-8">Call or text Andrew directly — he answers.</p>
+            <a href="tel:+18185217493" className="btn-gold text-sm py-4 px-10 inline-flex items-center gap-2">
+              Call / Text (818) 521-7493
             </a>
           </AnimatedSection>
         </section>

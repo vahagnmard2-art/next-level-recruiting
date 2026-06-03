@@ -59,6 +59,7 @@ export default function BlogPage() {
                     <Clock size={12} aria-hidden="true" />{featured.readTime}
                   </span>
                   <span className="text-white/30 text-xs font-body">{formatDate(featured.date)}</span>
+                  <span className="text-nlr-gold/70 text-xs font-heading font-bold tracking-widest uppercase">by Andrew Ayvazian</span>
                 </div>
                 <h2 id="featured-post-heading" className="display-heading text-3xl sm:text-5xl text-white mt-2 mb-4 group-hover:text-nlr-gold transition-colors duration-300">
                   {featured.title}
@@ -87,9 +88,12 @@ export default function BlogPage() {
                     <h2 className="font-heading font-bold text-white text-xl tracking-wide uppercase mb-3 group-hover:text-nlr-gold transition-colors duration-300 leading-snug">
                       {post.title}
                     </h2>
-                    <p className="text-white/45 text-sm leading-relaxed mb-6">{post.description}</p>
+                    <p className="text-white/60 text-sm leading-relaxed mb-6">{post.description}</p>
                     <div className="flex items-center justify-between">
-                      <span className="text-white/25 text-xs font-body">{formatDate(post.date)}</span>
+                      <div>
+                        <span className="text-white/25 text-xs font-body block">{formatDate(post.date)}</span>
+                        <span className="text-nlr-gold/60 text-[10px] font-heading tracking-widest uppercase">Andrew Ayvazian</span>
+                      </div>
                       <span className="inline-flex items-center gap-1 text-nlr-gold font-heading font-bold text-xs tracking-widest uppercase group-hover:text-nlr-gold-light transition-colors">
                         Read <ChevronRight size={10} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                       </span>

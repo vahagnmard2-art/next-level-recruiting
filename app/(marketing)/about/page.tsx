@@ -154,11 +154,11 @@ export default function AboutPage() {
             <dl className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/5">
               {numbers.map((stat, i) => (
                 <AnimatedSection key={stat.label} delay={i * 100}>
-                  <div className="bg-nlr-navy p-10 text-center border border-transparent hover:border-nlr-gold/20 transition-all duration-300 group">
+                  <div className="card-glow p-10 text-center group">
                     <dt className="font-display text-6xl sm:text-7xl text-gradient-gold leading-none mb-3">{stat.val}</dt>
                     <dd>
                       <span className="font-heading font-bold text-white text-sm tracking-widest uppercase block mb-1">{stat.label}</span>
-                      <span className="text-white/30 text-xs font-body">{stat.sub}</span>
+                      <span className="text-white/50 text-xs font-body">{stat.sub}</span>
                     </dd>
                   </div>
                 </AnimatedSection>
@@ -205,7 +205,7 @@ export default function AboutPage() {
             <p className="text-white/75 text-lg mb-10 leading-relaxed max-w-2xl mx-auto">
               NLR started in Southern California, but the vision is national. We&apos;re building the systems, the brand, and the playbook to bring NLR to every major market.
             </p>
-            <p className="text-white/40 text-sm mb-10 font-heading tracking-widest uppercase">Franchise opportunities coming soon</p>
+            <p className="text-white/40 text-sm mb-10 font-heading tracking-widest uppercase">Franchise inquiries now open</p>
             <a href="mailto:info@nextlevelrecruiting.com?subject=Franchise%20Inquiry" className="btn-gold text-sm py-4 px-12 inline-flex items-center gap-2">
               Inquire About Franchise <ChevronRight size={16} aria-hidden="true" />
             </a>
