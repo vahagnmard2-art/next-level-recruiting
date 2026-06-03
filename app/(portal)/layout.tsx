@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import { redirect } from 'next/navigation'
 import { createServerSupabaseClient } from '@/lib/supabase-server'
 import PortalNav from '@/components/portal/portal-nav'
+import StatusNotifier from '@/components/portal/status-notifier'
 
 export default async function PortalLayout({ children }: { children: ReactNode }) {
   const supabase = await createServerSupabaseClient()
@@ -33,6 +34,7 @@ export default async function PortalLayout({ children }: { children: ReactNode }
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {children}
       </main>
+      <StatusNotifier athleteId={user.id} />
     </div>
   )
 }

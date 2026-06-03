@@ -5,6 +5,7 @@ import { ChevronRight, Play, Award, Users, Clock, CheckCircle, XCircle } from 'l
 import InstagramIcon from '@/components/marketing/instagram-icon'
 import AnimatedSection from '@/components/marketing/animated-section'
 import SportsTicker from '@/components/marketing/sports-ticker'
+import StepsTimeline from '@/components/marketing/steps-timeline'
 
 export const metadata: Metadata = {
   title: 'Athlete Recruiting Services — Highlight Tapes & College Consulting',
@@ -118,19 +119,7 @@ export default function HomePage() {
               <div className="gold-line mx-auto mt-6" aria-hidden="true" />
             </AnimatedSection>
 
-            <ol className="grid grid-cols-1 md:grid-cols-3 gap-8 relative list-none m-0 p-0">
-              <div className="hidden md:block absolute top-10 left-1/3 right-1/3 h-px bg-gradient-to-r from-nlr-gold/30 via-nlr-gold/60 to-nlr-gold/30 z-0" aria-hidden="true" />
-              {steps.map((step, i) => (
-                <AnimatedSection key={step.num} delay={i * 150} className="relative z-10">
-                  <li className="card-dark p-8 group">
-                    <div className="font-display text-7xl text-nlr-gold/15 group-hover:text-nlr-gold/25 transition-all duration-300 leading-none mb-4" aria-hidden="true">{step.num}</div>
-                    <div className="w-12 h-1 bg-nlr-gold mb-6" aria-hidden="true" />
-                    <h3 className="font-heading font-bold text-white text-xl tracking-wide uppercase mb-3">{step.title}</h3>
-                    <p className="text-white/55 text-sm leading-relaxed">{step.desc}</p>
-                  </li>
-                </AnimatedSection>
-              ))}
-            </ol>
+            <StepsTimeline steps={steps} />
           </div>
         </section>
 
