@@ -34,7 +34,7 @@ export default async function ProfilePage() {
       <div>
         <p className="section-label">Athlete Portal</p>
         <h1 className="font-heading font-bold text-white text-3xl uppercase tracking-wide mt-1">My Profile</h1>
-        <p className="text-white/40 text-sm mt-1">Keep your info current so Andrew has everything he needs.</p>
+        <p className="text-white/40 text-sm mt-1">Keep your info current so our team has everything they need.</p>
       </div>
 
       {/* Avatar / summary */}
@@ -73,7 +73,7 @@ export default async function ProfilePage() {
             <p className="text-white text-sm">{user!.email}</p>
           </div>
         </div>
-        <p className="text-white/25 text-xs">To change your email or password, contact Andrew directly.</p>
+        <p className="text-white/25 text-xs">To change your email or password, contact NLR directly.</p>
       </div>
     </div>
   )

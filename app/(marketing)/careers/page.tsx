@@ -131,7 +131,7 @@ export default function CareersPage() {
             </h2>
             <div className="gold-line mx-auto mt-6 mb-8" aria-hidden="true" />
             <p className="text-white/50 text-sm leading-relaxed">
-              Andrew reviews every application personally. Whether you&apos;re interested in a specific role or just want to start a conversation — reach out.
+              Every application is reviewed personally. Whether you&apos;re interested in a specific role or just want to start a conversation — reach out.
             </p>
           </AnimatedSection>
           <AnimatedSection>

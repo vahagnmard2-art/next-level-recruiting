@@ -129,8 +129,8 @@ export default async function DashboardPage() {
             <div className="card-dark p-8 text-center">
               <MessageSquare size={28} className="text-white/20 mx-auto mb-3" />
               <p className="text-white/50 text-sm">No messages yet.</p>
-              <p className="text-white/30 text-xs mt-1 mb-4">Send Andrew a message to get started.</p>
-              <Link href="/messages" className="btn-gold text-xs py-2.5 px-6 inline-block">Message Andrew</Link>
+              <p className="text-white/30 text-xs mt-1 mb-4">Send NLR a message to get started.</p>
+              <Link href="/messages" className="btn-gold text-xs py-2.5 px-6 inline-block">Message NLR</Link>
             </div>
           ) : (
             <div className="space-y-3">
@@ -145,7 +145,7 @@ export default async function DashboardPage() {
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
                       <span className="text-white/60 text-xs font-heading font-bold uppercase tracking-wide">
-                        {msg.sender === 'admin' ? 'Andrew · NLR' : 'You'}
+                        {msg.sender === 'admin' ? 'NLR Team' : 'You'}
                       </span>
                       {!msg.read && msg.sender === 'admin' && (
                         <span className="w-1.5 h-1.5 bg-nlr-green rounded-full" />
@@ -168,7 +168,7 @@ export default async function DashboardPage() {
       <div className="bg-nlr-green/10 border border-nlr-green/20 p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <p className="font-heading font-bold text-white text-sm tracking-wide uppercase">Ready to book your next service?</p>
-          <p className="text-white/50 text-sm mt-1">Tapes, film breakdowns, recruiting profiles — Andrew builds it all.</p>
+          <p className="text-white/50 text-sm mt-1">Tapes, film breakdowns, recruiting profiles — built by our coach.</p>
         </div>
         <Link href="/contact" className="btn-gold text-xs py-3 px-8 flex-shrink-0">Book a Service</Link>
       </div>

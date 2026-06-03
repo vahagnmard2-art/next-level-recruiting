@@ -25,7 +25,7 @@ export default function LoginPage() {
             </div>
           </Link>
           <h1 className="font-heading font-bold text-white text-2xl uppercase tracking-wide">Athlete Portal</h1>
-          <p className="text-white/40 text-sm mt-1">Track your tapes, message Andrew, manage your recruiting.</p>
+          <p className="text-white/40 text-sm mt-1">Track your tapes, message our team, manage your recruiting.</p>
         </div>
 
         <div className="bg-nlr-dark border border-white/5 p-8">
@@ -46,7 +46,7 @@ export default function LoginPage() {
               <Link href="/contact" className="btn-gold text-xs py-3 px-8 inline-block">
                 Book Your Service
               </Link>
-              <p className="text-white/25 text-xs">Already have an account? Contact Andrew directly.</p>
+              <p className="text-white/25 text-xs">Already have an account? Contact NLR directly.</p>
             </div>
           )}
         </div>

@@ -152,7 +152,7 @@ export default function ContactPage() {
             <h2 id="contact-cta-heading" className="display-heading text-4xl sm:text-6xl text-white mb-4">
               PREFER TO TALK<br />RIGHT NOW?
             </h2>
-            <p className="text-white/70 text-lg mb-8">Call or text Andrew directly — he answers.</p>
+            <p className="text-white/70 text-lg mb-8">Call or text us directly — we answer.</p>
             <a href="tel:+18185217493" className="btn-gold text-sm py-4 px-10 inline-flex items-center gap-2">
               Call / Text (818) 521-7493
             </a>

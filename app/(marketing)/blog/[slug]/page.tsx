@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     title: post.title,
     description: post.description,
     alternates: { canonical: `/blog/${post.slug}` },
-    openGraph: { type: 'article', publishedTime: post.date, authors: ['Andrew Ayvazian'] },
+    openGraph: { type: 'article', publishedTime: post.date, authors: ['NLR'] },
   }
 }
 
@@ -81,7 +81,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     headline: post.title,
     description: post.description,
     datePublished: post.date,
-    author: { '@type': 'Person', name: 'Andrew Ayvazian' },
+    author: { '@type': 'Person', name: 'NLR' },
     publisher: { '@type': 'Organization', name: 'Next Level Recruiting', url: SITE },
     url: `${SITE}/blog/${post.slug}`,
   }
@@ -114,7 +114,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                   <span className="font-display text-nlr-darker text-xs">AA</span>
                 </div>
                 <div>
-                  <p className="font-heading font-bold text-white text-xs tracking-widest uppercase">Andrew Ayvazian</p>
+                  <p className="font-heading font-bold text-white text-xs tracking-widest uppercase">NLR Staff</p>
                   <p className="text-white/30 text-xs">Founder, Next Level Recruiting · NCAA Certified</p>
                 </div>
               </div>

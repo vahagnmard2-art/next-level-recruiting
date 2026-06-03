@@ -6,7 +6,7 @@ import AnimatedSection from '@/components/marketing/animated-section'
 
 export const metadata: Metadata = {
   title: 'About NLR — Southern California Athlete Recruiting Agency',
-  description: 'Meet Andrew Ayvazian, founder of Next Level Recruiting. Learn how NLR was built to give every Southern California athlete professional recruiting tools and college exposure across 10 sports.',
+  description: 'Meet the founder of Next Level Recruiting — an active head coach and NCAA certified recruiting specialist. NLR was built to give every Southern California athlete professional recruiting tools and college exposure across 10 sports.',
   alternates: { canonical: '/about' },
 }
 
@@ -27,8 +27,8 @@ const numbers = [
 const founderSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  name: 'Andrew Ayvazian',
-  jobTitle: 'Founder',
+  name: 'NLR Founder',
+  jobTitle: 'Founder & Head Coach',
   worksFor: { '@type': 'SportsOrganization', name: 'Next Level Recruiting', url: 'https://nextlevelrecruiting.com' },
   address: { '@type': 'PostalAddress', addressRegion: 'CA', addressCountry: 'US' },
 }
@@ -66,7 +66,7 @@ export default function AboutPage() {
                   <div className="relative overflow-hidden bg-gradient-to-b from-nlr-green/10 to-nlr-darker">
                     <Image
                       src="/andrew-ayvazian.png"
-                      alt="Andrew Ayvazian, founder of Next Level Recruiting, standing with arms crossed wearing an Adidas polo"
+                      alt="NLR founder and head coach, NCAA certified recruiting specialist"
                       width={750}
                       height={1000}
                       className="w-full h-auto object-cover object-top"
@@ -81,25 +81,22 @@ export default function AboutPage() {
               <AnimatedSection direction="right">
                 <p className="section-label">Meet the Founder</p>
                 <h2 id="founder-heading" className="display-heading text-5xl sm:text-6xl text-white mt-3 mb-6">
-                  ANDREW<br />AYVAZIAN
+                  MEET THE<br /><span className="text-nlr-gold">FOUNDER</span>
                 </h2>
                 <div className="gold-line mb-8" aria-hidden="true" />
 
                 <div className="space-y-5 text-white/65 leading-relaxed text-sm sm:text-base">
                   <p>
-                    Andrew Ayvazian&apos;s journey in basketball began where it means the most — giving back. In 2018, he returned to his roots as a youth coach, spending three seasons pouring into the same community that shaped him. It was there that he discovered his gift: not just teaching the game, but building the people who play it.
+                    The founder of NLR isn&apos;t a video editor who discovered recruiting. He&apos;s an active head coach at the high school level — on the sideline every season, in the gym every week, and in the film room when everyone else has gone home. He built NLR because he watched talented athletes go unseen not because of a lack of ability, but because of a lack of access.
                   </p>
                   <p>
-                    From those early seasons, Andrew brought his passion to tournament basketball, where he volunteered and became known for something coaches rarely prioritize — fundamentals. The footwork, the decision-making, the habits that separate good players from great ones.
+                    NCAA certified and Gold License certified, he has spent years building relationships across the D1, D2, D3, and JUCO landscapes. College coaches reach out to NLR directly — not because of a marketing budget, but because the quality of the work speaks for itself. When a coach opens a tape from NLR, they know exactly what they&apos;re going to see.
                   </p>
                   <p>
-                    Today, Andrew serves as a Head Freshman Coach at the high school level, where his philosophy is simple: a team is a family. Every player on the roster must trust each other — not just on the court, but beyond it.
+                    What separates NLR from every other recruiting service is simple: the person building your tape has stood on the other side of the table. He has evaluated athletes, sat through hundreds of tapes from a coach&apos;s perspective, and knows exactly what makes a coach stop scrolling and pick up the phone. That insight cannot be replicated by a freelance editor. It is built from years of being inside the game.
                   </p>
                   <p>
-                    Next Level Recruiting was born from everything Andrew witnessed along the way — talented athletes overlooked not because of ability, but because of access. He built NLR to close that gap. To give every young athlete — male or female, across 10 sports — the professional tools, the exposure, and the guidance that used to be reserved for the well-connected few.
-                  </p>
-                  <p>
-                    When he&apos;s not on the court, you&apos;ll find him training and developing the next generation, studying the game he loves, or spending time with friends and family. Everything he does points back to one belief: every athlete deserves a shot.
+                    Every athlete NLR works with gets the same commitment: a tape that represents the best version of who they are on the field or court, a strategy that targets the right programs, and a partner who is invested in their outcome — not just their transaction.
                   </p>
                 </div>
 

@@ -22,7 +22,7 @@ export default function SignupPage() {
             </div>
           </Link>
           <h1 className="font-heading font-bold text-white text-2xl uppercase tracking-wide">Create Your Account</h1>
-          <p className="text-white/40 text-sm mt-1">Track your tapes, message Andrew, and manage your recruiting journey.</p>
+          <p className="text-white/40 text-sm mt-1">Track your tapes, message our team, and manage your recruiting journey.</p>
         </div>
 
         <div className="bg-nlr-dark border border-white/5 p-8">

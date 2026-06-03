@@ -26,7 +26,7 @@ const compareRows = [
 
 const steps = [
   { num: '01', title: 'Submit Your Footage', desc: 'Share your game film, practice clips, or combine footage. Raw phone recordings are fine — we handle the rest.' },
-  { num: '02', title: 'Andrew Produces', desc: 'Andrew edits, scores, and polishes your content to the standard that college coaches and scouts expect — because he is one.' },
+  { num: '02', title: 'We Produce', desc: 'Our coach edits, scores, and polishes your content to the standard that college coaches and scouts expect — because he is one.' },
   { num: '03', title: 'Your Tape Goes to Work', desc: 'Receive your polished tape in days. Every rep you have put in, translated into footage coaches actually watch.' },
 ]
 
@@ -49,7 +49,7 @@ const homeSchema = {
       email: 'info@nextlevelrecruiting.com',
       areaServed: 'Southern California',
       sameAs: ['https://instagram.com/NLRAthletes'],
-      founder: { '@type': 'Person', name: 'Andrew Ayvazian' },
+      founder: { '@type': 'Person', name: 'NLR Founder' },
     },
   ],
 }
@@ -222,7 +222,7 @@ export default function HomePage() {
                     <div>
                       <p className="font-heading font-bold text-white text-2xl tracking-wide uppercase mb-3">Real Tapes. Real Athletes.</p>
                       <p className="text-white/60 text-sm leading-relaxed mb-5 max-w-md">
-                        Every tape Andrew delivers is built to the standard that stops a college coach mid-scroll.
+                        Every tape NLR delivers is built to the standard that stops a college coach mid-scroll.
                         Follow <a href="https://instagram.com/NLRAthletes" target="_blank" rel="noopener noreferrer" className="text-nlr-gold hover:underline">@NLRAthletes</a> to see current work, athlete highlights, and recruiting wins from NLR athletes.
                       </p>
                       <div className="flex flex-wrap gap-3">
@@ -262,17 +262,17 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 {
-                  quote: "Andrew built my son's tape in 5 days. The coach from Cal State called us the following week. The quality is on another level compared to what we had before.",
+                  quote: "NLR built my son's tape in 5 days. The coach from Cal State called us the following week. The quality is on another level compared to what we had before.",
                   name: 'Marcus T.',
                   detail: 'Parent — Basketball, Glendale CA',
                 },
                 {
-                  quote: "I was stuck in the portal going nowhere. Andrew put together my breakdown tape and two programs reached out within two weeks. He knows exactly what coaches look for.",
+                  quote: "I was stuck in the portal going nowhere. NLR put together my breakdown tape and two programs reached out within two weeks. They know exactly what coaches look for.",
                   name: 'Jordan R.',
                   detail: 'Transfer Portal — Football',
                 },
                 {
-                  quote: "Worth every dollar. The recruiting profile site alone got me three direct messages from college coaches. Andrew builds these things like he's selling the athlete himself.",
+                  quote: "Worth every dollar. The recruiting profile site alone got me three direct messages from college coaches. NLR builds these things like they're selling the athlete themselves.",
                   name: 'Aaliyah M.',
                   detail: 'Athlete — Volleyball, SoCal AAU',
                 },
@@ -332,7 +332,7 @@ export default function HomePage() {
               <Link href="/contact" className="btn-gold text-sm py-4 px-12 flex items-center gap-2 animate-pulse-glow-once">
                 Book Free Consultation <ChevronRight size={16} aria-hidden="true" />
               </Link>
-              <Link href="/about" className="btn-outline text-sm py-4 px-10">Meet Andrew</Link>
+              <Link href="/about" className="btn-outline text-sm py-4 px-10">Meet the Founder</Link>
             </div>
           </AnimatedSection>
         </section>

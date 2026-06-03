@@ -76,7 +76,7 @@ export default function MessageComposer({ athleteId, initialMessages }: Props) {
         {messages.length === 0 ? (
           <div className="text-center py-16">
             <p className="text-white/40 text-sm">No messages yet.</p>
-            <p className="text-white/25 text-xs mt-1">Send Andrew a message below — he typically responds same day.</p>
+            <p className="text-white/25 text-xs mt-1">Send NLR a message below — he typically responds same day.</p>
           </div>
         ) : (
           messages.map((m) => (
@@ -87,7 +87,7 @@ export default function MessageComposer({ athleteId, initialMessages }: Props) {
                   : 'bg-nlr-navy border border-white/10 text-white rounded-tr-lg rounded-tl-sm rounded-br-lg'
               }`}>
                 {m.sender === 'admin' && (
-                  <p className="text-nlr-gold text-[10px] font-heading font-bold tracking-widest uppercase mb-1">Andrew · NLR</p>
+                  <p className="text-nlr-gold text-[10px] font-heading font-bold tracking-widest uppercase mb-1">NLR Team</p>
                 )}
                 <p>{m.content}</p>
                 <p className={`text-[10px] mt-1.5 ${m.sender === 'athlete' ? 'text-nlr-darker/60' : 'text-white/30'}`}>
@@ -108,7 +108,7 @@ export default function MessageComposer({ athleteId, initialMessages }: Props) {
             value={body}
             onChange={e => setBody(e.target.value)}
             onKeyDown={e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); handleSend(e as never) } }}
-            placeholder="Message Andrew..."
+            placeholder="Send a message..."
             rows={1}
             className="flex-1 bg-nlr-navy border border-white/10 px-4 py-3 text-white placeholder-white/25 text-sm focus:outline-none focus:border-nlr-gold transition-colors resize-none"
           />

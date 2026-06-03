@@ -7,7 +7,7 @@ import type { Tables } from '@/types'
 
 const STATUS_CONFIG = {
   submitted:   { label: 'Submitted',   color: 'text-yellow-400', bg: 'bg-yellow-400/10 border-yellow-400/30', icon: Clock,         desc: 'Your order is confirmed and in queue.' },
-  in_progress: { label: 'In Progress', color: 'text-blue-400',   bg: 'bg-blue-400/10 border-blue-400/30',    icon: Loader,        desc: 'Andrew is actively working on your tape.' },
+  in_progress: { label: 'In Progress', color: 'text-blue-400',   bg: 'bg-blue-400/10 border-blue-400/30',    icon: Loader,        desc: 'Our coach is actively working on your tape.' },
   review:      { label: 'In Review',   color: 'text-purple-400', bg: 'bg-purple-400/10 border-purple-400/30', icon: Eye,           desc: 'Your tape is in final review before delivery.' },
   delivered:   { label: 'Delivered',   color: 'text-nlr-green',  bg: 'bg-nlr-green/10 border-nlr-green/30',  icon: CheckCircle,   desc: 'Your tape is ready. Watch and share it.' },
 }
@@ -97,7 +97,7 @@ export default async function TapeDetailPage({ params }: { params: { id: string 
       {/* Notes */}
       {tape.notes && (
         <div className="card-dark p-6">
-          <h2 className="font-heading font-bold text-white text-sm tracking-widest uppercase mb-3">Note from Andrew</h2>
+          <h2 className="font-heading font-bold text-white text-sm tracking-widest uppercase mb-3">Note from NLR</h2>
           <p className="text-white/70 text-sm leading-relaxed">{tape.notes}</p>
         </div>
       )}
@@ -117,7 +117,7 @@ export default async function TapeDetailPage({ params }: { params: { id: string 
             </div>
           )}
           <Link href="/messages" className="btn-outline text-sm py-3 px-6 flex items-center gap-2">
-            <MessageSquare size={15} /> Message Andrew
+            <MessageSquare size={15} /> Message NLR
           </Link>
         </div>
       </div>

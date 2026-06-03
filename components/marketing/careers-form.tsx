@@ -45,7 +45,7 @@ export default function CareersForm() {
         </div>
         <h3 className="font-heading font-bold text-white text-xl tracking-wide uppercase mb-3">Application Received</h3>
         <p className="text-white/50 text-sm leading-relaxed max-w-sm mx-auto">
-          Andrew reviews every application personally. You&apos;ll hear back within 5–7 business days.
+          Every application is reviewed personally. You&apos;ll hear back within 5–7 business days.
         </p>
       </div>
     )

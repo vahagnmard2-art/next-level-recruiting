@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     'basketball recruiting',
     'NLR',
   ],
-  authors: [{ name: 'Andrew Ayvazian', url: SITE_URL }],
+  authors: [{ name: 'NLR', url: SITE_URL }],
   creator: 'Next Level Recruiting',
   openGraph: {
     type: 'website',

@@ -57,7 +57,7 @@ export default async function TapesPage() {
         <div className="card-dark p-16 text-center">
           <Film size={40} className="text-white/15 mx-auto mb-4" />
           <h2 className="font-heading font-bold text-white text-lg uppercase tracking-wide mb-2">No Tapes Yet</h2>
-          <p className="text-white/40 text-sm mb-6">Book a service and Andrew will start building your tape.</p>
+          <p className="text-white/40 text-sm mb-6">Book a service and we&apos;ll start building your tape.</p>
           <Link href="/contact" className="btn-gold text-sm py-3 px-10 inline-block">Book a Service</Link>
         </div>
       ) : (
@@ -102,7 +102,7 @@ export default async function TapesPage() {
 
                     {tape.notes && (
                       <div className="mt-4 bg-white/5 border border-white/10 px-4 py-3">
-                        <p className="text-white/40 text-xs font-heading uppercase tracking-widest mb-1">Note from Andrew</p>
+                        <p className="text-white/40 text-xs font-heading uppercase tracking-widest mb-1">Note from NLR</p>
                         <p className="text-white/70 text-sm">{tape.notes}</p>
                       </div>
                     )}
@@ -120,7 +120,7 @@ export default async function TapesPage() {
                       </Link>
                       <Link href="/messages"
                         className="text-nlr-gold text-xs font-heading tracking-widest uppercase hover:underline">
-                        Message Andrew
+                        Message NLR
                       </Link>
                     </div>
                   </div>
