@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Mail, MapPin, ChevronRight, Phone } from 'lucide-react'
 import InstagramIcon from './instagram-icon'
 
-const sports = ['Basketball', 'Baseball', 'Football', 'Soccer', 'Volleyball', 'Softball', 'Track & Field', 'Lacrosse', 'Wrestling', 'Tennis']
+const sports = ['Basketball', 'Baseball', 'Football', 'Soccer', 'Volleyball', 'Softball', 'Track & Field', 'Golf', 'Tennis']
 
 export default function Footer() {
   return (
@@ -86,7 +86,7 @@ export default function Footer() {
               ))}
             </ul>
             <Link href="/sports" className="inline-flex items-center gap-1 text-nlr-gold hover:text-nlr-gold-light text-xs font-heading font-bold tracking-widest uppercase mt-4 transition-colors">
-              View All 10 Sports
+              View All 9 Sports
               <ChevronRight size={10} aria-hidden="true" />
             </Link>
           </nav>

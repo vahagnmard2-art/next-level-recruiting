@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Eye, EyeOff, CheckCircle, AlertCircle, Loader2, ChevronDown } from 'lucide-react'
 import { createClient } from '@/lib/supabase'
 
-const sports = ['Basketball', 'Baseball', 'Football', 'Soccer', 'Volleyball', 'Softball', 'Track & Field', 'Lacrosse', 'Wrestling', 'Tennis', 'Other']
+const sports = ['Basketball', 'Baseball', 'Football', 'Soccer', 'Volleyball', 'Softball', 'Track & Field', 'Golf', 'Tennis', 'Other']
 const grades = ['6th Grade', '7th Grade', '8th Grade', '9th Grade (Freshman)', '10th Grade (Sophomore)', '11th Grade (Junior)', '12th Grade (Senior)', 'College Freshman', 'College Sophomore', 'College Junior', 'College Senior', 'Transfer Portal']
 
 interface Fields { fullName: string; email: string; password: string; confirm: string; sport: string; grade: string; school: string }

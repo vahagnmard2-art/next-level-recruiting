@@ -5,7 +5,7 @@ import { ChevronDown, CheckCircle, Loader2, AlertCircle } from 'lucide-react'
 import { createClient } from '@/lib/supabase'
 import type { Tables } from '@/types'
 
-const sports = ['Basketball', 'Baseball', 'Football', 'Soccer', 'Volleyball', 'Softball', 'Track & Field', 'Lacrosse', 'Wrestling', 'Tennis', 'Other']
+const sports = ['Basketball', 'Baseball', 'Football', 'Soccer', 'Volleyball', 'Softball', 'Track & Field', 'Golf', 'Tennis', 'Other']
 const currentYear = new Date().getFullYear()
 const gradYears = Array.from({ length: 8 }, (_, i) => currentYear + i)
 

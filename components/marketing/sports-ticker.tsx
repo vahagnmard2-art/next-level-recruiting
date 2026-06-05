@@ -5,7 +5,7 @@ import { useState } from 'react'
 const sportBadges = [
   '🏀 Basketball', '⚾ Baseball', '🏈 Football', '⚽ Soccer',
   '🏐 Volleyball', '🥎 Softball', '🏃 Track & Field', '🥍 Lacrosse',
-  '🤼 Wrestling', '🎾 Tennis',
+  '⛳ Golf', '🎾 Tennis',
 ]
 
 export default function SportsTicker() {
@@ -14,7 +14,7 @@ export default function SportsTicker() {
   return (
     <section
       className="bg-nlr-green py-5 overflow-hidden"
-      aria-label="Sports we cover: Basketball, Baseball, Football, Soccer, Volleyball, Softball, Track and Field, Lacrosse, Wrestling, Tennis"
+      aria-label="Sports we cover: Basketball, Baseball, Football, Soccer, Volleyball, Softball, Track and Field, Golf, Tennis"
     >
       <div className="flex" aria-hidden="true">
         <div

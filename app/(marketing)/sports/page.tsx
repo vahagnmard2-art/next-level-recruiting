@@ -6,7 +6,7 @@ import AnimatedSection from '@/components/marketing/animated-section'
 
 export const metadata: Metadata = {
   title: 'Sports We Cover — Basketball, Baseball, Football & 7 More',
-  description: 'Next Level Recruiting covers 10 sports in Southern California: Basketball, Baseball, Football, Soccer, Volleyball, Softball, Track & Field, Lacrosse, Wrestling, and Tennis. All ages, all positions.',
+  description: 'Next Level Recruiting covers 9 sports in Southern California: Basketball, Baseball, Football, Soccer, Volleyball, Softball, Track & Field, Golf, and Tennis. All ages, all positions.',
   alternates: { canonical: '/sports' },
 }
 
@@ -18,8 +18,7 @@ const sports = [
   { emoji: '🏐', name: 'Volleyball', badge: null, desc: 'Attack efficiency, blocking presence, serve, and passing ratings — we produce volleyball recruiting content that showcases your complete game.', focuses: ['Hitting efficiency clips', 'Serve & receive sequences', 'Blocking & defense highlights', 'Setter decision packages'] },
   { emoji: '🥎', name: 'Softball', badge: null, desc: 'Pitching velocity and movement, hitting power, and defensive range — everything a college softball coach needs to see in under five minutes.', focuses: ['Pitching spin & velocity reels', 'Offensive production clips', 'Defensive range videos', 'Catching frame sequences'] },
   { emoji: '🏃', name: 'Track & Field', badge: null, desc: 'Event-specific clips, PR documentation, and technique sequences that position you against national recruiting standards.', focuses: ['Sprint & relay clips', 'Field event technique videos', 'PR time documentation', 'Cross country race highlights'] },
-  { emoji: '🥍', name: 'Lacrosse', badge: null, desc: 'Attack, midfield, defense, and goalie — we understand the positions and produce lacrosse content that travels well from SoCal to East Coast programs.', focuses: ['Attack shot selection clips', 'Midfield transition sequences', 'Defensive footwork & checks', 'Goalie reaction packages'] },
-  { emoji: '🤼', name: 'Wrestling', badge: null, desc: 'Technical wrestling proficiency, takedown percentage, and pin sequences — formatted for coaches evaluating your mat IQ and physicality.', focuses: ['Takedown efficiency clips', 'Cradle & pin sequences', 'Neutral position footwork', 'Match highlight packages'] },
+  { emoji: '⛳', name: 'Golf', badge: null, desc: 'Swing footage, tournament round highlights, and handicap documentation formatted for college golf coaches evaluating recruits at every division level.', focuses: ['Swing mechanics video', 'Tournament round highlights', 'Handicap & scoring documentation', 'Course management clips'] },
   { emoji: '🎾', name: 'Tennis', badge: null, desc: 'Serve velocity, stroke technique, match highlights, and USTA/UTR documentation to help position you with ITA-level college programs.', focuses: ['Serve & volley sequences', 'Groundstroke technique video', 'Match highlight reels', 'UTR documentation support'] },
 ]
 
@@ -32,7 +31,7 @@ export default function SportsPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-nlr-green/10 via-transparent to-nlr-gold/10" aria-hidden="true" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection>
-            <p className="section-label">10 Sports. All Ages.</p>
+            <p className="section-label">9 Sports. All Ages.</p>
             <h1 id="sports-hero-heading" className="display-heading text-6xl sm:text-8xl text-white mt-3 mb-6">
               YOUR SPORT.<br /><span className="text-nlr-gold">OUR EXPERTISE.</span>
             </h1>

@@ -16,7 +16,7 @@ const faqs = [
   { q: 'Do college coaches actually watch these?', a: 'Yes. A well-produced tape that leads with your best plays in the first 60 seconds dramatically increases your evaluation rate versus a raw, unedited file.' },
   { q: 'Can NLR film at our games or events?', a: 'Yes — we film year-round, including during live evaluation periods. We operate at SoCal AAU gyms and travel sports facilities. Contact us to discuss on-site filming for your games, showcases, or combines.' },
   { q: 'What is your revision policy?', a: 'Standard tape includes one revision round. Premium tape includes two revision rounds. All revisions must be requested within 30 days of delivery.' },
-  { q: 'Is this only for basketball?', a: 'No. We cover 10 sports: Basketball, Baseball, Football, Soccer, Volleyball, Softball, Track & Field, Lacrosse, Wrestling, and Tennis.' },
+  { q: 'Is this only for basketball?', a: 'No. We cover 9 sports: Basketball, Baseball, Football, Soccer, Volleyball, Softball, Track & Field, Golf, and Tennis.' },
 ]
 
 const services = [

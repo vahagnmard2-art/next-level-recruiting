@@ -22,7 +22,7 @@ const schema = z.object({
 
 const sports = [
   'Basketball', 'Baseball', 'Football', 'Soccer', 'Volleyball',
-  'Softball', 'Track & Field', 'Lacrosse', 'Wrestling', 'Tennis', 'Other',
+  'Softball', 'Track & Field', 'Golf', 'Tennis', 'Other',
 ]
 
 const serviceOptions = [

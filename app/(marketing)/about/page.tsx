@@ -5,7 +5,7 @@ import AnimatedSection from '@/components/marketing/animated-section'
 
 export const metadata: Metadata = {
   title: 'About NLR — Southern California Athlete Recruiting Agency',
-  description: 'About Next Level Recruiting — active coaches and NCAA certified recruiting specialists. NLR was built to give every Southern California athlete professional recruiting tools and college exposure across 10 sports.',
+  description: 'About Next Level Recruiting — active coaches and NCAA certified recruiting specialists. NLR was built to give every Southern California athlete professional recruiting tools and college exposure across 9 sports.',
   alternates: { canonical: '/about' },
 }
 
@@ -18,7 +18,7 @@ const values = [
 
 const numbers = [
   { val: '20+', label: 'Athletes Served', sub: 'Male & Female, All Sports' },
-  { val: '10', label: 'Sports Covered', sub: 'Basketball to Tennis' },
+  { val: '9', label: 'Sports Covered', sub: 'Basketball to Tennis' },
   { val: '2018', label: 'Coaching Since', sub: 'Actively on the Sideline' },
   { val: 'D1–JUCO', label: 'Programs Reached', sub: 'Coaches Contact NLR Nationally' },
 ]

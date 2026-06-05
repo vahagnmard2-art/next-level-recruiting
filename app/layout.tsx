@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     template: '%s | Next Level Recruiting',
   },
   description:
-    'Southern California athlete recruiting agency founded by an active high school coach. Professional highlight tapes, film breakdowns, recruiting profiles, and college consulting across 10 sports.',
+    'Southern California athlete recruiting agency founded by an active high school coach. Professional highlight tapes, film breakdowns, recruiting profiles, and college consulting across 9 sports.',
   keywords: [
     'athlete recruiting',
     'highlight tape',

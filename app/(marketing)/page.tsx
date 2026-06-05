@@ -9,7 +9,7 @@ import StepsTimeline from '@/components/marketing/steps-timeline'
 
 export const metadata: Metadata = {
   title: 'Athlete Recruiting Services — Highlight Tapes & College Consulting',
-  description: 'Next Level Recruiting (NLR) — Southern California athlete recruiting agency founded by an active high school coach. Professional highlight tapes, film breakdowns, recruiting profiles, and college consulting across 10 sports.',
+  description: 'Next Level Recruiting (NLR) — Southern California athlete recruiting agency founded by an active high school coach. Professional highlight tapes, film breakdowns, recruiting profiles, and college consulting across 9 sports.',
   alternates: { canonical: '/' },
 }
 
@@ -21,7 +21,7 @@ const compareRows = [
   { feature: 'Coach Network', nlr: 'D1–JUCO coaches contact NLR directly', other: 'Mass email distribution' },
   { feature: 'Pricing Model', nlr: 'Pay per project, no subscription', other: 'Monthly fees, locked contracts' },
   { feature: 'Revisions', nlr: 'Included, no surprise charges', other: 'Billed separately' },
-  { feature: 'Sports Covered', nlr: '10 sports, every position', other: 'Limited or sport-specific' },
+  { feature: 'Sports Covered', nlr: '9 sports, every position', other: 'Limited or sport-specific' },
 ]
 
 const steps = [
