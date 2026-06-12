@@ -28,7 +28,7 @@ export default function SportsPage() {
       <section className="relative pt-32 pb-20 bg-nlr-darker overflow-hidden" aria-labelledby="sports-hero-heading">
         <Image src="/images/sports-collage.webp" alt="" fill priority className="object-cover object-center" aria-hidden="true" />
         <div className="absolute inset-0 bg-nlr-darker/80" aria-hidden="true" />
-        <div className="absolute inset-0 bg-gradient-to-br from-nlr-green/10 via-transparent to-nlr-gold/10" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-nlr-gold/10" aria-hidden="true" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection>
             <p className="section-label">9 Sports. All Ages.</p>
