@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import Image from 'next/image'
 import { ChevronRight, Video, FileText, Globe, Headphones, Users, Zap, CheckCircle } from 'lucide-react'
 import AnimatedSection from '@/components/marketing/animated-section'
 
@@ -107,8 +106,6 @@ export default function ServicesPage() {
 
       <div className="overflow-x-hidden">
         <section className="relative pt-32 pb-20 bg-nlr-darker overflow-hidden" aria-labelledby="services-hero-heading">
-          <Image src="/images/hero-football-field.webp" alt="" fill priority className="object-cover object-center" aria-hidden="true" />
-          <div className="absolute inset-0 bg-nlr-darker/80" aria-hidden="true" />
           <div className="absolute inset-0 bg-gradient-to-br from-nlr-green/10 via-transparent to-nlr-gold/10" aria-hidden="true" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <AnimatedSection>
@@ -137,8 +134,6 @@ export default function ServicesPage() {
 
         {/* FULL PACKAGE — Image 1 style */}
         <section className="py-16 bg-nlr-darker relative overflow-hidden" aria-labelledby="services-package-heading">
-          <Image src="/images/hero-athlete.webp" alt="" fill className="object-cover object-center opacity-20" aria-hidden="true" />
-          <div className="absolute inset-0 vignette" aria-hidden="true" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <AnimatedSection>
               <div className="border border-nlr-gold/30 p-8 lg:p-12 overflow-hidden relative"
