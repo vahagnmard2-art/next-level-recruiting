@@ -4,7 +4,6 @@ import Image from 'next/image'
 import { ChevronRight, Play, Award, Users, Clock, CheckCircle, XCircle } from 'lucide-react'
 import InstagramIcon from '@/components/marketing/instagram-icon'
 import AnimatedSection from '@/components/marketing/animated-section'
-import SportsTicker from '@/components/marketing/sports-ticker'
 import StepsTimeline from '@/components/marketing/steps-timeline'
 
 export const metadata: Metadata = {
@@ -103,8 +102,6 @@ export default function HomePage() {
             <div className="w-px h-8 bg-gradient-to-b from-nlr-gold/60 to-transparent" />
           </div>
         </section>
-
-        <SportsTicker />
 
         {/* HOW IT WORKS */}
         <section className="py-24 lg:py-32 bg-nlr-dark relative" aria-labelledby="process-heading">
