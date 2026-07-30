@@ -13,7 +13,7 @@ export default function SportsTicker() {
 
   return (
     <section
-      className="bg-nlr-green py-5 overflow-hidden"
+      className="bg-nlr-darker py-5 overflow-hidden border-y border-nlr-gold/10"
       aria-label="Sports we cover: Basketball, Baseball, Football, Soccer, Volleyball, Softball, Track and Field, Golf, Tennis"
     >
       <div className="flex" aria-hidden="true">
