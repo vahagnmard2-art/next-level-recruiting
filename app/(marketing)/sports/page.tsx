@@ -25,11 +25,11 @@ const sports = [
 export default function SportsPage() {
   return (
     <div className="overflow-x-hidden">
-      <section className="relative pt-32 pb-20 bg-nlr-darker overflow-hidden" aria-labelledby="sports-hero-heading">
-        <Image src="/images/sports-collage.webp" alt="" fill priority className="object-cover object-center" aria-hidden="true" />
+      <section className="relative pt-32 pb-20 min-h-[480px] lg:min-h-[560px] flex items-center bg-nlr-darker overflow-hidden" aria-labelledby="sports-hero-heading">
+        <Image src="/images/sports-collage.webp" alt="" fill priority sizes="100vw" className="object-cover object-center" aria-hidden="true" />
         <div className="absolute inset-0 bg-nlr-darker/80" aria-hidden="true" />
         <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-nlr-gold/10" aria-hidden="true" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection>
             <p className="section-label">9 Sports. All Ages.</p>
             <h1 id="sports-hero-heading" className="display-heading text-6xl sm:text-8xl text-white mt-3 mb-6">
